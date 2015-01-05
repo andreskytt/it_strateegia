@@ -369,7 +369,7 @@ Eesmärk on läbida IT strateegia koostamine \emph{võimalikult realistlikes} ti
 			\item Hea arusaam tapi tugevusest ei anna vastust küsimusele, kuidas ehitada hea maja
 		\end{itemize}
 		
-		Akadeemilises vaates on arhitektuur viis millegi formaalseks kirjeldamiseks ja selle kirjelduseni jõudmiseks
+		Akadeemilises vaates on arhitektuur tavaliselt viis millegi formaalseks kirjeldamiseks ja selle kirjelduseni jõudmiseks
 		\begin{itemize}
 			\item Väga palju tööd millest väga vähe jõuab praktikasse
 			\item Terve hulk omavahel sobimatuid paradigmasid
@@ -409,7 +409,7 @@ Eesmärk on läbida IT strateegia koostamine \emph{võimalikult realistlikes} ti
   \frametitle{Süsteemi piiridest}
 		Igasugune süsteemi piiri tõmbamine on meelevaldne
 		\begin{itemize}
-			\item Tavaliselt tõmmatakse piir nende osade ümber, mida kontrollitakse. See on viga (Yosemite näide) 
+			\item Tavaliselt tõmmatakse piir kas kontrolli või tehnoloogia alusel, vt. ka slaid \ref{Yosemite}
 			\item Süsteemi võib kuuluda nii riistvara, tarkvara kui inimesed ning nedevahelised suhted
 			\item Järelikult ei saa rääkida vaid tarkvara või näiteks laua arhitektuurist, vt. ka slaid \ref{stack}
 		\end{itemize}
@@ -425,6 +425,22 @@ Eesmärk on läbida IT strateegia koostamine \emph{võimalikult realistlikes} ti
 		\end{center}
 \end{frame}
 
+\begin{frame}[label=Yosemite]
+	\frametitle{Yosemite näide süsteemi piiridest}
+	\begin{columns}[t]
+		\begin{column}{6.5cm}
+			Apple muutis 2013. teises pooles põhjalikult OS Xi kiipkaardi draiveriarhitektuuri
+			\begin{itemize}
+				\item Baastarkvaras muutust teha ei jõutud 
+				\item 1. detsembril esimesed e-residendid
+				\item Tulemuseks kallis ja närvesööv rabelemine
+			\end{itemize}
+		\end{column}
+		\begin{column}[T]{4.5cm}
+			\includegraphics[width=\textwidth]{yosemite.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
 
 %Arutelu koht
 \begin{frame}[fragile]
@@ -434,9 +450,53 @@ Eesmärk on läbida IT strateegia koostamine \emph{võimalikult realistlikes} ti
 		\end{center}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Alternatiivne arhitektuuri käsitlus}
+	Ed Crawley pakub käsitlust, mis eelkirjeldatute probleemid ületab
+	\begin{columns}[t]
+		\begin{column}{6cm}
+			\begin{itemize}
+				\item Tervikuks seotakse nii süsteemi funktsionaalsed kui tehnilised aspektid 
+				\item Mudel arvestab konteksti
+				\item Praktikas kasutusel, akadeemias siiski vähem
+				\item Paraku korralikult avaldamata
+			\end{itemize}
+		\end{column}
+		\begin{column}[T]{4cm}
+			\includegraphics[width=\textwidth]{ffc.pdf}
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+
 \begin{frame}[fragile]
-  \frametitle{CFF mudel}
-	Mudeli kirjeldus ja mõju. Concept kui seos kultuuriga.
+  \frametitle{Architecture is...}
+  		\begin{center}
+			\begin{quote}
+			The embodiment of \textbf{concept}, and the allocation of physical/informational \textbf{function} to elements of \textbf{form}, and definition of \textbf{interfaces} among the elements and with the surrounding \textbf{context}.
+			\end{quote}
+		\end{center}
+	\cite{edcrawley} 
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Definitsioonid}
+	\begin{description}
+		\item[Vorm] See, mis \emph{on} + selle miski struktuur
+		\item[Funktsioon] See, mida tehakse struktureerituna peamist väärtust toova protsessi ümber
+		\item[Kontseptsioon] Süsteemi visioon, mis seob vormi funktsiooniga ning kehastab peamisi printsiipe
+	\end{description}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Märkused mudeli kohta}
+	\begin{itemize}
+		\item Arhitektuur määrab disaini- ja operatiivparameetrid, disain annab neile väärtused
+		\item Kuna mudel sisaldab nii funktsiooni kui vormi struktuuri, on mudel tihedalt seotud keerukuse kontseptsiooniga
+		\item Väga multidistiplinaarne lähenemine (inseneriteadus, juhtimine, kontrolliteooria, AI, matemaatika jne.)
+		\item Olemuslikult holistiline ja seotud süsteemimõtlemisega 
+	\end{itemize}
 \end{frame}
 
 %Arutelu koht
@@ -480,10 +540,9 @@ Eesmärk on läbida IT strateegia koostamine \emph{võimalikult realistlikes} ti
 \begin{frame}[fragile]
   \frametitle{Lahtised otsad ja ideed}
 	\begin{itemize}
-		\item Küsimused mitte sectioni vaid bloki lõpus
 		\item Arthur Ganson Machine with Concrete kui näide muutuste põhjustest
 		\item Keerukus ärimuutuste juures rääkida
-		\item Iga sektsiooni algusse slaid asukohaga skeemil
+		\item Iga loengu algusse slaid asukohaga skeemil
 		\item \url{http://www.wired.com/2014/12/disappearing-business-of-design} näide ärimuutustest. Tehnilise kihi piirilt üles ja alla tagasi
 		\item Nordea näide ärimuudatustega reageerimise juurde (oluline on kiirendus, mitte niivõrd kiirus)
 	\end{itemize}
