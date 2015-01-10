@@ -1,0 +1,87 @@
+\documentclass{article} 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{makeidx}
+\usepackage{tgpagella}
+\usepackage[T1]{fontenc}
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=black           % color of external links
+}
+
+\usepackage{lipsum}
+
+\makeatletter 
+\def\s@btitle{\relax} 
+\def\subtitle#1{\gdef\s@btitle{#1}} 
+\def\@maketitle{% 
+  \newpage 
+  \null 
+  \vskip 2em% 
+  \begin{center}% 
+  \let \footnote \thanks 
+    {\LARGE \@title \par}% 
+                \if\s@btitle\relax 
+                \else\typeout{[subtitle]}% 
+                        \vskip .5pc 
+                        \begin{large}% 
+                                \textsl{\s@btitle}% 
+                                \par 
+                        \end{large}% 
+                \fi 
+    \vskip 1.5em% 
+    {\large 
+      \lineskip .5em% 
+      \begin{tabular}[t]{c}% 
+        \@author 
+      \end{tabular}\par}% 
+    \vskip 1em% 
+    {\large \@date}% \\
+    \vfill
+  \end{center}% 
+  \par 
+  \vskip 1.5em} 
+\makeatother 
+
+
+\title{IFI7013. IT Strateegiline Juhtimine}
+\subtitle{Slaidid ja märkmed}
+\date{\today}
+\author{Andres Kütt}
+%\institute{Riigi Infosüsteemi Amet}
+
+\newcounter{slidenum}
+\setcounter{slidenum}{2} % set to 2 if want to exclude title page of presentation
+
+\newcommand\showslide{
+%  \clearpage 
+  \begin{center}
+    \framebox{\includegraphics[page=\arabic{slidenum},width=.99\textwidth]{esimene_kontakt_beamer.pdf}}
+%	\includegraphics[page=\arabic{slidenum},width=.65\textwidth]{esimene_kontakt_beamer.pdf}
+    \stepcounter{slidenum}
+  \end{center}
+  \clearpage
+}
+
+\begin{document}
+\maketitle
+\clearpage
+
+
+%\showslide
+%\showslide
+%\lipsum[1-5]
+
+%\showslide
+%\lipsum[2]
+\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{it_strateegia} 
+
+\end{document}
