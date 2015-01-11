@@ -1,4 +1,3 @@
-
 \begin{document}
 
 \maketitle
@@ -21,20 +20,76 @@
 
 \section{Äriplaani koostamine}
 \begin{frame}[fragile]
-  \frametitle{Äriplaan}
+  \frametitle{IT Kulud}
+  	ITle kulutatakse raha vaid siis, kui see aitab aktsionäridele väärtust luua. Järelikult:
 	\begin{itemize}
-		\item IT kulumudel. Arendus ei ole mäluga, haldus on
-		\item FFC mudeli ja ärimudeli seos
-		\item Tehnilise võla olemus
+		\item On täiesti normaalne, et ITle kulutatav kõigub
+		\item On IT-juhi töö näidata, kuidas iga kulutatud euro aktsionäridele väärtust loob
+		\note{Mitte lihtsalt väärtust, vaid väärtust aktsionäridele}
+		\item IT-juhi töö on disainida ärimudelile vastav IT organisatsioon, mitte vastupidi
 	\end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Arenduse ja halduse kulud}
+  	\begin{columns}[t]
+		\begin{column}[T]{6.5cm}
+			\begin{itemize}
+				\item Halduskulud on funktsioon eelmise perioodi halduskuludest ja \emph{eelmise perioodi arenduskuludest}
+				\item Tehniline võlg tuleb tellija juurest ja läheb tellija juurde saades vahepeal IT probleemiks
+				\item Kui $A_{vana}=0$, siis H kasvab isegi, kui $A_n=const$
+			\end{itemize}
+		\end{column}
+		\begin{column}[T]{3.5cm}
+			\begin{align}
+				K_n &= H_n+A_n \nonumber \\
+			    H_n &= H(H_{n-1}, A_{n-1}, I_n) \nonumber\\
+			    A_n &= A_{uus}(A_{n-1}, I_n) \nonumber \\
+			    &\quad {} + A_{vana}(A_{n-1}, I_n) \nonumber
+		    \end{align}
+		\end{column}
+	\end{columns}
+\end{frame}
+\note{Kuna IT väärtust tajutakse sageli just läbi uute arenduste järeldub siit, et kui vana ja uue arenduse suhe on vale, väheneb konstantsete investeeringute puhul IT võimekus uut tajutud väärtust tooota.}
+
+\begin{frame}[fragile]
+  \frametitle{Järeldused}
+	\begin{itemize}
+		\item On strateegiliselt oluline kliendile seletada tänaste otsuste mõju homsetele kuludele
+		\item Tarkvara kapitaliseerimise otsused on IT-juhile elutähtsad
+		\item IT-juhi jaoks on oluline olla kapitaliseerimisotsuste juures laua taga
+	\end{itemize}
+\end{frame}
+\note{Et olla kapitaliseerimisotsuste juures laua taga, peab IT-juht suutma seal tõsiseltvõetavalt kaasa rääkida}
+
+
+\begin{frame}[fragile]
+  \frametitle{Arhitektuur ja äri}
+  	\begin{center}
+			\includegraphics[width=.7\textwidth]{ffc_profit.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Arhitektuur ja äri}
+			\begin{itemize}
+				\item Arhitektuur määrab toote või teenuse \emph{võimekuse} kasumit teenida
+				\item Sealhulgas
+				\begin{itemize}
+					\item Tootmiskulud. Kui kallist programmerijat teie arhitektuur eeldab?
+					\item Halduskulud. Kas olemasolevad adminid tulevad toime?
+					\item Väljumiskulud. Kui keeruline on teie tarkvarast loobuda?
+				\end{itemize}
+				\item Arhitekt peab ettevõtte ärimudelist väga hästi aru saama ja suutma tolle arusaamaga midagi ette võtta
+			\end{itemize}
+\end{frame}
+\note{Oluline rõhk võimekusel. Mäletate: arhitektuur määrab vektorid, mille sisustab disain. Kui aga parameetrid on paigast ära, ei tule kasumist midagi. Ehk. Vale arhitektuur tähendab, et äri ei saa olla kasumlik, õige arhitektuur ei tähenda, et äri on kasumlik.}
 
 %Arutelu koht
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kui palju peaks juhtkond teadma tehnilisest võlast?}
+			\textbf{Kuidas seletada kliendile, et ta saab sama raha eest täna vähem, kui eile?}
 		\end{center}
 \end{frame}
 
@@ -70,7 +125,7 @@
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kui palju peaks juhtkond teadma tehnilisest võlast?}
+			\textbf{Kuidas seletada tehnilist võlga juhtkonnale?}
 		\end{center}
 \end{frame}
 
