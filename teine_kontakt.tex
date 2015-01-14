@@ -95,13 +95,68 @@
 
 \section{Tarkvaratehnika}
 \begin{frame}[fragile]
-  \frametitle{Tarkvaratehnika}
+  \frametitle{Tarkvaratehnika definitisioon}
+	\begin{center}
+		\begin{quote}
+			Tarkvaratehnika on süstemaatiline lähenemine tarkvara analüüsile, disainile, hindamisele, realiseerimisele, testimisele, haldamisele ja ümbertöötamisele, ehk, inseneriteaduse rakendamine tarkvarale.
+		\end{quote}		
+	\end{center}
+	\cite{laplante}
+\end{frame}
+\note{Väga asjalik raamat, nii palju kui sirvida jõudsin. Annab kena ülevaate, mis üldse tarkvaratehnikas toimub}
+
+\begin{frame}[fragile]
+  \frametitle{Definitsiooni järelmid}
 	\begin{itemize}
-		\item Software engineeringu mõiste
-		\item Miks on tarkvaratehnika oluline? \cite{spolsky2004joel2}
-		\item Brooks ja tema "No silver bullet" \cite{brooks1975mythical}
+		\item Mainitud seitset eri distsipliini, realisatsioon on vaid üks neist
+		\note{Siit peaks tulema vihje rõhuasetuste kohta: enamasti keskendutakse programmeerimisele\\}
+		\item Ei ole viidet arendusprotsessile, kui sellisele
+			\begin{itemize}
+				\item Distsipliine saab kokku panna väga mitmel eri viisil, milline on parim?
+				\item Igapäevases elus saab arendusprotsess disproportsionaalselt palju tähelepanu
+				\note{Sest kvarteti liikmeid ümber paigutada on lihtne, mõistliku testimisraamistiku välja töötamine aga väga keeruline\\}
+			\end{itemize}
+		\item Kenasti on kaetud tarkvara elutsükkel, ümbertöötamine (ingl. \emph{reengineering}) on samuti osa protsessist ja oluline kuluallikas
 	\end{itemize}
 \end{frame}
+\note{Programmeerijad on tarkvaratehnika kaaperdanud tõmmates tähelepanu endale ja jättes varju teised valdkonnad. Mis, muidugi, võtavad ära suurema osa ka nende päevast kuid siiski kutsutakse neid 'programmeerijateks'}
+
+\begin{frame}[fragile]
+  \frametitle{Tarkvaratehnika olulisus}
+  Äristrateegia on otseselt seotud valitud viisiga tarkvara ehitada. Joel \citep{spolsky2004joel2} kirjeldab kenasti Amazon vs. Ben \& Jerry's dilemmat
+  \begin{itemize}
+  	\item Orgaaniline kasv vs. Ruttu Suureks lähenemine
+	\item Head näited tarkvaratehniliste valikute osas
+		  \begin{itemize}
+		  	\item Kas probleemile lähenetakse raha või mõtlemisega?
+			\item Kui oluline on toodetud koodi kvaliteet?
+			\item Kas protsess toetab on kiiret rabelemist või jätkusuutlikku arengut?
+		  \end{itemize}
+	\item Õige vastus sõltub valitud strateegiast. Seega
+  \end{itemize}
+  \begin{center}
+	  \textbf{Otsusta üheselt, kas oled Amazon või Ben \& Jerry's}
+  \end{center}
+\end{frame}
+\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam}
+\note{Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti}
+
+\begin{frame}[fragile]
+  \frametitle{Tarkvaratehnika keerukus}
+	Brooks ütleb oma essees \citep{brooks1975mythical}, et \emph{Tarkvara ehitamine on oma olemuselt keeruline}, see ei saa kunagi lihtne olema. 
+  \begin{itemize}
+	\item Läbi aja on üritatud hõbekuuli siiski leida
+		  \begin{itemize}
+		  	\item Nõuete kirjeldamine
+			\item Mingi protsessi kasutamine
+			\item Artefaktide tootmine
+			\item "Tagasi loodusse" protsesse eitavad lähenemised
+		  \end{itemize}
+	\item Keskendu olulisele ja ära lase endale mao-õli müüa
+	\note{Tuletage meelde tarkvaratehnika definitsiooni, katsuge igaühte neist võimalikult hästi teha ning siduge tükid kokku nii, nagu mõnus tundub\\}
+  \end{itemize}
+\end{frame}
+\note{Ülejäänud Brooks on ka hea, "The mythical man-month" essee peaks olema kohustuslik igale programmeerijaid juhtivale inimesele}
 
 
 %Arutelu koht
@@ -112,7 +167,6 @@
 		\end{center}
 \end{frame}
 
-\section{Tarkvaratehnika}
 \begin{frame}[fragile]
   \frametitle{Tarkvaratehnika}
 	\begin{itemize}
