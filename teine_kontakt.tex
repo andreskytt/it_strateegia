@@ -25,7 +25,7 @@
 	\begin{itemize}
 		\item On täiesti normaalne, et ITle kulutatav kõigub
 		\item On IT-juhi töö näidata, kuidas iga kulutatud euro aktsionäridele väärtust loob
-		\note{Mitte lihtsalt väärtust, vaid väärtust aktsionäridele}
+		\note{Mitte lihtsalt väärtust, vaid väärtust aktsionäridele\\}
 		\item IT-juhi töö on disainida ärimudelile vastav IT organisatsioon, mitte vastupidi
 	\end{itemize}
 \end{frame}
@@ -138,8 +138,7 @@
 	  \textbf{Otsusta üheselt, kas oled Amazon või Ben \& Jerry's}
   \end{center}
 \end{frame}
-\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam}
-\note{Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti}
+\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam \par Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti}
 
 \begin{frame}[fragile]
   \frametitle{Tarkvaratehnika keerukus}
@@ -153,10 +152,10 @@
 			\item "Tagasi loodusse" protsesse eitavad lähenemised
 		  \end{itemize}
 	\item Keskendu olulisele ja ära lase endale mao-õli müüa
-	\note{Tuletage meelde tarkvaratehnika definitsiooni, katsuge igaühte neist võimalikult hästi teha ning siduge tükid kokku nii, nagu mõnus tundub\\}
+	\note{Tuletage meelde tarkvaratehnika definitsiooni, katsuge igaühte neist võimalikult hästi teha ning siduge tükid kokku nii, nagu mõnus tundub\par
+	Ülejäänud Brooks on ka hea, "The mythical man-month" essee peaks olema kohustuslik igale programmeerijaid juhtivale inimesele}
   \end{itemize}
 \end{frame}
-\note{Ülejäänud Brooks on ka hea, "The mythical man-month" essee peaks olema kohustuslik igale programmeerijaid juhtivale inimesele}
 
 
 %Arutelu koht
@@ -167,12 +166,6 @@
 		\end{center}
 \end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Tarkvaratehnika}
-	\begin{itemize}
-		\item Mõistliku koodi 12 reeglit \cite{spolsky2004joel}
-	\end{itemize}
-\end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Mõistliku koodi reeglid}
@@ -226,48 +219,101 @@
 \end{frame}
 
 \section{IT valitsemine}
+
 \begin{frame}[fragile]
   \frametitle{IT valitsemine}
+  IT valitsemine on olemuselt IT juhtimise administratiivne aspekt
 	\begin{itemize}
-		\item Management vs. leadership. Manager is expendable, leader is not
-		\item Mida me juhime, kui me juhime ITd? Inimesed, ressursid, protsessid
-		\item Policy resistance olemus?
+		\item ITGI definitsioon: ... eestvedamine, organisatsioonilised struktuurid ning protsessid, mis tagavad, et organisatsiooni IT toetab ja laiendab tema strateegiaid ja eesmärke \citep{insitute2003board}
+		\item Ühest definitsiooni ei ole, ülejäänud räägivad samuti peamiselt protsessidest, struktuuridest jms. 
+		\note{Oluline tõlkeküsimus: leadership, management, governance. Eestvedamine, juhtimine ja valitsemine. Tuleb olla täpne!}
+		\item Olulisel kohal on asjade kontrolli all hoidmine ning nende mõjutamine soovitud suunas. 
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Poliitikavastasus}
+ Ingl. \emph{policy resistance}. Süsteemide omadus suunavatele impulssidele kas mitte reageerida, reageerida vastupidses suunas või naasta mõju lõppedes esialgse olukorra juurde
+	\begin{itemize}
+		\item Tegemist on põhimõttelise probleemiga, tuleb eristada inimeste käitumist süsteemi käitumisest
+		\item Iga süsteem on mingi mõttes tasakaalus, tasakaal võib olla kas stabiilne, ebastabiilne või neutraalne
+		\item Kehtib konkreetse poliitika kohta!
+		\item Enne poliitika rakendamist või muutmist küsi alati: 
+		\begin{itemize}
+			\item millised mehhanismid üritavad esialgset olukorda taastada? 
+			\item mis tüüpi tasakaalus on mu süsteem?
+	\end{itemize}
+
+	\end{itemize}
+\end{frame}
+\note{Huntide ja jäneste näide. Huntide arvu tõstmiseks tuleb suurendada jäneste juurdekasvu kiirust, mitte lisada hunte}
+
+\begin{frame}[fragile]
+  \frametitle{Mida me siis valtseme?}
+	Mida me juhime, kui me juhime ITd?
+	\begin{itemize}
+		\item Inimesi
+		\item Ressursse
+		\item Protsesse
+	\end{itemize}
+\end{frame}
+
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Milline on põhimõtteline vahe IT juhtimise ja IT valitsemise vahel?}
+		\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Inimesed}
+  Inimesed käituvad viisil, mis \emph{maksimeerib nende huvisid}. Kuidas need ettevõtte huvidega sobivad, on juhi probleem.
 	\begin{itemize}
-		\item Inimesed käituvad viisil, mis maksimeerib nende huvisid. Kas need huvid on ettevõtte huvidega sobivad, on juhi mure
-		\item Enne, kui inimesi valitsema/kontrollima hakata, küsi: kes läheb ära ja kes saab edukaks. \emph{Mitte} "kes jääb" 
+		\item Jällegi põhimõtteline, mitte konkreetse inimese probleem
+		\item Inimeste selline käitumine on oluline poliitikavastasuse allikas 
+		\item Enne, kui inimesi valitsema/kontrollima hakata, küsi: 
+		\note{Küsida tuleb nimeliselt!\par}
+			\begin{itemize}
+				\item Kes läheb ära. Need inimesed sa kaotad ja \emph{selliseid enam palgata ning hoida ei õnnestu}
+				\item Kes saab edukaks. Neile uus poliitika sobib ja \emph{selliseid hakkab juurde tulema} kas värbamise või olemasolevate muutumise kaudu
+				\note{Ülejäänud on kahtlemata olulised, kuid mitte muutuse kontekstis}
+			\end{itemize}
 	\end{itemize}
-\end{frame}
-
-
-%Arutelu koht
-\begin{frame}[fragile]
-  \frametitle{Arutelu koht}
-		\begin{center}
-			\textbf{Kuidas mõõta programmeerija tulemust?}
-		\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Ressursid}
+	Ressursid (inimesed, raha, kontor, võrk, jne.) antakse IT juhile \emph{ärilise eesmärgi saavutamiseks}. Ja ainult. Siit kaks kriitilist küsimust:
 	\begin{itemize}
-		\item Kriitiline vahe riigi- ja erasektori vahel ressursijuhtimisel
-		\item Ülesanne on alati maksimeerida bang per buck. Kõik muu on irrelevantne
-		\item Seos tehnilise võlaga. Veendu, et tellija saab aru oma otsuste pikaajalisest rahalisest mõjust
-		\item Strateegilises plaanis ei ole ressursijuhtimise protsessid kriitilised, osta HR paperwork ja finants väljast
+		\item Mis see eesmärk on?
+		\note{Mõlemast küsimusest peavad aru saama mõlemad\\}
+		\item Kui kaugele on antud ressursiga reaalne jõuda?
+		\note{Sest ressursse on definitsiooni järgi alati vähe\\}
+	\end{itemize}
+
+	Järelikult:
+	\begin{itemize}
+		\item IT juhi ülesanne on maksimeerida \emph{bang per buck}. 
+		\note{Kõik muu on irrelevantne. Seepärast ongi oluline aru saada, mida "bang" antud kontekstis tähendab\\}
+		\item peab tehnilise võla juhtimine olema läbipaistev, tellija peab aru saama oma otsuste pikaajalisest mõjust
+		\note{Sest tehnilise võla intresside maksmine võtab ressursse, mis on antud sulle ärilise eesmärgi täitmiseks ja mitte võlgade klaarimiseks. Vt. märkus IT juhi valikute kohta}
 	\end{itemize}
 \end{frame}
+
 
 \begin{frame}[fragile]
   \frametitle{Protsessid}
 	\begin{itemize}
-		\item Küberneetika kontrolli probleem. 
-		\item Süsteemide loomulik inerts, eri tüüpi tasakaalud, beer game
-		\item Jaapani mõtteviis (high velocity edge viited)
+		\item Protsesside valitsemine on klassikaline küberneetilika tagasisidega kontrolli probleem. Anname protsessile sisendi, mõõdame tulemust, võrdleme seda soovituga ja anname uuesti sisendi. 
+		\note{Kreeka k. kybernetike "valitsemine"\\}
+		\item Tüüpiliselt mõõdetakse tulemi kvaliteeti ja tehtud kulu
+		\item Võtmeküsimus: \emph{Kuidas protsesside juhtimist üles skaleerida?}
+		\item Spear \citep{spear2010high} väidab, et seda tehes on võimalik eristuda ning saavutada strateegiline eelis
+		\note{Spear on hea, vt. ka märkus organisatioonide kiirendamise kohta\\}
+		\item Jaapanlastel on hetkel kõige mõistlikum mudel selle küsimuse lahendamiseks. Vt. \emph{Kaizen, muda/mura/muri}
+		\note{Agiilsed metoodikad järgivad paljus sama mõtteviisi ning on samuti autotööstuse juurtega (3C projekt)}
 	\end{itemize}
 \end{frame}
 
@@ -276,19 +322,60 @@
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kui palju peaks juhtkond teadma tehnilisest võlast?}
+			\textbf{Kuidas ja miks mõõta programmeerija tulemust?}
 		\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Arenduse pipeline}
-	\begin{itemize}
-		\item Miks see on oluline (kuigi läheb natuke taktikaliseks)
-		\item Printsiibid: eelarve- ja otsusepõhine juhtimine. Nende tasakaalust. Suurte ja väikeste kivide probleem (seos tehnilise võlaga)
-		\item Capacity, overflow ja pipeline otsused. Demand ületab alati supply. Järelikult jääb asju alati pipeline lõppu. On kriitiline, kuidas neid sealt välja võetakse
-		\item Kuidas teha. Mõlemalt poolt mandaadiga juhid, regulaarne (veel parem: online), rolling, mitte spot
-	\end{itemize}
+  \frametitle{Arenduse sisendi juhtimine}
+  \begin{center}
+	  Probleem: kuidas otsustada, mis järjekorras tellija soove täita
+\bigskip
+	\emph{  Ressursse on alati, definitsiooni järgi, vähem, kui vajadusi}
+  \end{center}
 \end{frame}
+	  \note{Kuigi olemuselt taktikaline, on tegu tihti probleemse valdkonnaga. Sellest ka väike kõrvalepõige.}
+    
+\begin{frame}[fragile]
+  \frametitle{Projekti nimekiri kasvab}
+  Kui vanni voolab vett kiiremini, kui äravool välja juhib, siis vee tase vannis kasvab.
+		\begin{itemize}
+			\item Mida pikem on järjekord, seda paindumatum on organisatsioon. 
+			\note{Kui meil on nimekirjas kolme aasta jagu projekte, siis nimekirjas viimane jõuab tegemisse kõige varem kolme aasta pärast. Isegi siis, kui arendusvõimekus vastab tellija tellimisvõimekusele\par}
+			\item Peab eksisteerima mõistlik mehhanism asjade nimekirjast välja võtmiseks
+			\note{Näide nimekirja pikkuse kontrolli kohta: järjekord on fikseeritud pikkusega. kui midagi järjekorda võetakse langeb miski välja\par}
+			\item Paberimahuga blokeerimine on vale mõte. Kui tuleb esitada palju dokumentatsiooni, seda hambad ristis, ka tehakse. 
+			\note{Tellija vajadus on ju (vähemalt tajutuna) reaalne. Hammaste kriginal tehakse paberid ära. Aga iga nimekirjast välja visatud projekt tähendab raisatud ressursse}				
+			\item Projektidel on komme järjekorras hapuks minna
+		\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Vältimatu poliitiline surve}
+  Eksisteerib vältimatu surve millist iganes rahajagamismehhanismi ümber teha või sellest mööda minna.
+		\begin{itemize}
+			\item Otsustamine peab olema väga läbipaistev, grupiviisiline ja konsensuslik
+			\item Hea mõte on otsustamine mehhaniseerida. 
+			\note{Näide otsustamise mehhaniseerimisest: iga üksus saab x koguse raha ja kui see kulutatud, rohkem projekte jutule ei võeta\\}
+			\item Mida allpool tehakse otsused, seda vähem poliitiliselt mõjutatavad nad on
+			\note{Otsused on mõistlik suruda madalaimale tasemele, kus nii tellija kui täitja poolt on saadaval kogenud mandaadiga juhid, kes omavahel kokku võiksid leppida\\}
+			\item Mida sagedasemad on otsused, seda lihtsam on neid teha 
+			\note{50 projekti 5 tunniga vs. 5 tunnist koosolekut, igaühes otsustamisel 10 projekti. Kõige parem jooksvad otsused\\}
+			\item Peab eksisteerima mõistlik ja kontrollitud viis erandeid teha ilma protsessi diskrediteerimata. 
+			\note{Näide erandi tegemise mehhanismist: vanaisa õigus}
+		\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Olulised asjad võivad tegemata jääda}
+		\begin{itemize}
+			\item Pisikesed, kuid olulised muutused (näiteks veaparandused) peab olema võimalik kiiresti ja paindlikult ära teha
+			\item See on kriitiline koht tehnilise võla juhtimise seisukohast: tehnilist võlga on peaaegu võimatu tavapärase prioretiseerimise läbi likvideerida 
+			\note{Kriitiline võlg on IT, mitte äri valuga. Äri tunneb seda ainult läbi arendusvõimekuse kahanemise ja ei pruugi olla suuteline põhjusi mõistma. Vt. jälle märkust IT juhi valikute kohta\par Mida suuremate "kividega" opereeritakse, seda suuremad tühimikud nende vahele jäävad ja seda ebaefektiivsem on ressursikasutus}
+			\item Vt. punkt erandi kohta eelmisel slaidil
+		\end{itemize}
+\end{frame}
+
 
 %Arutelu koht
 \begin{frame}[fragile]

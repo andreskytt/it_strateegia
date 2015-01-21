@@ -74,6 +74,13 @@
 \begin{document}
 \maketitle
 \clearpage
+\tableofcontents
+\clearpage
+
+\section{Arhitektuur}
+\subsection{Printsiipidest}
+Arhitektuuriga süvitsi tegelemisel on hea mõte pidada printsiipide päevikut. Arhitektuuris on mõttemudelil oluline koht ja seega on mõistlik tegeleda oma isikliku mõttemudeli arendamise ning dokumenteerimisega. Printsiibipäevik on üks viis seda teha. Printsiip on miski, mis tundub kehtivat alati ning mis ei sõltu teistest. Teatavas mõttes on tegemist universaalse tõega. Üheks näiteks printsiipidest arvutivõrkude vallas on \cite{callon1996rfc}. Printsiibipäeviku mõte on selles, et iga kord, kui igapäevases töös tundub mõni printsiip silma jäävat, kirjutatakse see jalamaid üles. Perioodiliselt vaadatakse päevik üle lootuses destilleerida kirja pandust veel universaalsemaid ja üldisemaid põhimõtteid. Üks näide sellisest päevikust on \cite{archprinciples}. 
+
 \section{Tarkvaratehnika}
 \subsection{Kood ei roosteta. Või siiski?}
 Joel Spolsky ütleb, et reeglina on väga halb mõte oma koodibaasi ümber kirjutada, sest kood ju "ei roosteta" \citep{joelrust}. Ta toob mitu näidet väga ebameeldivate tagajärgedega ümber-kirjutamis ettevõtmiste kohta ning, tõesti, neid on ka siinkirjutaja praktikas mitmeid ette tulnud. Põhjuseid on mitmeid, peamiseks ehk paratamatu teadmuskadu: iga tükki koodi on juba enne rakenduse valmimist kümneid kui mitte sadu kordi muudetud ja parandatud parandamaks vigu, ületamaks nõuete ebatäielikkust jne. Nii kaob igasugune võimalus hinnata, kas kood on selline, nagu ta on, põhjusega või põhjuseta. Rääkimata analüüsist, kas põhjus jätkuvalt kehtib. Miks siis tekib vahel siiski kohu asju ümber teha ning miks on Eestis kehtestatud \emph{no legacy policy}?
@@ -97,7 +104,25 @@ Lisaks negatiivsele on koodi uuesti kirjutamisel ka üks oluline positiivne omad
 
 Lõpuks tuleb panna kõrvuti süsteemi ümber kirjutamise kulu (korrutades esiaglse hinnangu vähemalt kahega), olemasoleva muutmise ning mõlema alternatiivi halduskulude nüüdisväärtus. Kui nüüd tundub, et rakenduse uuesti kirjutamine on siiski mõistlik, on oluline aru saada, miks nii läks. Jällegi Joelile toetudes, ei ole mõistlik eeldada, et kui ühel korral ei õnnestunud hankida mõistlikku süsteemi või seda pusaks muutumast hoida, siis teisel korral asjad teisiti lähevad. On oluline, et suudetakse välja tuua konkreetsed tegevused, mille abil hoidutakse vajadusest süsteem uuesti ümber kirjutada. Siinkohal kuuleb ilmselt argumenti \emph{build one to throw away} aga sel juhul peaks olema võimalik vähemalt üles kirjutada, mida esimesest korrast täpselt õpiti.
 
+\subsection{Tehniline võlg}
+On kriitiline, et tellija saaks aru oma tegevuse tagajärgedest. Mis, arvestades teo ja selle tagajärje ajalist vahet, on väga keeruline. Põhjus on selles, et tehnilise võla likvideerimine tuleb arenduse läbilaskevõime arvelt. Järelikult tähendab tehnilise võla kuhjumine, et arenduse läbilaskevõime ajas kahaneb. Kui tellija ei saa aru, et tema otsus tekitas tehnilise võla, on IT-juhil kaks põhimõttelist otsust. Ta kas keeldub tehnilist võlga tekitamast, näib paindumatu ja lastakse lahti või ta võtab tehnilise võla, asub seda IT võimekust vähendades likvideerima ning ta lastakse lahti. Ehk, häid valikuid ei ole. Järelikult ei ole IT juhil muud valikut peale tellija harimise.
+
 \section{IT valitsemine}
+\subsection{Poliitikavastasus. Hundid ja jänesed}
+Kujutlegem lihtsat ökosüsteemi, mis koosneb huntidest ja jänestest. Hundid söövad jäneseid, jänesed elavad õhust ja armastusest (mida mõlemat on piisavalt). Oletagem, et meil on soov tõsta huntide arvukust. Seepärast tuuakse mujalt ja lastakse metsa lahti viis emast ja viis isast hunti. Mis juhtub? 
+\begin{itemize}
+	\item Huntide arvukus tõuseb kümne lisandunud hundi võrra
+	\item Kuna kümme lisandunud hunti tahavad süüa, siis väheneb jäneste arvukus. Ajaühikus ära söödavate jäneste hulk ju suureneb
+	\item Kuna jäneseid on vähem, väheneb ka jäneste juurdekasvu kiirus. Ära söödud jänesed ju uusi jäneseid ei tee. Samuti tahavad uued hundid ka homme süüa
+	\item Seega hakkab jäneste arvukus vähenema
+	\item Misjärel hakkavad hundid nälga jääma, sest kõigile enam jäneseid ei jagu
+	\item Mistõttu saavad hundid vähem järglasi ja langeb nende juurdekasvu kiirus
+	\item Kuna hundid surevad vanadusse ikka sama tempoga, hakkab huntide arvukus vähenema
+	\item Kui huntide arvukus on jõudnud esialgsele tasemele, on kõigile jälle piisavalt jäneseid 
+\end{itemize}
+
+Nii taastub esialgne olukord, algne huntide lisamine ei ole andnud soovitud tulemust. Huntide arvukus võiks tõusta hoopis tõstes jäneselaste arvu jäneseperekonnas ehk nende juurdekasvu kiiruse tõstmisega. 
+
 \subsection{Inimeste valitsemine}
 Valitsemise üsna lahutamatu osa on paraku vajadus inimesed organisatsioonist eemaldada. Jättes kõrvale juriidilised ja muud nüansid, on oluline aru saada, et mõtteliidri (\emph{thought leader}) lahkumine on meeskonna dünaamika jaoks oluline sündmus. Samuti on oluline mõista, et tegu on vältimatu protsessiga, mis seega on mõistlik läbi viia kontrollitult ja minimaalsete kadudega. Järgnevas selleks mõned näpunäited: 
 
@@ -116,6 +141,22 @@ Valitsemise üsna lahutamatu osa on paraku vajadus inimesed organisatsioonist ee
 			\item Avalik teade. Kui vähegi usutav, võiks tekst olla kiitvas, positiivses ja tänulikus toonis. Kui mitte, siis lakooniline kuiv tekst.
 		\end{enumerate}
 \end{itemize}
+
+\subsection{Ressursijuhtimine}
+Järgnev on üks võimalik vaade asjadele: selgesti on avaliku- ja erasektori suhtumine rahasse erinev. Ainus põhjus, miks maksumaksja riigile raha annab, on, et selle raha eest osutataks avalikku teenust. Kui nüüd riik korjab raha kokku, kuid selle eest mõistlikku avalikku teenust ei osuta (ka reservide kogumine on avalik teenus), siis on tegu maksumaksja asjatu koormamisega. Erasektoris jaotatakse kasum omanike vahel, riigis selle mehhanismi ekvivalenti ei eksisteeri. Järelikult on erasektoris pigem surve raha mitte kulutada samas kui riigisektoris on pigem surve raha eest võimalikult palju teenust osutada.  
+
+\subsection{Protsesside juhtimine}
+\subsubsection{Organisatsiooni kiirendamine}
+Suurepärane näide organisatsiooni kiirendamisest on Singapur. Joonisel \ref{fig:kasv} on toodud viie riigi GNI aastatel 1995 kuni 2012. On näha, kuidas USA, Eesti, Läti ja Vene Föderatsioon kasvavavad suuresti samas rütmis, kuigi absoluutnumbrites on USA teistest kaugel ees. Singapur aga on suutnud aastast 2002 näidata teistest oluliselt kiiremat kasvu. Isegi arvestades 2008. aasta kriisi mõju, on kasv teistest oluliselt kiirem. Lühike järeldus joonisest on, et ühel või teisel viisil on Singapur suutnud mitte ainult kasvada, vaid kasvada teistest kiiremini. Kui Eesti aga ka jätkab senist stabiilset kasvu, ei õnnestu meil ilmselt kunagi USAle järele jõuda. 
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=\textwidth]{kasv.pdf}
+		\caption{Riikide GNI võrdlus. Maailmapanga andmed.}
+		\label{fig:kasv}
+	\end{center}
+\end{figure}
+
 
 
 %\showslide
