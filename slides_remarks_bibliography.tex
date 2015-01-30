@@ -187,6 +187,57 @@ Grupp inimesi viib valge tahvliga ruumis läbi järgmised sammud:
 \subsection{Piiridest ja nende ületamisest}
 Eelmise sajandi seitsmekümnendatel töötas Jay Forrester Rooma Klubi tellimusel välja mudeli maailma rahvastiku kasvu uurimiseks. Forresteri õpilased on mudelit hiljem täiendanud, hetkel on ehk parim lugemismaterial \cite{meadows1992beyond}. Ennustused ei ole roosilised, pigem vastupidi. Ühe tõenäolise võimalusena nähakse ette, et rahavastik ületab suurelt piirid, mida tehnoloogia võimaldab planeedil Maa ära toita ning mahutada ja et järgneb mõõdukas kollaps. Rahvastik kahaneb kiiresti ning palju ning toimub tugev konkurents ressursside pärast (sest kõigile lihtsalt ei jätku). 
 
+\section{Riskijuhtimine}
+\subsection{Paradigmamuutus}
+Riskijuhtimise paradigmamuutust tingivad järgmised trendid:
+	\begin{itemize}
+		\item BCP\footnote{\emph{Business Continuity Plan}} keerukus/hind kasvab eksponendina süsteemi keerukusest
+			\begin{itemize}
+		\item Facebookil ei ole kuskil teist andmekeskust igaks juhuks jõude seismas. See oleks liiga kallis
+		\item Väliste partnerite puhul ei ole alati võimalik alternatiivi leida
+		\item Äriprotsesside toimimisele ei ole vahel enam mitte-elektroonilist alternatiivi
+	\end{itemize}
+
+		\item BCP efektiivsus kahaneb eksponendina süsteemi keerukusest
+			\begin{itemize}
+		\item Kuidas taastub pilveteenusepakkuja täielikust andmekaost?
+		\item Keerulist süsteemi ei pruugi õnnestuda ka mitte ajuti taastada, kui palju ka ei kulutaks. Kui Skype p2p võrk päriselt maha kukub, seda sisuliselt ei olnud võimalik taastada
+		\item Äriplaanid, kliendiandmed, ideed, dokumentatsioon on üha enam immateriaalne ja seega kergesti teisaldatav
+	\end{itemize}
+
+		\item Üksikute riskisündmuste asemel peame rääkima pidevast, kasvavast ja kuju muutvast survest
+			\begin{itemize}
+		\item Ka kuritegevuses on edukas see, kes suudab oma ärimudeli võimalikult efektiivselt võimalikult suureks skaleerida
+		\item Keerulises süsteemis on väga palju elemente ja nende interaktsioone, mõne katki mineku tõenäosus on suur
+		\item Inimese kognitiivset võimet ületavate süsteemide puhul kasvab kiiresti operaatori vigade tõenäosus. Mistõttu ma olen suhteliselt ettevaatlik Eesti Vabariigi infosüsteemi torkimisega
+	\end{itemize}
+
+		\item Riskifaktoreid ei saa enam suruda aktsepteeritavale tasemele
+			\begin{itemize}
+		\item Riik suudab tagada, et tänaval ei jookse nagaaniga vehkiv jõuk, internetis ei ole see võimalik
+		\item Süsteemi kõik elemendid ei ole kontrolli all. Vt. esimese kontakti slaidid Yosemite intsidendist
+		\item Kuna info liigub, kerkib kiiresti esile uusi (Google: \emph{"ATM gas attacks"})
+		\item Turvalist ega vigadeta tarkvara ei ole reaalne toota. Heartbleed istus aastaid laialt kasutatud open source tarkvarateegis kõigi silmade all
+	\end{itemize}
+
+\end{itemize}
+\subsection{Süsteemiohutuse vaatenurk}
+Eelnevalt loetletu kõrvale seab \cite{leveson2011engineering} oma nimekirja asjaoludest, mis sunnivad loobuma senistest süsteemide ohutust käsitlevatest mudelitest:
+\begin{itemize}
+	\item Kiire tehnoloogiline muutus
+	\item Vähenev õppmisvõimekus, mida põhjustab järjest lühenev toote elutsükkel
+	\item Õnnetuste iseloom on muutumas, eriti tänu tarkvara tihedasse integreerumisse igapäevaellu
+	\item Uued ohtude tüübid. Nanotehnoloogia, keemia, antibiootikumid jne.
+	\item Suurenev keerukus ja seotus
+	\item Vähenev tolerants üksik-õnnetuste suhtes, mis tuleneb süsteemide suurusest ning meie suurenevast sõltuvusest tehnoloogiast
+	\item Prioriteetide seadmise ja valikute tegemise keerukus
+	\item Inimeste ja automaatide järjest keerulisemad suhted
+	\item Muutuv regulatiivne ja avalikkuse vaade ohutusele. Üksikindiviid ei ole enam suuteline oma vahetu keskkonna ohutust kontrollima
+\end{itemize}
+
+\subsection{Kaos ja ahvid}
+Üks suurimaid probleeme slaididel ja loengus kirjeldatud paradigmamuutusega toime tulekul on inimeste hoiakud. Kui ühe serveri puhul võis loota, et see niipea katki ei lähe ja kui läheb, siis on teine varuks, siis 1000 serveri puhul läheb iga päev mõni katki. Sama lugu on küberrünnetega. Inimeste mõttemudel muutub aga aeglaselt. Probleemi on huvitavalt lahendanud Netflix \citep{monkey}. Nende vahend lihtsalt käib ja lülitab servereid välja, kõik teavad seda. Ehk, iga teenus peab olema suuteline sellist käitumist taluma. Sisuliselt on Netflix teadmata parameetritega rikete mürafooni asendanud palju tugevama kuid tuntud parameetritega signaaliga.   
+
 %\showslide
 %\showslide
 %\lipsum[1-5]

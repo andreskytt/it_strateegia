@@ -399,6 +399,7 @@
 		\item Filmis jookseb korduvalt läbi fraas "kas üks või kaks tehast"
 		\item Strateegiline analüüs näitas, et tehast ei pruugi üldse vaja olla
 		\item Lõppotsus: osta kaks uue tehnoloogiaga tehast
+		\note{Põhjused mitmetahulised. Muu hulgas öeldakse, et aeti segi kaks eri otsust: kas uus või vana tehnoloogia ning kas osta või mitte osta. Oma rolli mängis ka ettevõttesisene poliitika.\\}
 		\item Neist üks pandi püsti kuid konserveeriti kohe. Teist ei pandud kunagi püsti ning müüdi alles mõned aastad tagasi
 	\end{itemize}
 	\begin{center}
@@ -446,11 +447,139 @@
 \end{frame}
 
 \section{Riskijuhtimine}
+\begin{frame}[fragile]
+  \frametitle{Riskijuhtimine}
+	\begin{itemize}
+		\item System safety mõiste
+		\item Põgus ülevaade eelduste muutusest
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Riskijuhtimine}
+	
+	\begin{itemize}
+		\item Enamasti ei saa rääkida IT riskide juhtimisest eraldi organisatsiooni riskide juhtimisest
+		\item Süsteemide keerukuse kasv muudab põhimõtteliselt riskide juhtimise olemust
+	\end{itemize}
+
+	\begin{center}
+		\emph{Ei ole sisulist vahet, kas elektrijaam plahvatab kellegi rumaluse, küberründe, disainivea või komponendi kulumise tõttu}
+		\note{Inimesed saavad surma ja suur kahju tekib igal juhul}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Muutused riskijuhtimises}
+	Järgnev kehtib üha enam kõigi riskitüüpide puhul
+	\begin{itemize}
+		\item BCP\footnote{\emph{Business Continuity Plan}} keerukus/hind kasvab eksponendina süsteemi keerukusest
+		\item BCP efektiivsus kahaneb eksponendina süsteemi keerukusest
+		\item Üksikute riskisündmuste asemel peame rääkima pidevast, kasvavast ja kuju muutvast survest
+		\item Riskifaktoreid ei saa enam suruda aktsepteeritavale tasemele
+	\end{itemize}
+\end{frame}
+
+\iffalse
+% Need slaidid tõstetud märkmetesse, aega ei ole
+\begin{frame}[fragile]
+  \frametitle{BCP keerukus}
+	BCP keerukus/hind kasvab eksponendina süsteemi keerukusest
+	\begin{itemize}
+		\item Facebookil ei ole kuskil teist andmekeskust igaks juhuks jõude seismas. See oleks liiga kallis
+		\item Väliste partnerite puhul ei ole alati võimalik alternatiivi leida
+		\item Äriprotsesside toimimisele ei ole vahel enam mitte-elektroonilist alternatiivi
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{BCP efektiivsus}
+	BCP efektiivsus kahaneb eksponendina süsteemi keerukusest
+	\begin{itemize}
+		\item Kuidas taastub pilveteenusepakkuja täielikust andmekaost?
+		\item Keerulist süsteemi ei pruugi õnnestuda ka mitte ajuti taastada, kui palju ka ei kulutaks
+		\note{Kui Skype p2p võrk päriselt maha kukub, seda sisuliselt ei olnud võimalik taastada}
+		\item Äriplaanid, kliendiandmed, ideed, dokumentatsioon on üha enam immateriaalne ja seega kergesti teisaldatav
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Voog sündmuste asemel}
+	Üksikute riskisündmuste asemel peame rääkima pidevast, kasvavast ja kuju muutvast survest
+	\begin{itemize}
+		\item Ka kuritegevuses on edukas see, kes suudab oma ärimudeli võimalikult efektiivselt võimalikult suureks skaleerida
+		\item Keerulises süsteemis on väga palju elemente ja nende interaktsioone, mõne katki mineku tõenäosus on suur
+		\note{Suures tehases läheb kogu aeg midagi katki}
+		\item Inimese kognitiivset võimet ületavate süsteemide puhul kasvab kiiresti operaatori vigade tõenäosus
+		\note{Mistõttu ma olen suhteliselt ettevaatlik Eesti Vabariigi infosüsteemi torkimisega}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Riskifaktorid}
+	Riskifaktoreid ei saa enam suruda aktsepteeritavale tasemele
+	\begin{itemize}
+		\item Riik suudab tagada, et tänaval ei jookse nagaaniga vehkiv jõuk, internetis ei ole see võimalik
+		\item Süsteemi kõik elemendid ei ole kontrolli all
+		\note{Vt. esimese kontakti slaidid Yosemite intsidendist}
+		\item Kuna info liigub, kerkib kiiresti esile uusi (Google: \emph{"ATM gas attacks"})
+		\item Turvalist ega vigadeta tarkvara ei ole reaalne toota
+		\note{Heartbleed istus aastaid laialt kasutatud open source tarkvarateegis kõigi silmade all}
+	\end{itemize}
+\end{frame}
+
+\fi
+% Siit edasi on jälle OK
+
+\begin{frame}[fragile]
+	\frametitle{Kuidas läheneda?}
+	\vfill
+	\begin{center}
+		Keeruliste probleemide puhul küsi alati: \\kellel on sama probleem akuutsemalt ja kauem?  
+		\note{ABS leiutati kõigepealt lennukite pidama saamiseks. Autoinsenerid said lahenduse sealt}
+	\end{center}
+	\vfill
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Süsteemiohutusest}
+	Keerukate süsteemide ohutuse eest hoolitsevatel inimestel on asjakohane teooria ja praktika olemas.
+	\begin{itemize}
+		\item Kuidas tagada USA tuumalaevastiku ohutus?
+		\note{5400 reaktori-aastat intsidentideta tööd}
+		\item Keemiatööstus, lennukid, laevad 
+		\item Juured ICMB ja Apollo programmides eelmise sajandi keskel
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Süsteemiohutuse definitsioon}
+	\begin{center}
+		\begin{quote}
+			This system safety standard practice is a key element of Systems Engineering (SE) that provides a standard, generic method for the identification, classification, and mitigation of hazards.
+		\end{quote}
+	\end{center}
+			MIL-STD-882
+	
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Süsteemiohutusest}
+	Levinuimad põhjuslikkuse mudelid eeldavad, et õnnetusi põhjustavad komponentide rikked ning et neid rikkeid vältides või neiks valmistudes võib õnnetusi vältida. Kuigi see eeldus on tõsi lihtsate elektromehaaniliste süsteemide puhul, pole see enam nii tänaste keeruliste sotsiotehniliste süsteemide korral \cite{leveson2011engineering}.
+	\begin{itemize}
+		\item Rida varasemalt toiminud eeldusi enam ei kehti
+		\item Põhjused on nii süsteemide keerukuse tõusus kui ka maailma järjest keerulisemaks muutumises
+		\note{Tuletage meelde juttu süsteemi piiridest}
+		\item Võtmetähtsusega on sotsiotehniliste süsteemide vaatlemine terviklike, tagasisidestatud mittelineaarsete süsteemidena
+	\end{itemize}
+\end{frame}
+
+
 %Arutelu koht
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{6. küsimus}
+			\textbf{Kui tõsine probleem on riskijuhtimise paradigma muutus \\tegelikus elus?}
 		\end{center}
 \end{frame}
 
