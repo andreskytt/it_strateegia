@@ -9,26 +9,46 @@
 
 \ProvidesPackage{beamerthemem}
 
-%{{{ --- Packages ---------------------
-
-\usepackage[no-math]{fontspec}
-\usepackage{etoolbox}
-\usepackage{tikz}
-\usepackage{pgfplots}
-
-\usetikzlibrary{backgrounds}
-
-\usecolortheme{metropolis}
-\usefonttheme{metropolis}
-
-%}}}
 %{{{ --- Options ----------------------
 
 \newif\if@useTitleProgressBar
-\@useTitleProgressBarfalse
-\DeclareOption{titleprogressbar}{\@useTitleProgressBartrue}
+\newif\if@protectFrameTitle
 
-\ProcessOptions\relax
+\@useTitleProgressBarfalse
+\@protectFrameTitlefalse
+
+\newlength{\@mtheme@voffset}
+\setlength{\@mtheme@voffset}{2em}
+
+\DeclareOptionBeamer{useTitleProgressBar}{\@useTitleProgressBartrue}
+\DeclareOptionBeamer{protectframetitle}{\@protectFrameTitletrue}
+\DeclareOptionBeamer{blockbg}{%
+  \PassOptionsToPackage{blockbg}{beamercolorthememetropolis}%
+}
+\DeclareOptionBeamer{nooffset}{\setlength{\@mtheme@voffset}{0em}}
+
+\DeclareOptionBeamer*{%
+  \PackageWarning{beamerthemem}{Unknown option `\CurrentOption'}%
+}
+
+\ProcessOptionsBeamer
+
+%}}}
+
+\mode<presentation>
+
+%{{{ --- Packages ---------------------
+
+\RequirePackage[no-math]{fontspec}
+\RequirePackage{etoolbox}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+
+\usecolortheme{metropolis}
+\usefonttheme{metropolis}
 
 %}}}
 %{{{ --- Titlepage --------------------
@@ -50,7 +70,7 @@
     {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
     \vspace*{0.5em}
     \fi%
-    \begin{tikzpicture}\draw[mLightBrown] (0, 0) -- (\textwidth, 0);\end{tikzpicture}%
+    \begin{tikzpicture}\draw[alerted text.fg] (0, 0) -- (\textwidth, 0);\end{tikzpicture}%
     \vspace*{1em}
     \ifx\insertauthor\@empty%
     \else%
@@ -88,39 +108,49 @@
 
 % the progress bar
 \def\progressbar@sectionprogressbar{%
-  \progressbar@tmpcounta=\insertframenumber
-  \progressbar@tmpcountb=\inserttotalframenumber
-  \progressbar@tmpdim=\progressbar@pbwd
-  \multiply\progressbar@tmpdim by \progressbar@tmpcounta
-  \divide\progressbar@tmpdim by \progressbar@tmpcountb
+  {\usebeamercolor{palette primary}%
+    \progressbar@tmpcounta=\insertframenumber
+    \progressbar@tmpcountb=\inserttotalframenumber
+    \progressbar@tmpdim=\progressbar@pbwd
+    \divide\progressbar@tmpdim by 100
+    \multiply\progressbar@tmpdim by \progressbar@tmpcounta
+    \divide\progressbar@tmpdim by \progressbar@tmpcountb
+    \multiply\progressbar@tmpdim by 100
 
-  \makebox[\textwidth][c]{
-    \begin{tikzpicture}[tight background]
+    \makebox[\textwidth][c]{
+      \begin{tikzpicture}[tight background]
 
-      \node[anchor=west, mDarkTeal, inner sep=0pt] at (0pt, 0pt) {\insertsectionHEAD};
+        \node[anchor=west, fg, inner sep=0pt] at (0pt, 0pt) {\insertsectionHEAD};
 
-      \draw[anchor=west, mDarkTeal!20, fill=mDarkTeal!20, inner sep=0pt]
-      (2pt, -16pt) rectangle ++ (\progressbar@pbwd, \progressbar@pbht);
+        \draw[anchor=west, fg!20, fill=fg!20, inner sep=0pt]
+        (2pt, -16pt) rectangle ++ (\progressbar@pbwd, \progressbar@pbht);
 
-      \draw[anchor=west, mDarkTeal, fill=mDarkTeal, inner sep=0pt]
-      (2pt, -16pt) rectangle ++ (\progressbar@tmpdim, \progressbar@pbht);
-    \end{tikzpicture}%
-  }
+        \draw[anchor=west, fg, fill=fg, inner sep=0pt]
+        (2pt, -16pt) rectangle ++ (\progressbar@tmpdim, \progressbar@pbht);
+      \end{tikzpicture}%
+    }
+  } % end usebeamercolor{palette primary}
 }
 
 \if@useTitleProgressBar
-  \def\progressbar@titleprogressbar{%
-    \progressbar@tmpcounta=\insertframenumber
-    \progressbar@tmpcountb=\inserttotalframenumber
-    \progressbar@tmpdim=\paperwidth
-    \multiply\progressbar@tmpdim by \progressbar@tmpcounta
-    \divide\progressbar@tmpdim by \progressbar@tmpcountb
+\def\progressbar@titleprogressbar{%
+  \progressbar@tmpcounta=\insertframenumber
+  \progressbar@tmpcountb=\inserttotalframenumber
+  \progressbar@tmpdim=\paperwidth
+  \divide\progressbar@tmpdim by 100
+  \multiply\progressbar@tmpdim by \progressbar@tmpcounta
+  \divide\progressbar@tmpdim by \progressbar@tmpcountb
+  \multiply\progressbar@tmpdim by 100
 
+  {%
+    \usebeamercolor{palette quaternary}%
+    \usebeamercolor{alerted text}%
     \begin{tikzpicture}[tight background]
-      \draw[mDarkBrown, fill=mDarkBrown] (0, 0) rectangle (\paperwidth, 0.2pt);
-      \draw[mLightBrown, fill=mLightBrown] (0, 0) rectangle (\progressbar@tmpdim, 0.2pt);
-    \end{tikzpicture}
-  }
+      \draw[palette quaternary.fg, fill=palette quaternary.fg] (0, 0) rectangle ($(\paperwidth, 0.2pt) - (0.4pt, 0)$);
+      \draw[alerted text.fg, fill=alerted text.fg] (0, 0) rectangle (\progressbar@tmpdim, 0.2pt);
+    \end{tikzpicture}%
+  }%
+}
 \fi
 %}}}
 %{{{ --- Commands ---------------------
@@ -132,7 +162,7 @@
 
 \newcommand{\plain}[2][]{%
   \begingroup
-  \setbeamercolor{background canvas}{bg=mDarkTeal}
+  \setbeamercolor{background canvas}{use=palette primary,bg=palette primary.fg}
   \begin{frame}{#1}
     \centering
     \vfill\vspace{1em}\usebeamerfont{section title}\textcolor{white}{\scshape #2}\vfill
@@ -163,7 +193,7 @@
 \AtBeginSection[]
 {
   \begingroup
-  \setbeamercolor{background canvas}{bg=black!2}
+  \setbeamercolor{background canvas}{parent=palette primary}
   \begin{frame}[plain]
     \vspace{2em}\usebeamerfont{section title}
     \progressbar@sectionprogressbar%
@@ -201,16 +231,21 @@
 \setbeamertemplate{frametitle}{%
 \nointerlineskip
 \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.3cm,rightskip=0.3cm,ht=2.5ex,dp=1.5ex]{frametitle}
+\if@protectFrameTitle
+  \usebeamerfont{frametitle}\MakeLowercase{\protect\insertframetitle}%
+\else
   \usebeamerfont{frametitle}\MakeLowercase{\insertframetitle}%
+\fi
 \end{beamercolorbox}%
 \if@useTitleProgressBar
-  \vspace{-.5em}
+  \vspace{-.6em}
   \begin{beamercolorbox}[wd=\paperwidth,ht=1pt,dp=0pt]{frametitle}
     \progressbar@titleprogressbar
   \end{beamercolorbox}
 \fi
-\vspace{2em}
+\vspace{\@mtheme@voffset}
 }
+
 %}}}
 %{{{ --- pgfplots ---------------------
 
@@ -252,7 +287,7 @@
   {TolColor2, mark=*, mark size=1.5pt},
   {TolColor7, mark=square*, mark size=1.3pt},
   {TolColor4, mark=triangle*, mark size=1.5pt},
-  {TolColor7, mark=diamond*, mark size=1.5pt},
+  {TolColor6, mark=diamond*, mark size=1.5pt},
 }
 
 %}}}
@@ -328,15 +363,13 @@
 
 %}}}
 
-%}}}
+\mode<all>
 
-\mode
-<all>
-
-% {{{ misc
+%{{{ misc
 \let\otp\titlepage
 \renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
 \newcommand{\mreducelistspacing}{\vspace{-\topsep}}
 
 \linespread{1.15}
+
 %}}}
