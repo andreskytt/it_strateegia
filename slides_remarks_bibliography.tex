@@ -81,6 +81,11 @@
 \subsection{Printsiipidest}
 Arhitektuuriga süvitsi tegelemisel on hea mõte pidada printsiipide päevikut. Arhitektuuris on mõttemudelil oluline koht ja seega on mõistlik tegeleda oma isikliku mõttemudeli arendamise ning dokumenteerimisega. Printsiibipäevik on üks viis seda teha. Printsiip on miski, mis tundub kehtivat alati ning mis ei sõltu teistest. Teatavas mõttes on tegemist universaalse tõega. Üheks näiteks printsiipidest arvutivõrkude vallas on \cite{callon1996rfc}. Printsiibipäeviku mõte on selles, et iga kord, kui igapäevases töös tundub mõni printsiip silma jäävat, kirjutatakse see jalamaid üles. Perioodiliselt vaadatakse päevik üle lootuses destilleerida kirja pandust veel universaalsemaid ja üldisemaid põhimõtteid. Üks näide sellisest päevikust on \cite{archprinciples}. 
 
+\subsection{Emergentsusest}
+Ingliskeelsel terminil \emph{emergence} on eesti keeles vasteks emergentsus. Nii tähistatakse süsteemi omadust, mis seisneb millegi ilmnemises tänu mingitele muudele süsteemi omadustele. Arhitektuuri kontekstis on emergentsus süsteemide omadus lisaks disaini kaudu eesmärgiks seatud omadustele ka teiste omaduste ilmnemiseks. Tüüpiline emergentne omadus on võime inimesi tappa: suur hulk tehnoloogiaid alates tulest ja lõpetades tuumareaktsiooniga on mingil hetkel osutunud efektiivseks vaenlastest vabanemise vahendiks. Esimene nuga ei olnud mõledud mõrvaks kuid seda on nii aegade algusest kasutatud. Tüüpiliselt ei ole probleem mitte niivõrd süsteemi enda emergentsed omadused vaid emergents, mis sünnib eri objektide kombinatsioonist. Laua funktsioon on toetada asju. Joonlaua funktsioon on sirgeid jooni tõmmata. Kui aga asetada joonlaud poolenisti lauale, oleme saanud, sõltuvalt vaatepunktist, kas muusikariista või inimeste ärritamise vahendi. 
+
+Mitte kõik emergentsed omadused ei ole lihtsalt ebasoovitavad või ootamatud \cite{emergence} toob häid näiteid sellest, kuidas pilvelõhkujad oma arhitektuuriga lausa inimesi ohustada võivad.
+
 \section{Tarkvaratehnika}
 \subsection{Kood ei roosteta. Või siiski?}
 Joel Spolsky ütleb, et reeglina on väga halb mõte oma koodibaasi ümber kirjutada, sest kood ju "ei roosteta" \citep{joelrust}. Ta toob mitu näidet väga ebameeldivate tagajärgedega ümber-kirjutamis ettevõtmiste kohta ning, tõesti, neid on ka siinkirjutaja praktikas mitmeid ette tulnud. Põhjuseid on mitmeid, peamiseks ehk paratamatu teadmuskadu: iga tükki koodi on juba enne rakenduse valmimist kümneid kui mitte sadu kordi muudetud ja parandatud parandamaks vigu, ületamaks nõuete ebatäielikkust jne. Nii kaob igasugune võimalus hinnata, kas kood on selline, nagu ta on, põhjusega või põhjuseta. Rääkimata analüüsist, kas põhjus jätkuvalt kehtib. Miks siis tekib vahel siiski kohu asju ümber teha ning miks on Eestis kehtestatud \emph{no legacy policy}?
@@ -237,6 +242,10 @@ Eelnevalt loetletu kõrvale seab \cite{leveson2011engineering} oma nimekirja asj
 
 \subsection{Kaos ja ahvid}
 Üks suurimaid probleeme slaididel ja loengus kirjeldatud paradigmamuutusega toime tulekul on inimeste hoiakud. Kui ühe serveri puhul võis loota, et see niipea katki ei lähe ja kui läheb, siis on teine varuks, siis 1000 serveri puhul läheb iga päev mõni katki. Sama lugu on küberrünnetega. Inimeste mõttemudel muutub aga aeglaselt. Probleemi on huvitavalt lahendanud Netflix \citep{monkey}. Nende vahend lihtsalt käib ja lülitab servereid välja, kõik teavad seda. Ehk, iga teenus peab olema suuteline sellist käitumist taluma. Sisuliselt on Netflix teadmata parameetritega rikete mürafooni asendanud palju tugevama kuid tuntud parameetritega signaaliga.   
+
+\section{Infoturve}
+\subsection{Korea isikukoodi näide}
+2014. aastal tehti Lõuna-Koreas otsus vahetada välja isikukoodid\footnote{Lühike kokkuvõte ja edasisi viiteid saadaval siin \url{https://www.ria.ee/riigiarhitektuur/blog/2014/10/18/south-korea-about-to-overhaul-their-id-card/}}. Põhjuseks asjaolu, et sealne süstem oli üles ehitatud isikukoodi salajasusele. See viimane oli aga disainitud toetuma suhteliselt triviaalsetele turvameetmetele. Tulemuseks oli, et ühest küljest muutus isikukood ahvatlevaks ründeobjektiks ja teisalt olid rea intsidentide tulemusena kümne aasta jooksul sisuliselt kõigi kodanike isikukoodid lekkinud. Ja kuna identiteedivargus on üleüldine, tuleb isikukoodid välja vahetada.
 
 %\showslide
 %\showslide

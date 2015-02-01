@@ -17,11 +17,11 @@
   \frametitle{Täna kavas}
 		\includegraphics[width=\textwidth]{aine_struktuur_neljas.pdf}
 \end{frame}
+
 \section{Infoturve}
 \begin{frame}[fragile]
   \frametitle{Infoturve}
 	\begin{itemize}
-		\item Riskijuhtimise kordus: ei ole intsidente, on pidev voog ründeid
 		\item Kuna tarkvarakomponendid ei ole turvalised ja nende turvalisusest ka ei piisa, tuleb truvalisusele läheneda süsteemselt
 		\item Arhitektuuri roll infoturbes: safe by design. Korea isikukoodi näide
 		\item Must turg: küsimus on äris, kehtivad turu reeglid
@@ -30,6 +30,75 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Küberründe võrratus}
+	\begin{center}
+	  Rünne tasub end ära siis ja ainult siis, kui:\par
+		$S_p>P_f(S_a + P_c S_c)$
+	\vfill
+	\begin{description}
+		\item[$S_p$] Ründest oodatav kasu
+		\item[$P_f$] Ründe ebaõnnestumise tõenäosus
+		\item[$S_a$] Ründe läbi viimise kulu
+		\item[$P_c$] Vahele jäämise tõenäosus
+		\item[$S_c$] Vahele jäämise kulu
+	\end{description}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Muutujate seis}
+	\begin{itemize}
+		\item $S_p$ kasvab, kuna 
+			\begin{itemize}
+				\item Andmeid saab kasutada (ka) järgmise rünnakute jaoks (tagasiside) 
+				\item Interneti sõltuvus reklaamist ja seega privaatsest infost kasvab
+				\item Eksisteerib toimiv andmete ja ründeteenuste must turg
+			\end{itemize}
+		\item $P_f$ kahaneb, kuna süsteemid lähevad järjest keerulisemaks
+		\item $S_a$ on dramaatiliselt langenud, kuna 
+			\begin{itemize}
+				\item Ründed on paljus automatiseeritud
+				\item Eksisteerib toimiv üle võetud arvutite must turg
+				\item Toimib tagasiside: mida rohkem arvuteid üle võetakse, seda rohkem arvuteid suudetakse rünnata ja seega ka üle võtta
+			\end{itemize}
+		\item $P_c$ arenenud riikides kasvab, mujal stabiilne
+		\item $S_c$ arenenud riikides kasvab kiiresti (vt. megauploadi juhtum)
+	\end{itemize}
+	\note{Võrratuse parem pool kasvab, kuna ründed lähevad odavamaks ja efektiivsemaks palju kiiremini, kui kasvab vahele jäämise tõenäosus}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Võrratuse tulemus}
+	Üksikud intsidendid on asendunud pideva vooga
+	\begin{itemize}
+		\item Põhjuseks rünnete hinna langemini kiiremini, kui suudetakse tõsta vahele jäämise kulusid
+		\item CERT-EE hinnagul ei ole 2015 aasta alguseks enam märgata pause \emph{(spear) phishingu} kampaaniate vahel
+		\item Väga suurt rolli mängib automatiseerimine: kuigi automatiseeritud või \emph{drive-by} ründe $P_f$ on suhteliselt suur, on $S_a$ sisuliselt null
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Turvalisus ja arhitektuur}
+	\begin{center}
+		Ohutus (rurvalisus) ei ole mitte süsteemi funktsioon vaid selle emergentne käitumine
+		\note{Turvalisust ei saa funktsionaalsete nõuete kaudu väljendada. Saab nõuda teatud testide läbi viimist ja saab püstitada ohutusnõuded, kuid ohutust kui sellist ei saa ei nõuda ega testida.}
+	\end{center}
+	\cite{leveson2011engineering}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Turvalisus tuleb arhitektuurist}
+	Turvalisus peab olema sisse ehitatud süsteemi arhitektuuri
+	\begin{itemize}
+		\item Seda ei saa hiljem lisada ega "külge kruvida"
+		\item Kuna me ei suuda emergentsust kontrollida, on turvalisuse tagamine süsteemi elutsüklit läbiv protsess: Ohuanalüüsi tulemid on sisendiks disainiotsustele mis realiseerituna omakorda annavad sisendi uuele ohuanalüüsile
+		\item Olulisel kohal on süsteemi kontseptsioon: kas idee on toetuda ühe sõlme turvalisusele või on terve süsteem ehitatud vastupidavaks?
+		\note{Lõuna-Korea isikukoodi näide\par}
+	\end{itemize}
+\end{frame}
 
 %Arutelu koht
 \begin{frame}[fragile]
