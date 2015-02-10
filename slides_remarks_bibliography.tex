@@ -87,6 +87,28 @@ Ingliskeelsel terminil \emph{emergence} on eesti keeles vasteks emergentsus. Nii
 Mitte kõik emergentsed omadused ei ole lihtsalt ebasoovitavad või ootamatud \cite{emergence} toob häid näiteid sellest, kuidas pilvelõhkujad oma arhitektuuriga lausa inimesi ohustada võivad.
 
 \section{Tarkvaratehnika}
+\subsection{Kokkuhoiust programmeerijatelt}
+Joel ütleb õigesti, et programmeerijate arendamiselt kokku hoida ei ole mõistlik. Sama kehtib ka teiste valdkondade inimeste puhul, kuid programmerijate töö on teiste omast suhteliselt info- ja teadmismahukam.
+
+Valest kohast kokku hoitud raha (või värbamisel tehtud vead) võivad viia järgmise tagasisideni (vt. joonis \ref{fig:kokkuhoid}\footnote{Pluss-märk noolel ei tähenda mitte positiivset mõju vaid seda, et muutujad liiguvad samas suunas: ühe tõusule järgneb teise tõus ja langusele langus}):
+\begin{enumerate}
+	\item Koodi kvaliteet on madal
+	\item Mistõttu kulub suhteliselt rohkem raha vigadega tegelemiseks ja teenitakse vähem
+	\item Mis viib alla ettevõtte võimekuse inimestesse investeerida
+	\item Mispeale langeb inimeste kompetentsitase veelgi (tehnoloogia ju areneb)
+	\item Madalad kompetentsid viivad aga madalale koodi kvaliteedi
+\end{enumerate}
+
+Eesti IT-ettevõtted jagunevad ITLi andmetel suhteliselt radikaalselt kaheks: suured ning kasumlikud ning väikesed ja virelevad. Seda veelahet võib seletada läbi selle, kellel on õnnestunud tsükkel mis pidi tööle panna sest, muidugi, kehtib ka vastupidine. Kõrge koodi kvaliteet viib suuremate sissetulekuteni jne.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=.6\textwidth]{kvaliteet.png}
+		\caption{Kokkuhoiu tagajärjed}
+		\label{fig:kokkuhoid}
+	\end{center}
+\end{figure}
+
 \subsection{Kood ei roosteta. Või siiski?}
 Joel Spolsky ütleb, et reeglina on väga halb mõte oma koodibaasi ümber kirjutada, sest kood ju "ei roosteta" \citep{joelrust}. Ta toob mitu näidet väga ebameeldivate tagajärgedega ümber-kirjutamis ettevõtmiste kohta ning, tõesti, neid on ka siinkirjutaja praktikas mitmeid ette tulnud. Põhjuseid on mitmeid, peamiseks ehk paratamatu teadmuskadu: iga tükki koodi on juba enne rakenduse valmimist kümneid kui mitte sadu kordi muudetud ja parandatud parandamaks vigu, ületamaks nõuete ebatäielikkust jne. Nii kaob igasugune võimalus hinnata, kas kood on selline, nagu ta on, põhjusega või põhjuseta. Rääkimata analüüsist, kas põhjus jätkuvalt kehtib. Miks siis tekib vahel siiski kohu asju ümber teha ning miks on Eestis kehtestatud \emph{no legacy policy}?
 
