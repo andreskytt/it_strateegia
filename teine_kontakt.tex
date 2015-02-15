@@ -25,7 +25,7 @@
 	\begin{itemize}
 		\item On täiesti normaalne, et ITle kulutatav kõigub
 		\item On IT-juhi töö näidata, kuidas iga kulutatud euro aktsionäridele väärtust loob
-		\note{Mitte lihtsalt väärtust, vaid väärtust aktsionäridele\\}
+		\note{Mitte lihtsalt väärtust, vaid väärtust aktsionäridele. Kes on aktsionär ja kuidas ta oma tahet väljendab?\\}
 		\item IT-juhi töö on disainida ärimudelile vastav IT organisatsioon, mitte vastupidi
 	\end{itemize}
 \end{frame}
@@ -37,30 +37,32 @@
 			\begin{itemize}
 				\item Halduskulud on funktsioon eelmise perioodi halduskuludest ja \emph{eelmise perioodi arenduskuludest}
 				\item Tehniline võlg tuleb tellija juurest ja läheb tellija juurde saades vahepeal IT probleemiks
-				\item Kui $A_{vana}=0$, siis H kasvab isegi, kui $A_n=const$
+				\item Kui $a_{vana}\equiv0$, siis H kasvab isegi, kui $A_n=const$
 			\end{itemize}
 		\end{column}
 		\begin{column}[T]{3.5cm}
 			\begin{align}
 				K_n &= H_n+A_n \nonumber \\
-			    H_n &= H(H_{n-1}, A_{n-1}, I_n) \nonumber\\
-			    A_n &= A_{uus}(A_{n-1}, I_n) \nonumber \\
-			    &\quad {} + A_{vana}(A_{n-1}, I_n) \nonumber
+			    H_n &= h(K_{n-1}) \nonumber\\
+			    A_n &= a_{uus}(A_{n-1}) \nonumber \\
+			    &\quad {} + a_{vana}(A_{n-1}) \nonumber
 		    \end{align}
 		\end{column}
 	\end{columns}
 \end{frame}
-\note{Kuna IT väärtust tajutakse sageli just läbi uute arenduste järeldub siit, et kui vana ja uue arenduse suhe on vale, väheneb konstantsete investeeringute puhul IT võimekus uut tajutud väärtust tooota.}
+\note{K-kulud kokku, H-halduskulud, A-arenduskulud mingis aastas\\Kuna IT väärtust tajutakse sageli just läbi uute arenduste järeldub siit, et kui vana ja uue arenduse suhe on vale, väheneb konstantsete investeeringute puhul IT võimekus uut tajutud väärtust tooota.}
 
 \begin{frame}[fragile]
   \frametitle{Järeldused}
 	\begin{itemize}
 		\item On strateegiliselt oluline kliendile seletada tänaste otsuste mõju homsetele kuludele
-		\item Tarkvara kapitaliseerimise otsused on IT-juhile elutähtsad
-		\item IT-juhi jaoks on oluline olla kapitaliseerimisotsuste juures laua taga
+		\item Seega on tarkvara kapitaliseerimise otsused IT-juhile elutähtsad
+		\item Järelikult on IT-juhi jaoks oluline olla kapitaliseerimisotsuste juures laua taga
+		\item Tehniline võlg on oluline
+		\note{Sellega mõistega kohtume natuke hiljem täpsemalt\\}
 	\end{itemize}
-\end{frame}
 \note{Et olla kapitaliseerimisotsuste juures laua taga, peab IT-juht suutma seal tõsiseltvõetavalt kaasa rääkida}
+\end{frame}
 
 
 \begin{frame}[fragile]
@@ -83,13 +85,13 @@
 				\item Arhitekt peab ettevõtte ärimudelist väga hästi aru saama ja suutma tolle arusaamaga midagi ette võtta
 			\end{itemize}
 \end{frame}
-\note{Oluline rõhk võimekusel. Mäletate: arhitektuur määrab vektorid, mille sisustab disain. Kui aga parameetrid on paigast ära, ei tule kasumist midagi. Ehk. Vale arhitektuur tähendab, et äri ei saa olla kasumlik, õige arhitektuur ei tähenda, et äri on kasumlik.}
+\note{Oluline rõhk võimekusel. Mäletate: arhitektuur määrab vektorid, mille sisustab disain. Kui aga parameetrid on paigast ära, ei tule kasumist midagi. Ehk. Vale arhitektuur tähendab, et äri ei saa olla kasumlik, õige arhitektuur ei tähenda, et äri on kasumlik.\par Black \& Deckeri platvormi näide seitsmekümnendatest, Volkswagen vs. GM}
 
 %Arutelu koht
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kuidas seletada kliendile, et ta saab sama raha eest täna vähem, kui eile?}
+			\textbf{Kuidas seletada kliendile, \\et ta saab sama raha eest täna vähem, kui eile?}
 		\end{center}
 \end{frame}
 
@@ -109,17 +111,18 @@
   \frametitle{Definitsiooni järelmid}
 	\begin{itemize}
 		\item Mainitud seitset eri distsipliini, realisatsioon on vaid üks neist
-		\note{Siit peaks tulema vihje rõhuasetuste kohta: enamasti keskendutakse programmeerimisele\\}
+		\note{Siit peaks tulema vihje rõhuasetuste kohta: enamasti keskendutakse programmeerimisele, muud jäävad unarusse\par}
 		\item Ei ole viidet arendusprotsessile, kui sellisele
 			\begin{itemize}
 				\item Distsipliine saab kokku panna väga mitmel eri viisil, milline on parim?
+				\note{Distipliinide kokku panemise parim viis sõltub olukorrast. Retsepti ei ole\par}
 				\item Igapäevases elus saab arendusprotsess disproportsionaalselt palju tähelepanu
-				\note{Sest kvarteti liikmeid ümber paigutada on lihtne, mõistliku testimisraamistiku välja töötamine aga väga keeruline\\}
+				\note{Sest kvarteti liikmeid ümber paigutada on lihtne, mõistliku testimisraamistiku välja töötamine on aga väga keeruline\par}
 			\end{itemize}
 		\item Kenasti on kaetud tarkvara elutsükkel, ümbertöötamine (ingl. \emph{reengineering}) on samuti osa protsessist ja oluline kuluallikas
 	\end{itemize}
+\note{Programmeerijad on tarkvaratehnika kaaperdanud tõmmates tähelepanu endale ja jättes varju teised valdkonnad. Mis, muidugi, võtavad ära suurema osa ka programmeerija päevast kuid siiski kutsutakse neid 'programmeerijateks' ja mitte kuidagi teisiti}
 \end{frame}
-\note{Programmeerijad on tarkvaratehnika kaaperdanud tõmmates tähelepanu endale ja jättes varju teised valdkonnad. Mis, muidugi, võtavad ära suurema osa ka nende päevast kuid siiski kutsutakse neid 'programmeerijateks'}
 
 \begin{frame}[fragile]
   \frametitle{Tarkvaratehnika olulisus}
@@ -138,7 +141,7 @@
 	  \textbf{Otsusta üheselt, kas oled Amazon või Ben \& Jerry's}
   \end{center}
 \end{frame}
-\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam \par Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti}
+\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam \par Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti. \par Veelkord: kuidas te tarkvara ehitate, nagu ka kõik muu, mida te teete, peab toetama äristrateegiat}
 
 \begin{frame}[fragile]
   \frametitle{Tarkvaratehnika keerukus}
@@ -149,6 +152,7 @@
 		  	\item Nõuete kirjeldamine
 			\item Mingi protsessi kasutamine
 			\item Artefaktide tootmine
+			\note{Väga levinud lähenemine avalikus sektoris, bürokraadid armastavad kõikvõimalikke dokumente toota\par}
 			\item "Tagasi loodusse" protsesse eitavad lähenemised
 		  \end{itemize}
 	\item Keskendu olulisele ja ära lase endale mao-õli müüa
@@ -185,6 +189,7 @@
 		\item Kas uued tulijad kirjutavad intervjuu ajal koodi?
 		\item Kas sa teed kiireid kasutatavusteste?
 	\end{enumerate}
+	\note{Taktikalised, kuid illustreerivad strateegilisi probleeme \par Osa neist on tänapäeval elementaarsed, kuid mitte kõik. Jällegi illustreerib kenasti eri distsipliinide olulisust kuigi kaldub programmeerijate poole\par Olulised: ehitamine, vigade parandamine, rahu/vaikus.\par Parimad raha eest ostetavad tööriistad on tänapäeval asendunud parimate raha eest saadavate konverentside/raamatutega. Inimese arendamise osas ei ole mõistlik koonerdada (vt. märkmed)}
 \normalsize
 \end{frame}
 
@@ -199,7 +204,7 @@
 	\item Vaid ITl on võimekus hallata tehnilise võla portfelli
 	\item Tehnilise võla likvideerimisel on reeglina ärilised põhjused kuid võivad olla ka tehnilised
   \end{itemize}
-
+\note{Shipping is a feature. A really important feature. Your product must have it. Spolsky, duct tape programmer}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -208,6 +213,7 @@
 			\includegraphics[width=.65\textwidth]{fowler.pdf}
 	\end{center}
 	\cite{fowlerdebt}
+	\note{On oluline aru saada, millisesse kvadranti teie võlg läheb. \par "pole aega": kõrge intressiga kiire laen riskantseteks projektideks \par "millised kihid?": sms laen \par "Peame tarnima": arvelduskrediit \par "nüüd teame": eluasemelaen. Suhteliselt vältimatu, sellest tuleb viimast võtta}
 \end{frame}
 
 %Arutelu koht
@@ -274,12 +280,13 @@
 		\item Jällegi põhimõtteline, mitte konkreetse inimese probleem
 		\item Inimeste selline käitumine on oluline poliitikavastasuse allikas 
 		\item Enne, kui inimesi valitsema/kontrollima hakata, küsi: 
-		\note{Küsida tuleb nimeliselt!\par}
+		\note{Küsimusi inimeste kohta enne poliitika rakendamist tuleb küsida nimeliselt!\par}
 			\begin{itemize}
 				\item Kes läheb ära. Need inimesed sa kaotad ja \emph{selliseid enam palgata ning hoida ei õnnestu}
 				\item Kes saab edukaks. Neile uus poliitika sobib ja \emph{selliseid hakkab juurde tulema} kas värbamise või olemasolevate muutumise kaudu
-				\note{Ülejäänud on kahtlemata olulised, kuid mitte muutuse kontekstis}
+				\note{Ülejäänud seltskond on kahtlemata olulised, kuid mitte muutuse kontekstis}
 			\end{itemize}
+		\item \cite{spolsky2008more} annab hea ülevaate põhimõttelistest inimeste juhtimise viisidest
 	\end{itemize}
 \end{frame}
 
@@ -331,7 +338,7 @@
   \begin{center}
 	  Probleem: kuidas otsustada, mis järjekorras tellija soove täita
 \bigskip
-	\emph{  Ressursse on alati, definitsiooni järgi, vähem, kui vajadusi}
+	\emph{Võimekust vajadusi rahuldada on alati, definitsiooni järgi, vähem, kui vajadusi}
   \end{center}
 \end{frame}
 	  \note{Kuigi olemuselt taktikaline, on tegu tihti probleemse valdkonnaga. Sellest ka väike kõrvalepõige.}
