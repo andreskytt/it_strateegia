@@ -88,6 +88,7 @@ Mitte kõik emergentsed omadused ei ole lihtsalt ebasoovitavad või ootamatud \c
 
 \section{Äriplaan}
 \subsection{Arendus- ja halduskuludest}
+\label{sec:kulud}
 Laias laastus võib öelda, et kulud arendusele jagunevad kuludeks, mis tarnivad uut funktsionaalsust (ning mida tavaliselt tajutakse kui uut väärtust lisavatena) ning kuludeks, mis lähevad olemasoleva muutmiseks või parandamiseks. Neist esimesed lisavad selgesti halduskoormust ja halduskulusid luues uusi rakendusi, mida tuleb hallata, millede teenustase tuleb tagada. Teised aga võivad (aga ei pruugi) halduskulusid vähendada näiteks tehnilist tehnilist võlga likvideerides. Arenduskulusid võib vaadata ka keerukuse vaatepunktist: esimest liiki kulud suurendavad, teised võivad aga keerukust vähendada. Kokkuvõte kuludest ja nende mõjudest on toodud tabelis \ref{tab:arendus}.
 
 \begin{table}
@@ -129,6 +130,7 @@ Kasumi ja arhitektuuri seoseid illustreerivaid näiteid on nii kaugemast kui lä
 
 \section{Tarkvaratehnika}
 \subsection{Kokkuhoiust programmeerijatelt}
+\label{sec:kokkuhoid}
 Joel ütleb õigesti, et programmeerijate arendamiselt kokku hoida ei ole mõistlik. Sama kehtib ka teiste valdkondade inimeste puhul, kuid programmerijate töö on teiste omast suhteliselt info- ja teadmismahukam.
 
 Valest kohast kokku hoitud raha (või värbamisel tehtud vead) võivad viia järgmise tagasisideni (vt. joonis \ref{fig:kokkuhoid}\footnote{Pluss-märk noolel ei tähenda mitte positiivset mõju vaid seda, et muutujad liiguvad samas suunas: ühe tõusule järgneb teise tõus ja langusele langus}):
@@ -174,6 +176,10 @@ Lõpuks tuleb panna kõrvuti süsteemi ümber kirjutamise kulu (korrutades esiag
 
 \subsection{Tehniline võlg}
 On kriitiline, et tellija saaks aru oma tegevuse tagajärgedest. Mis, arvestades teo ja selle tagajärje ajalist vahet, on väga keeruline. Põhjus on selles, et tehnilise võla likvideerimine tuleb arenduse läbilaskevõime arvelt. Järelikult tähendab tehnilise võla kuhjumine, et arenduse läbilaskevõime ajas kahaneb. Kui tellija ei saa aru, et tema otsus tekitas tehnilise võla, on IT-juhil kaks põhimõttelist otsust. Ta kas keeldub tehnilist võlga tekitamast, näib paindumatu ja lastakse lahti või ta võtab tehnilise võla, asub seda IT võimekust vähendades likvideerima ning ta lastakse lahti. Ehk, häid valikuid ei ole. Järelikult ei ole IT juhil muud valikut peale tellija harimise.
+
+Tehnilise võla oluline aspekt on seotud süsteemi piiride küsimusega. Kuna tehniline võlg on seotud konkreetse süsteemiga kuid, definitsiooni järgi, on süsteemi piirid alati suvalised, võib rääkida tehnilise võla skoobist. On võimalik olukord, kus lokaalsete optimumide saavutamise läbi võetakse süsteemi kui terviku suhtes tehnilist võlga. Näiteks võib ehitada kõik süsteemid tähtajaks kuid mitte arvestades teiste süsteemi osade integratsioonivajadusi. Üksiku süsteemi vaatepunktist võlga ei ole. Süsteem kui tervik aga võib vajada olulist investeeringut oma komponentide suhtluse tagamiseks. 
+
+Tehnilise võla juhtimine on teatavas mõttes sarnane finantsvõla juhtimisega: rahavoogude nüüdisväärtuse abil on võimalik teha otsuseid. Tehnilisel võlal on siiski ka aspekte, mida lihtsasti finantsmudelisse valada ei õnnestu. Teatavast piirist alates hakkab tehniline võlg takistama värbamist ja inimeste hoidmist. Tegemist on raskestivarjatava stressifaktoriga ning üha vähem leidub inimesi, kes "selle supiga" on nõus tegelema. Nii võib alata lõigus \ref{sec:kokkuhoid} kirjeldatuga sarnane tagasiside, kus kompetentsete inimeste lahkumine viib võla suurenemiseni mis omakorda tõrjub kompetentseid inimesi. 
 
 \section{IT valitsemine}
 \subsection{Poliitikavastasus. Hundid ja jänesed}
@@ -225,6 +231,19 @@ Suurepärane näide organisatsiooni kiirendamisest on Singapur. Joonisel \ref{fi
 	\end{center}
 \end{figure}
 
+\subsubsection{Arenduse ootejärjekorra juhtimine}
+Infotehnoloogia on tavaliselt põimunud sügavale organisatsiooni protsessidesse. Samuti on IT peamine protsesside efektiivistamise vahend. Järelikult on igas organisatsioonis suur hulk erinevaid arendusvajadusi. Samas on ressursid alati piiratud\footnote{Rangelt võttes võib probleemiks olla ka võimekus ressursside omavaheline vahetus. Näiteks on suurettevõtetes või avalikus sektoris tihti piiratud täistööajaga töötajate hulk, samuti võib saadaolev finantseering olla seotud pirangutega (selle kulutamine teatud riigis või teatud tegevusteks)} ning seega ületab organisatsiooni arendusvajadus reeglina IT-organisatsiooni võimekust seda vajadust täita\footnote{Vt. ka lõik \ref{sec:kulud} organisatsiooni võimekuse arengu kohta}. Järelikult kerkib küsimus tööülesannete järjestamisest. Mis järjekorras töid ette võtta?
+
+Ootejärjekorral on järgnevad omadused:
+\begin{itemize}
+	\item Kuna töid tekib definitsiooni järgi kiiremini, kui neid täita suudetakse, siis järjekord kasvab. Kui vannist voolab vesi aeglasemalt, kui seda sinna lisandub, hakkab vee tase tõusma
+	\item Mida pikem on ootejärjekord, seda paindumatum on organisatsioon. Kui järjekorras on x aasta jagu projekte, siis jõuab järjekorra viimane tegemisse kõige kiiremini x aastaga
+	\item Kuna organisatsiooni äritulemuste saavutamine sõltub sageli ITst, eksisteerib ootejärjekorrale tugev poliitiline surve. Otsus mõnda projekti teha ja teist mitte võib omada mõne osalise jaoks omada isiklikku väljundit tulemustasu näol
+\end{itemize}
+
+Et ootejärjekord on pikk, tuleb ühel või teisel viisil sealt kas projekte välja jätta või vähendada organisatsiooni võimekust sinna asju lisada. Et otsused on seotud konfliktiga, minnakse sageli just ootejärjekorra barjääri tõstmise teed. Oma rolli mängib siin ka soov olemasolevat võimalikult efektiivselt kasutada suunates klienti võimalikult põhjalikku eeltööd tegema. IT kliendiks oleva keskastme juhi vaatenurgast vaadates tekib nii olukord, kus tema (organisatsiooni perspektiivist väheoluline, kuid tema jaoks kriitiline) arendusvajadus vajab ebaproportsionaalselt palju panust ning omab ikkagi väikest shanssi töösse minna. Eriti drastiline on probleem harukontorite puhul, millede probleemistikust ei pruugi lõpuni aru saada ka peakontori inimesed. Kui nüüd tollel juhil on initsiatiivi, juhtub tavaliselt üks kahest. Kui käepärast on krediitkaart, siis võidakse probleemi lahendamiseks hankida marginaalse hinna eest teenust mõnelt SaaS\footnote{\emph{Software as a Service} tarkvara kui teenus. Lahendus, kus tarkvara hallatakse keskselt ning lõppkasutaja maksab teenuse eest perioodiliselt proportsionaalselt teenuse kasutamisega} pakkujalt. Mispuhul tekib reeglina kohe riskijuhtimislik probleem sest kaob kontroll organisatsiooni andmete üle. Kui aga käepärast on IT-kompetentsi kas Exceli makrode või PHP tundja näol, luuakse tõenäoliselt kohalik infosüsteem. Sedalaadi infosüsteem ei vasta tavaliselt ühelegi keskse IT standardile, muutub ühel hetkel tellija jaoks kriitiliseks, kaotab oma ainsa arendaja (vahel kõike korraga) ning paneb keskse IT fakti ette: üle tuleb võtta dokumenteerimata, ebaturvaline ja profiilist välja jääv ärikriitiline tehniline lahendus. Tekitatud pusa ümber kirjutamiseks (kui isegi leidub keegi, kes suudaks sellise ülesande pädevalt püstitada) reeglina finantseeringut leida ei õnnestu. 
+
+Taoliste olukordade vältimiseks on kriitiline, et järjekorrast projektide välja jäätmine oleks põhjalikult dokumenteeritud kui "sellega-me-ei-tegele-siin-majas" otsus ning et eksisteeriks ülevaade barjääri taga toimuvast. Samuti võib soovitada eraldi protsessi väikesemahulisteks arendusteks, mille abil on võimalik väikesed kuid olulised asjad tehtud saada. Tavaliselt on abi ka heast suhtest klientorganisatsiooni kõigi osadega, siin on abiks tugev ning suhtlemisaldis valdkonnajuht.
 
 \section{Jätkusuutlik areng}
 \subsection{Konteksti kaardistamine}
