@@ -386,39 +386,223 @@
 \section{Kvaliteedi juhtimine}
 
 \begin{frame}[fragile]
-  \frametitle{Kvaliteedi juhtimine}
-	Miks tarkvaras on vead
+  \frametitle{Vigadest tarkvaras}
+	Tarkvara on alati natuke katki, miks?
 	\begin{itemize}
-		\item Vigade parandamise dünaamiline mudel, selle matemaatiline lahend
-		\item Mudeli järelmid: alati on veel vigu, testima tuleb hakata vara
-		\item Otsustuskriteeriumid lõpetamiseks: eraldame ratsionaalse ja irratsionaalse. Ratsionnalselt (graafik): kui oleme jõudnud allapoole spetsifikatsiooni veamarginaali
+		\item Kui tehakse ühik tööd, võib see olla tehtud kas õigesti või valesti vajades ümber tegemist
+		\item Valesti tehtud tööd ei avastata kohe, avastamiseks kuluv aeg sõltub vigade hulgast
+		\item Vea parandamine on samuti ühik tööd, ka seda võib teha kas õigesti või valesti
 	\end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Kui palju on tarkvaras vigu?}
+	\vfill
+	\begin{center}
+		Kuidas kirjeldatud mudel käitub? 
+		\note{Nelja muutujaga diferentsiaalvõrrandisüsteem. Laske käia!}
+	\end{center}
+	\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Projekti mudel}
+  	\begin{center}
+			\includegraphics[width=.9\textwidth]{vead_mudel.png}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Mudeli simuleerimise tulemus}
+  	\begin{center}
+			\includegraphics[width=.9\textwidth]{vead.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Vaatame lähemalt}
+  	\begin{center}
+			\includegraphics[width=.9\textwidth]{vead_zoom.pdf}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Järeldused}
+	\begin{itemize}
+		\item Erinevus naiivsest mudelist on ligi kaks korda!
+		\item Graafiku kuju on ka lihtsa mudeli puhul mittetriviaalne ning intuitiivselt raskesti hinnatav
+		\item Lõpuks hakkab graafik kahanema eksponentsiaalselt
+		\note{Eksponent aga ei jõua kunagi nulli}
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Oluline järeldus:}
+	\vfill
+	\begin{center}
+		Tarkvaras on alati vead  
+	\end{center}
+	\vfill
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Strateegilised implikatsioonid}
+	\begin{itemize}
+		\item On oluline määratleda, millal lõpetada testimine
+		\note{Sest puhta rakenduseni ei jõuta eales\par}
+		\begin{itemize}
+			\item Järelikult peab eksisteerima toimiv veahaldus koos hooldus- ja hindamisprotsessiga
+			\item Peab arvesse võtma spetsifikatsiooni täpsust: ei ole mõtet testida detaile, mida spetsifikatsioonis ei ole
+		\end{itemize}
+		\item Testimine peab algama võimalikult vara
+		\note{Kui testimist alustada hiljem, jääme liiga kauaks naiivset mudelit uskuma\par}
+		\item Testimisprotsess kui selline on väga oluline
+		\note{Testimisprotsessi ülesehitusest sõltub graafiku kuju\par}
+	\end{itemize}
+	
+\end{frame}
+
 
 %Arutelu koht
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{4. küsimus}
+			\textbf{Kuidas aru saada, et tarkvara on valmis?}
 		\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Kvaliteedi juhtimine}
-	Jaapanlaste lähenemine
+	\frametitle{Kuidas suhtuda vigadesse}
+	\vfill
+	\begin{center}
+	\begin{quote}
+		High velocity organizations are constantly experimenting and learning more about all the work they do;\dots; These organisations do not encourage or admire workarounds, firefighting and heroic measures. They want to understand and solve problems, not put up with them.
+		\note{"Tahetakse parimat, välja kukub nagu alati" suhtumine on suurepärane näide sellise suhtumise vastandist}
+		\end{quote}
+	\end{center}
+	\cite{spear2010high}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Lean \& QA}
+	Moodsa kvaliteedijuhtimise juured on Toyotas\footnote{Täpsemalt, \emph{Toyota Production System, TPS}}, kus kasutatavat lähenemist tootmisele alates 90ndatest tuntakse ka kui \emph{"lean manufacturing"}  
+
 	\begin{itemize}
-		\item Seos lean liikumisega
-		\item Kaizeni olemus
-		\item Teede parandamise näide
-		\item Selle järeldused tarkvaratehnika ja QA jaoks
+		\item \emph{Lean} tootmise üheks aluseks on jäätmete ja raiskamise vältimine
+		\note{Kõik jäätmete tüübid on tihedalt seotud ja põhjustavad üksteist\par}
+		\begin{description}
+			\item[Muda] Töö, mis ei lisa väärtust
+			\note{Muda. Valesti tehtud töö ei lisa väärtust, samuti üleliigsed liigutused või sisutute paberite tootmine. Aga ka ootamine. Kokku seitse klassikalist muda\par}
+			\item[Muri] Ebamõistlik töö
+			\note{Muri. Kui töötaja (või masin) surutakse oma võimete piirist välja, ei saa head tulemust tulla ning toimub raiskamine\par}
+			\item[Mura] Ebamõistlik töövoog
+			\note{Mura. Kui üksikud sammud kokku ei sobi, toimub raiskamine}
+		\end{description}
+		\item Kuna raiskamine on tihti seotud ebakvaliteetse tootega, on \emph{lean} kvaliteedijuhtimisega tihedalt seotud
+		\item Efektiivselt toimiv tootmisprotsess annab kvaliteetset tulemust
+		\item Ka agiilsete meetodite juured on autotööstuses, väga paljus jagatakse mõtteviisi
 	\end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Oluline järeldus:}
+	\vfill
+	\begin{center}
+		Moodsa kvaliteedijuhtimise juured on efektiivsemas tootmises,\\ mitte lõppkasutaja rahulolus
+		\note{ITs keskendub QA tihti vaid lõppkasutajale ning ei saa seega olla edukas. CI peaks olema QA, mitte programmeerijate ajada\par Seega seob moodne kvaliteedijuhtimine põhjuse otseselt tagajärjega: kui sant lõpptulemus võib, kuid ei pruugi, viia väiksema müügini (NSVL! Ja müük!=kasum!) siis raiskamine tootmises viib kindlasti väiksema kasumini}
+	\end{center}
+	\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Definitsioon: kaizen}
+	\vfill
+	\begin{center}
+	\begin{quote}
+		\dots kaizen (improvement), a process of engaging those closest to the direct work of the organization in the continual improvement of that work.
+	\end{quote}
+	\end{center}
+	\cite{spear2010high}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Kaizenist}
+	Kaizen on üks mitmest viisist kvaliteedist mõelda. Selle definitsioonil on järgmised olulised osad:
+	\note{Mitte, et ma oleksin mõnda teist kasutuses näinud. Aga kindlasti on näiteks brittidel oma viis asjadest mõelda.\par Me ei jõua väga sügavale detaili minna, see asi on palju keerulisem, kui paistab ja siin rääkida jõuab.}
+
+	\begin{itemize}
+		\item Kvaliteet tuleneb tööd otseselt tegevast inimesest
+		\note{Kui programmeerija ei hooli oma töö tulemusest (või ei suuda seda tagada), ei saa süsteem olla kvaliteetne\par}
+		\item Kvaliteedi juhtimine on süstemaatiline protsess
+		\note{Kvaliteedi juhtimine ei seisne üle aia visatud koodi valideerimises kellegi arvamuse vastu süsteemi käitumisest}
+		\item Kvaliteedi juhtimine on pidev protsess
+		\note{Kuna koodis on definitsiooni järgi alati vead, ei lõpe kvaliteedi taga ajamine kunagi}		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Teede parandamisest}
+    	\begin{columns}[t]
+		\begin{column}[T]{4.5cm}
+			\textbf{Tavapärane}
+			\begin{itemize}
+				\item Tees on auk 
+				\item Auk parandatakse
+				\item Auk tekib uuesti
+				\item Auk parandatakse
+				\item Auk tekib uuesti
+				\item Auk parandatakse
+				\item Auk tekib uuesti
+				\item Auk parandatakse
+				\item jne.
+			\end{itemize}
+		\end{column}
+		\begin{column}[T]{6cm}
+			\textbf{TPS}
+			\begin{itemize}
+				\item Tees on auk 
+				\item Auk parandatakse
+				\item Auk tekib uuesti
+				\item Küsitakse "miks?"
+				\item Leitakse vastus, auk parandatakse
+				\item Auk tekib uuesti
+				\item Küsitakse "miks?"
+				\item Leitakse vastus, auk parandatakse
+				\item Tee on korras
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\note{Pange tähele seost jätkusuutlikkusega. Esimene viis on jätkusuutlik vaid lühikest aega (varem või hiljem on tees liiga palju auke, et neid parandada jõuaks), teine on jätkusuutlik, kuid ressursimahukam. Kui pikk on teie leping partneriga?}
+  
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Järelmid IT QA-le}
+	Kõigel sellel on järgmised järelmid IT QA kontekstis
+	\begin{itemize}
+		\item Kvaliteedi juhtimine peab olema ennekõike tarkvara tootja huvi
+		\item Tarkvaratehnika peab olema pidevas arengus
+		\note{Kui tarkvaratehnika ei muutu, ei saa õppimisprotsessi toimuda\par}
+		\item Teadmusjuhtimisel on QAs oluline roll
+		\note{Ilma teadmusjuhtimiseta ei saa toimuda õppimist, eriti õppimist teiste vigadest. Mida me oleme varem teinud olukorras, kus auk samasse kohta tagasi tuleb?}
+		\item QA tiim peab olema programmeerijatele võrdväärne partner
+		\note{Kui QA on lihtsalt seltskond, kes (paremal juhul) automaatteste kirjutab, ei suuda nad öelda, mida tarkvara tootmise protsessis teisiti teha. Ja kui ka oskaksid, ei võetaks neid tõsiselt\par}
+		\item QA ei saa olla isoleeritud tegevus projekti lõppfaasis
+		\note{Pidevast testimisest räägib ka meie eelnevalt kirjeldatud mudel\par}
+	\end{itemize}
+\end{frame}
+
 
 %Arutelu koht
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{5. küsimus}
+			\textbf{Milline tarkvara on kvaliteetne?}
 		\end{center}
 \end{frame}
 
@@ -427,13 +611,59 @@
 \begin{frame}[fragile]
   \frametitle{Teenustaseme juhtimine}
 	\begin{itemize}
-		\item Teenustaseme juhtimise aluseks on teenuse mõiste olemasolu (alignment kõigis kihtides)
 		\item Arutelu teenustasemete üle riskijuhtimist kaasamata on lihtsalt grupp jonnivaid inimesi
 		\item Teenustase tuleb määratleda läbi riskide
 		\item Järelikult tuleb mõõta teenust, mitte masinaid. Masinad, nagu rääkisime, lähevad ennustataval viisil katki
 		\item Keerulist süsteemi modelleerima hakka ainult siis, kui sul on palju aega ja raha ning tõsine vajadus. Sest ta on keeruline. Ja, nagu rääkisime, teenustaseme kao põhjus võib olla mõõtmisvea lähedal ja seega raskesti mürast eristatav
 	\end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Teenustaseme juhtimine}
+	Teenustaseme juhtimise aluseks on 
+	\note{Ilma nendeta ei ole mõtet rääkida teenuse juhtimisest. Kui kasvõi üks osis on puudu, teenust juhtida ei saa\par}
+		\begin{itemize}
+			\item Teenuse mõiste olemasolu organisatsiooni kõigis kihtides. Ehk, igal "teenusel" peab eksisteerima selgelt piiritletud
+			\begin{itemize}
+				\item tehniline komponent
+				\item funktsioon
+				\item organisatsiooniline vastutaja nii IT- kui tellija poolel
+				\item äristrateegia- ja mõõdikud
+			\end{itemize}		
+			\item Reaalne motivatsioon teatava taseme kehtestamiseks
+			\note{"Me hoolime sellest, kuidas meie kliendi kassil läheb" ei ole reaalne motivatsioon\par}
+			\item Mehhanismi olemasolu käitumise korrigeerimiseks teenustaseme mittesaavutamisel
+			\note{Taset ei ole mõtet mõõta, kui sellest miskit ei sõltu\par}
+		\end{itemize}		
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Miks teenustaset juhtida?}
+	\begin{center}
+		Teenustaseme juhtimise aluseks on selgelt piiritletud vajadus vältida teenuse taseme langemist alla teatud piiri
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Miks teenustaset juhtida?}
+	
+	\note{Ilma nendeta ei ole mõtet rääkida teenuse juhtimisest. Kui kasvõi üks osis on puudu, teenust juhtida ei saa\par}
+		\begin{itemize}
+			\item Teenuse mõiste olemasolu organisatsiooni kõigis kihtides. Ehk, igal "teenusel" peab eksisteerima selgelt piiritletud
+			\begin{itemize}
+				\item tehniline komponent
+				\item funktsioon
+				\item organisatsiooniline vastutaja nii IT- kui tellija poolel
+				\item äristrateegia- ja mõõdikud
+			\end{itemize}		
+			\item Reaalne motivatsioon teatava taseme kehtestamiseks
+			\note{"Me hoolime sellest, kuidas meie kliendi kassil läheb" ei ole reaalne motivatsioon\par}
+			\item Mehhanismi olemasolu käitumise korrigeerimiseks teenustaseme mittesaavutamisel
+			\note{Taset ei ole mõtet mõõta, kui sellest miskit ei sõltu\par}
+		\end{itemize}		
+\end{frame}
+
 
 
 %Arutelu koht
