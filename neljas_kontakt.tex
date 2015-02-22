@@ -608,15 +608,6 @@
 
 
 \section{Teenustaseme juhtimine}
-\begin{frame}[fragile]
-  \frametitle{Teenustaseme juhtimine}
-	\begin{itemize}
-		\item Arutelu teenustasemete üle riskijuhtimist kaasamata on lihtsalt grupp jonnivaid inimesi
-		\item Teenustase tuleb määratleda läbi riskide
-		\item Järelikult tuleb mõõta teenust, mitte masinaid. Masinad, nagu rääkisime, lähevad ennustataval viisil katki
-		\item Keerulist süsteemi modelleerima hakka ainult siis, kui sul on palju aega ja raha ning tõsine vajadus. Sest ta on keeruline. Ja, nagu rääkisime, teenustaseme kao põhjus võib olla mõõtmisvea lähedal ja seega raskesti mürast eristatav
-	\end{itemize}
-\end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Teenustaseme juhtimine}
@@ -647,30 +638,69 @@
 
 \begin{frame}[fragile]
   \frametitle{Miks teenustaset juhtida?}
-	
-	\note{Ilma nendeta ei ole mõtet rääkida teenuse juhtimisest. Kui kasvõi üks osis on puudu, teenust juhtida ei saa\par}
+  	Teenustaseme langus alla teatud piiri ja sellest sündiv kahju on riski realiseerumise definitsioon
 		\begin{itemize}
-			\item Teenuse mõiste olemasolu organisatsiooni kõigis kihtides. Ehk, igal "teenusel" peab eksisteerima selgelt piiritletud
+			\item Järelikult tuleb teenustaseme juhtimisest rääkida riskide kontekstis
+			\item Vastasel juhul on tegu lihtsalt grupi jonnivate inimestega
+			\note{Riskijuhtimine annab neile küsimustele ratsionaalse, mõõdetava ja rahasse valatava vastuse. Ilma riskijuhtimise mõtteviisita on sõna sõna vastu\par}
 			\begin{itemize}
-				\item tehniline komponent
-				\item funktsioon
-				\item organisatsiooniline vastutaja nii IT- kui tellija poolel
-				\item äristrateegia- ja mõõdikud
-			\end{itemize}		
-			\item Reaalne motivatsioon teatava taseme kehtestamiseks
-			\note{"Me hoolime sellest, kuidas meie kliendi kassil läheb" ei ole reaalne motivatsioon\par}
-			\item Mehhanismi olemasolu käitumise korrigeerimiseks teenustaseme mittesaavutamisel
-			\note{Taset ei ole mõtet mõõta, kui sellest miskit ei sõltu\par}
+				\item Kui palju on väärt teenustaseme tõstmine X ühiku võrra?
+				\item Milline on mõistlik teenustase?
+				\item Mida tähendab "teenus ei ole kättesaadav"?
+			\end{itemize}
+			\item Riskijuthimine annab kvaliteeditaseme juhtimise strateegilise mõõtme 
 		\end{itemize}		
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Teenuse mõõtmisest}
+  	Mõõta ja hinnata tuleb teenust, mitte selle komponente
+		\begin{itemize}
+			\item Keerukate süsteemide puhul ei ole põhjus-tagajärg seos selge
+			\note{Vähegi mittetriviaalse süsteemi puhul tekib lihtsasti olukord, kus kõik masinad on rohelised aga teenus on punane\par}
+			\item Tõrke ajend võib olla mõõtmisvea piires
+			\note{Tuletage meelde keerukuse definitsiooni: kuitahes väike muutus sisendis võib anda kuitahes suure muutuse väljundis\par}
+			\item Mitte kõik süsteemi komponendid ei ole teie kontrolli all
+			\note{Tuletage meelde juttu süsteemi piiridest. Tüüpiliseks näiteks on siin internetiühendus või näiteks Google. Kas teie teenus on kättesaadav, kui suurim ISP ei suuda nime lahendada ja teie domeen on Google blacklistis?\par}
+			\item Masinate mõõtmine on ka suhteliselt mõttetu: riistvara vead on suhteliselt teadaoleva jaotusega sündmused
+			\item Eriti oluline mitte-boolean parameetrite korral
+			\note{Veebilehe vasteaeg ei võrdu HTMLi serverist väljastamise ajaga. Tänapäeval väga keeruline teema (CDNid, eri DNSi pakkujad, pilvetehnoloogiad jne.). Ärge investeerige ilma selge vajaduseta, see teenus on võimalik sisse osta.\par}
+			\item Strateegiliselt on oluline vaadata teenuse kvaliteeti kui tervikut eristamata tehnilist komponenti
+			\note{Ehk, teie süsadmine peaks mõõtma NPSi abil.}
+		\end{itemize}		
+\end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Modelleerimisest}
+	On oluline panna vastu kiusatusele modelleerida süsteemi tõrkeid leidmaks seost serveri ja teenuse tõrke vahel
+	\note{Strateegiliselt väga riskantne samm. Räägin, sest olen seda kiusatust palju näinud ka mõistlike inimeste puhul}
+		\begin{itemize}
+			\item On kiusatus siduda organisatsiooni eri taseme mudelid
+			\note{Kui kõik neli on olemas, saame riistvaravea viia läbi konfiguratsioonihalduse arhitektuurimudelini, kust paistab välja mõjutatud teenus\par}
+			\begin{itemize}
+				\item Monitooringu mudel
+				\item Konfiguratsioonihalduse mudel
+				\item Tarkvara arhitektuuri mudel
+				\item Teenuste mudel
+			\end{itemize}
+			\item Ärge seda palun ilma mõjuva põhjuseta tehke:
+			\note{Mudelite sidumist võib kaaluda, kui eesmärk on selge ning nõutav panus on miskipärast (kõik neli mudelit on ühe tootja tarkvaras) väike\par}
+			\begin{itemize}
+				\item Põhjus-tagajärg seostest juba rääkisime
+				\item Nagu ka kõik-on-kogu-aeg-nii-kui-nii-katki reaalsusest
+				\item Nii muutuvad kõik neli mudelit eesmärgiks ja mitte vahendiks
+				\note{Saba hakkab liputama koera\par}
+				\item Organisatsiooni lisandub väga palju kaheldava väärtusega keerukust
+			\end{itemize}
+			
+		\end{itemize}		
+\end{frame}
 
 %Arutelu koht
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{6. küsimus}
+			\textbf{Mis on teenus?}
 		\end{center}
 \end{frame}
 
