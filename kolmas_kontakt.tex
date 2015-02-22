@@ -7,8 +7,8 @@
   \frametitle{Eelmine kord}
   Peamine fookus IT valitsemisel
 	\begin{itemize}
-		\item IT valitsemine on naljakas pool-akadeemiline distsipliin. Keeruline kunst.
-		\item Äriplaan mõjutab oluliselt arhitektuurseid ja tarkvaratehnilisi otsuseid
+		\item IT valitsemine kui raskesti määratletav pool-akadeemiline distsipliin
+		\item Tõdemus, et äriplaan mõjutab oluliselt arhitektuurseid ja tarkvaratehnilisi otsuseid ning vastupidi
 		\item Tehniline võlg võib juhtimatuna kergesti tagumikust hammustada
 	\end{itemize}
 \end{frame}
@@ -26,15 +26,20 @@
 	\end{center}
 	XKCD 1007
 \end{frame}
-\note{Jätkusuutlikkuse ümber on väga palju haipi ja vähe fakte. Katsuge näiteks arendada USA ajakirjanduses intelligentset vestlust kliimamuutuse ja selle põhjuste üle: saate sauna mõlemalt poolt. Katsun täna keskenduda jätkusuutlikkuse mõistele ning selle mõjule}
+\note{Jätkusuutlikkuse ümber on väga palju haipi ja vähe fakte. Katsuge näiteks arendada USA ajakirjanduses intelligentset vestlust kliimamuutuse ja selle põhjuste üle: saate sauna mõlemalt poolt. \par Tuleb eristada vaidlust selle üle, kas ja miks praegune tegevus on jätkusuutlik arutelust jätkusuutlikkuse mõiste üle. Katsun täna keskenduda viimasele}
 
 \begin{frame}[fragile]
   \frametitle{Jätkusuutlikkuse definitsioon}
 	\begin{itemize}
 		\item EKSS: arengu kohta, mis tagab inimeste elukvaliteedi paranemise kooskõlas keskkonna taluvusvõimega
+		\note{EKSS: Eesti Keele Seletav Sõnaraamat. Aga miks ainult inimeste elukvaliteedi paranemine? Ja miks see peab paranema kogu aeg?\par}
 		\item Wikipedia: \emph{sustainability is the endurance of systems and processes}
-		\item Kas maasse augu kaevamine on jätkusuutlik tegevus?
-		\item Kas 80-tunnine süsadmini töönädal on jätkusuutlik?
+		\note{Wikipedia oma on juba palju parem. Kuigi ikkagi on küsimus, mis on edurance? Universum ei ole ju ka igavene?\par}
+		\item Selles kontekstis küsigem:
+		\begin{itemize}
+			\item Kas maasse augu kaevamine on jätkusuutlik tegevus?
+			\item Kas 80-tunnine süsadmini töönädal on jätkusuutlik?
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -47,27 +52,27 @@
   \end{center}
 
 	\begin{itemize}
-		\item Laialt levinud definitsioonid on liiga kitsad ning ei ole otse ITle rakendatavad
-		\note{Välja arvatud serveriruumide disain}
+		\item Teised definitsioonid on liiga kitsad ning ei rakendu otse ITle
+		\note{Definitsioonid: välja arvatud serveriruumide disain, seal saab toetuda sustainable energy mõistele\par}
 		\item Mõistes on peidus 
 		\begin{itemize}
-			\item ajahorisont: ka universum ei ole igavene
+			\item ajahorisont: miski ei ole päris igavene
 			\note{Keskpikas perspektiivis oleme me kõik surnud\par}
-			\item ressursi mõiste: tegevuse lõppemise põhjus on ressursi lõppemine
+			\item ressursi mõiste: mittejätkamine tuleneb ressursi lõppemisest
 		\end{itemize}
 		
-		
-		\item Meie definitsiooni juured on agiilses tarkvaras \citep{sustainable}
+		\item Meie definitsiooni juured on agiilses tarkvaras \citep{sustainable}, kus räägitakse jätkusuutlikust tempost
+		\note{Jätkusuutlik on tempo, mida suudetakse kogu ettenähtava aja jooksul hoida\par}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Jätkusuutlikkus kui piirang}
  Vajadust jätkusuutlikkuse järele võib vaadelda kui kõrgemalt strateegia tasemelt seatud piirangut
-
+\note{Sisuliselt: organisatsioon peab toimima viisil, mis ei kuluta mingit ressurssi mingi aja jooksul lõpuni\par}
 	\begin{itemize}
-		\item Seatakse ka muid piiranguid, neid ei tohi jätkusuutlikkusega segi ajada
-		\note{Omanike otsus panna kinni tuumajaamad ja keskenduda hüdroenergiale on samaväärne otsusega mitte maksta altkäemaksu\par}
+		\item Seatakse ka muid piiranguid, mitte ainult jätkusuutlikkuse kohta
+		\note{Omanike otsus panna kinni tuumajaamad ja keskenduda hüdroenergiale on samaväärne otsusega maksta üle keskmise palka\par}
 		\item Piirangud võivad tulla ka mujalt
 			\begin{itemize}
 				\item Riigilt
@@ -75,14 +80,14 @@
 				\item Kohalikult omavalitsuselt
 				\item Maaomanikult
 			\end{itemize}
-		\item Selles kontekstis on jätkusuutlikkus nagu iga teine organisatsioonile või selle osale seatud piirang
-		\note{Kui see on väline, minnakse sellest mööda kui mööda minemise kulu on väiksem, kui reeglite järgimise kulu}
+		\item Igast välisest piirangust minnakse mööda, kui selle kulud on väiksemad, kui reeglite järgimise kulu
+		\note{Reeglitest mööda minemise kulus sisaldub ka vahele jäämise kulu x vahele jäämise tõenäosus. \par NB! Ka kulu mõistes on sees ajahorisont, NPVd arvutatakse ju ajaperioodi ja intressimäära kaudu}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Jätkusuutlikkuse ajahorisont}		
-  		Jätkusuutlikkuse põhiline parameeter on ajahorisont, igal organisatsioonil on oma. Startup näeb järgmise raharingini, ülikool sajandite taha.
+  		Jätkusuutlikkuse põhiline parameeter on ajahorisont, igal organisatsioonil on oma. Startup näeb järgmise raharingini, ülikool ideaalis sajandite taha.
 	  \begin{itemize}
 		\item Organisatsiooni ajahorisonti mõjutavad oluliselt
 			\begin{itemize}
@@ -93,10 +98,10 @@
 				\item Keskkond
 				\note{Kiiresti muutuvas keskkonnas ei ole võimalik ega mõistlik pikki sihte seada\par}
 				\item Organisatsiooni strateegia
-				\note{Mõnevõrra juba tulem omanike sisendist, kuid vahel mitte. On raske rääkida rohelisest ITst, kui ettevõtte strateegiaks on leida kõige odavamalt kinni makstavad ametnikud ja nende jurisdiktsioonist kuni vahele jäämiseni väärispuitu välja vedada}
+				\note{Strateegia on mõnevõrra juba tulem omanike sisendist, kuid alati ei tule omanikelt konkreetset suunda ja otsuse teeb juhtkond\par}
 			\end{itemize}		
-		\item Iga juhtimistasand seab oma strateegia eelmiselt saadud piirangute alusel lisades omapoolse perspektiivi
-		\note{Muude piirangute puudumisel jahutategi te oma serveriruumi hülgepoegadega, kui see juhtub kõige efektiivsem võimalus olema. Samas võib teie ajahorisont piirduda planeeritud tööajaga samas kui organisatsioon vaatab kaugemale\par} 
+		\item Iga juhtimistasand koostab oma strateegia eelmiselt tasandilt saadud piirangute alusel lisades omapoolse perspektiivi
+		\note{Muude piirangute puudumisel jahutategi te oma serveriruumi hülgepoegadega, kui see juhtub kõige efektiivsem võimalus olema. Teie ajahorisont võib aga piirduda kavandatud organisatsioonis töötamise aaga,  kuigi organisatsioon vaatab kaugemale\par} 
 	\end{itemize}
 \end{frame}
 
@@ -105,7 +110,7 @@
   \frametitle{Arutelu koht}
 		\begin{center}
 			\textbf{Miks on madal PUE oluline?}
-			\note{Power Usage effectivenes}
+			\note{Power Usage Effectivenes}
 		\end{center}
 \end{frame}
 
@@ -114,19 +119,20 @@
 	Mis on see, mis võib otsa saada?
 
 	\begin{itemize}
-		\item Materiaalsed ressursid: nafta, gaas, puhas vesi aga ka inimesed
+		\item Materiaalsed ressursid: nafta, gaas, puhas vesi. Aga ka inimesed
 		\item Immateriaalsed ressursid
 			\begin{itemize}
 				\item Inimesed
-				\note{Admini võimekus teha tööd, nende heasoovlikkus\par}
+				\note{Inimesed: Admini võimekus teha tööd, nende heasoovlikkus\par}
 				\item Partnerid
 				\note{Parnerite vastutulelikkus, läbirääkimissoov\par}
 				\item Regulaatorid
-				\note{Politseiniku soov hoiatusega piirduda\par}
+				\note{Regulaatorid: Politseiniku soov hoiatusega piirduda\par}
 				\item Ülemised juhtimistasandid
-				\note{Väga oluline! Tippjuhtkond on suuteline oma soovide ignoreerimist taluma vaid piiratud hulga aega!\par}
+				\note{Ülemised tasandid: Väga oluline! Tippjuhtkond on suuteline oma soovide ignoreerimist taluma vaid piiratud hulga aega!\par}
 			\end{itemize}		
 		\item Oluline küsimus: \emph{360 kraadi põhimõttel ringi vaadates, milliseid ressursse sa kelleltki saad ning mida sa neile vastu annad?}
+		\note{Vt. märkused, seal on üks meetod ära toodud selle kohta\par}
 	\end{itemize}
 \end{frame}
 
@@ -140,11 +146,11 @@
 		\item Probleem on ülereageerimine
 			\begin{itemize}
 				\item Me ei pruugi teada, millal ressurss otsa saab
-				\note{Seega ei saa ka planeerida. Kui kaua suudab admin 80-tunniseid nädalaid teha?\par}
+				\note{Kui me ei tea, millel miski otsa saab, ei saa ka planeerida. Kui kaua suudab admin 80-tunniseid nädalaid teha?\par}
 				\item Me võime jätkata kulutamist ka siis, kui see tegelikult on juba otsas
-				\note{Admin jätkab tööd ka pärast võimete piiri ületamist\par}
+				\note{Me ei pruugi lõppmiset kohe aru saada: Admin jätkab tööd ka pärast võimete piiri ületamist\par}
 				\item Igal süsteemil on inerts, ta ei jõua hetkega reageerida
-				\note{Kui admin väsib, ei ole uut kohe kuskilt võtta\par}
+				\note{Inerts: Kui admin väsib, ei ole uut kohe kuskilt võtta\par}
 			\end{itemize}		
 		\item Järgneb kas mõõdukas või täielik kollaps
 		\note{Sõltub kasvu kiirusest ja ressursi ning kasvu reageerimisaegadest}
@@ -159,7 +165,7 @@
 	\end{center}
 	\cite{sterman2000business}
 \end{frame}
-\note{Teised kaks stsenaariumi on S-kujuline tõus (kõige lihtsam juhtum) ning täielik kollaps}
+\note{Kokku kolm põhimõttelist võimalust, sõltub süsteemi struktuurist ja parameetritest. Teised kaks on S-kujuline tõus (kõige lihtsam juhtum) ning täielik kollaps}
 
 \begin{frame}[fragile]
   \frametitle{Näide kollapsist}
@@ -172,12 +178,12 @@
 		\item Teil juhina on 
 		\begin{itemize}
 			\item Teadmuskadu admini valdusala kohta
-			\note{Keegi ei dokumenteeri midagi, kui nii palju tööd teeb}
+			\note{Keegi ei dokumenteeri midagi, kui nii palju tööd teeb. Muu hulgas akumuleerub ka (hooletu) tehniline võlg!}
 			\item Vajadus päevapealt leida \emph{kaks} uut admini
 		\end{itemize}
 		\item Kuni uued adminid leitakse ja käima joostakse, valitseb kaos, mis võib viia ettevõtte pankrotini
 	\end{enumerate}
-	Ehk, süsteemi tagasiside ei reageerinud õigeaegselt taluvuspiiri ületamisele, toimus ülereageerimine ning kas osaline või täielik kollaps. 
+	Ehk, süsteemi tagasiside ei reageerinud õigeaegselt taluvuspiiri ületamisele, toimus ülereageerimine ning kollaps. 
 \end{frame}
 
 
@@ -194,6 +200,7 @@
   \frametitle{Miks äri muutub?}
   	\begin{center}
 			\includegraphics[width=.85\textwidth]{sp500.png}
+			\note{Ca iga 20 aasta tagant tundub toimuvat suurem väljasuremine. Pange see kõrvuti eelneva graafiga süsteemi ülereageerimisest!}
 	\end{center}
 	\cite{foster2011creative}
 \end{frame}
@@ -204,8 +211,9 @@
 	\begin{itemize}
 		\item 1983. aastal leidis Royal Dutch/Shell, et üks kolmandik ettevõtetest, kes olid osa F500-st seitsmekümnendatel, on kadunud \citep{senge19905th}
 		\item \cite{foster2011creative} ütleb, et kestma loodud ettevõtted ei saa põhimõtteliselt edukad olla
+		\note{Kestma loodud ettevõtted ei ole edukad sest keskkond on alati muutumises\par}
 		\item Kommunikatsioon ja globaliseerumine loovad üha mittelineaarsemat maailma
-		\item Pigem peaks tekkima küsimus "miks äri juba ei muutu"?
+		\item Vaikuse korral peaks tekkima küsimus "miks äri juba ei muutu"?
 	\end{itemize}
 \end{frame}
 
@@ -234,15 +242,15 @@
   	Leia (ausad) vastused järgmistele küsimustele: 
 		\begin{itemize}
 			\item Mis põhjustab ärimuutuse?
-			\note{Kas endogeenne või eksogeenne muutus?\par}
+			\note{Põhjus: Kas endogeenne või eksogeenne muutus?\par}
 			\item Milles muutus seisneb?
-			\note{Ehk, mis täpselt muutub. Neid kahte tuleb omavahel valideerida kuid 100\% vastavust ära oota, vt. British Steeli näide edaspidi\par}
+			\note{Milles muutus seisneb: Ehk, mis täpselt muutub. Neid kahte tuleb omavahel valideerida kuid 100\% vastavust ära oota, vt. British Steeli näide edaspidi\par}
 			\item Kes kontrollib muutust?
-			\note{Kes vastutab. Väga oluline küsimus. Väga hea vastus on ka vastuse puudumine\par}
+			\note{Kontoll: Kes vastutab. Väga oluline küsimus. Väga hea vastus on ka vastuse puudumine\par}
 			\item Millistes organisatsiooni kihtides on muutus struktuurne ja millistes mitte?
-			\note{Mäletate, rääkisime arhitektuurist kui parameetrite vektorist. Arhitektuuri muutmine on kallis, parameetrite muutmine odav\par}
+			\note{Sturktuurne vs. mittestruktuurne: Mäletate, rääkisime arhitektuurist kui parameetrite vektorist. Arhitektuuri muutmine on kallis, parameetrite muutmine odav\par}
 			\item Milline on muutuste kadents?
-			\note{See on väga oluline küsimus: kas te peaksite oma süsteeme ehitama paindlikumaks või mitte. Paindlikkus on kallis, seda ei ole mõistlik niisama tekitada.\par}
+			\note{Kadents: See on väga oluline küsimus: kas te peaksite oma süsteeme ehitama paindlikumaks või mitte. Paindlikkus on kallis, seda ei ole mõistlik niisama tekitada.\par}
 		\end{itemize}
 
 \end{frame}
@@ -254,13 +262,6 @@
 		\begin{center}
 			\textbf{Kas IT saab algatada organisatsiooni äri muutuse? \\Kui jah, siis kuidas?}
 		\end{center}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Keerukus}
-	\begin{itemize}
-		\item Keerukuse eksponentsiaalne kasv üle võimete piiri
-	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -278,9 +279,10 @@
   Iga muutus äris on olemuslikult muutus keerulises sotsiotehnilises süsteemis
 	\begin{itemize}
 		\item IT-juht vastutab selle süsteemi tehnilise osa eest
-		\note{Erinevalt "sotsio" poolest ei saa siin hakkama deklaratsioonidega, keerukust ignoreerida ei saa\par}
-		\item IT-juhi roll on juba niigi keerulises süsteemis viia läbi mittetriviaalne muutus
+		\note{Erinevalt "sotsio" poolest ei saa siin hakkama deklaratsioonidega, keerukust ignoreerida ei saa. Väga sageli eeldatakse, et muutus regulatsioonis tähendab automaatselt muutust reaalsuses\par}
+		\item Tema roll on juba niigi keerulises süsteemis viia läbi mittetriviaalne muutus
 		\item Kuna ei ole ruumi rääkida süsteemiteooriast, räägime keerukusest
+		\note{Sellest on hea lühike ülevaade edasipidi viidatavas System Safety raamatus\par}
 		\item Arusaam keerukuse olemusest annab head mõttemudelid keerulistest situatsioonidest mõtlemiseks
 	\end{itemize}
 	\note{Keerukusest on oluline aru saada ning ärimuudatused tundus olevat õige koht sellest rääkimiseks}
@@ -289,21 +291,23 @@
 \begin{frame}[fragile]
   \frametitle{Keerukuse mõiste}
   Ühest definitsiooni ei ole. On viisid selle mõõtmiseks \citep{mitchell2009complexity}:
-  \note{Meil juba olid sellised asjad: strateegia, arhitektuur... Võib olla on tegu lihtsalt keelelise abstraktsiooniga, mille taga ongi hulk eri nähtusi?}
+  \note{Meil juba olid sellised asjad: strateegia, arhitektuur... Võib olla on tegu lihtsalt keelelise abstraktsiooniga, mille taga ongi hulk eri nähtusi?\par}
 	\begin{itemize}
 		\item Keerukus kui suurus, osiste ja nendevahelise seoste hulk
-		\note{Kõige levinum inseneerias. Küllalt intuitiivne.\par}
+		\note{suurus: Kõige levinum inseneerias. Küllalt intuitiivne.\par}
 		\item Keerukus kui entroopia määr
-		\note{Shannon entropy. Üllatuse määr kommunikatsioonis\par}
+		\note{entroopia: Shannon entropy. Üllatuse määr kommunikatsioonis\par}
 		\item Keerukus kui pakitavuse määr
-		\note{Kui palju annab süsteemi kokku pakkida. Tehniliselt Algorithmic Information Content\par}
+		\note{pakitavus: Kui palju annab süsteemi kokku pakkida. Tehniliselt Algorithmic Information Content\par}
 		\item Keerukus kui loogiline või termodünaamiline sügavus
-		\note{Kui keeruline on süsteemi konstrueerida. Loogiline on matemaatliselt kena Turingi masina kaudu defineeritav konstruktsioon, praktiliselt aga kasutu. Termodünaamiline on samuti keeruline\par}
+		\note{loogiline: Kui keeruline on süsteemi konstrueerida. Loogiline on matemaatliselt kena Turingi masina kaudu defineeritav konstruktsioon, praktiliselt aga kasutu. Termodünaamiline on samuti keeruline\par}
 		\item Keerukus kui sisendi ja väljundi seos
-		\note{Statistiline keerukus. Minimaalne kogus infot praeguse ja eelnenud sisendi kohta, mida on vaja väljundi ennustamiseks. Dünaamiline keerukus!\note}
+		\note{sisendi/väljundi seos: Stat. Minimaalne kogus infot praeguse ja eelnenud sisendi kohta, mis vajalik väljundi ennustamiseks. Dün. keerukus!\\}
+
 		\item Keerukus kui fraktaaldimensioon
-		\note{Matemaatika, fraktalid, liiga keeruline, et siin detaili minna. Lugege}
+		\note{Matemaatika, fraktalid, liiga keeruline, et siin detaili minna. Lugege\par}
 		\item Keerukus kui alamsüsteemide hulk
+		
 	\end{itemize}
 \end{frame}
 
@@ -315,7 +319,7 @@
 		\item Dünaamiline ja staatiline keerukus
 			\begin{itemize}
 				\item Dünaamiliselt keerukas süsteem käitub kaootiliselt: kuitahes väike sisendi muutus võib põhjustada kuitahes suure muutuse väljundis
-				\note{Liblika tiivalöök ja Bono. Meie süsteemid käituvad tänapäeval samuti\par}
+				\note{Dünaamiline keerukus: Liblika tiivalöök ja Bono. Meie süsteemid käituvad tänapäeval samuti\par}
 				\item Staatiliselt keerukas süsteem on keerulise struktuuriga
 				\note{Staatilist keerukust mõõdab enamus eeltoodud meetrikaid.\par}
 			\end{itemize} 
@@ -340,7 +344,7 @@
 	\vfill
 	\begin{center}
 		Milline on teie süsteemi keerukus eri mõõdikute järgi?  
-		\note{Sellest sõltub, kuidas ja mil viisil saab hinnata ärimuutuse mõju teie poolt juhitavale süsteemile ning teie võimekust reageerida}
+		\note{Just nimelt sotsiotehnilise, mitte ainult tehnilise süsteemi. Sellest sõltub, kuidas ja mil viisil saab hinnata ärimuutuse mõju teie poolt juhitavale süsteemile ning milline on teie reaalne võimekus reageerida}
 	\end{center}
 	\vfill
 \end{frame}
@@ -348,7 +352,7 @@
 
 
 \begin{frame}[fragile]
-  \frametitle{Mis on keerukus?}
+  \frametitle{Keerukuse kasvust}
   	\begin{center}
 			\includegraphics[width=.7\textwidth]{keerukus.pdf}
 	\end{center}
@@ -369,16 +373,16 @@
 
 \begin{frame}[fragile]
   \frametitle{Keerukuse juhtimine}
-  	Keerukuse juhtimine on vastava taseme arhitekti töö. 
+  	Keerukuse juhtimine on vastava taseme arhitekti töö. \\
 	\note{Meie puhul IT juhi oma \par}
-	On järgmised põhimõttelised strateegiad
+	Olen detilleerinud järgmised põhimõttelised strateegiad
 	\begin{description}
 	\item[Google mudel:] Joone tõusu vähendamine
-	\note{G suudab lisada teenuse teenuse ja serveripargi serveripargi järel ilma, et ta oma kompetentsist üle kasvaks}
+	\note{G suudab lisada teenuse teenuse ja serveripargi serveripargi järel ilma, et ta oma kompetentsist üle kasvaks\par}
 	\item[Morgani mudel:] Peatumine horisontaalteljel
-	\note{Morgan keeldub kasvamast, sest muidu satuks ohtu nende operatsioonimudel. Samal põhjusel ei võta pangad teatud piirist kallimaid projekte ette}
+	\note{Morgan keeldub kasvamast, sest muidu satuks ohtu nende operatsioonimudel. Samal põhjusel ei võta pangad teatud piirist kallimaid projekte ette\par}
 	\item[Skype mudel:] Võimete piiri tõstmine
-	\note{Skype tagas, et suudab palgata kõige paremad saadaolevad insenerid ja lasta neil rahus toimetada viies sellega üles oma võimekuse. Ühel hetkel sai piiravaks juhtkonna võimekus}
+	\note{Skype tagas, et suudab palgata kõige paremad saadaolevad insenerid ja lasta neil rahus toimetada viies sellega üles oma võimekuse. Ühel hetkel sai piiravaks jätkusuutlikkus: piisavalt võimekaid juhte ei olnud võtta enam isegi, kui insenere suudeti leida\par}
 \end{description}
 \end{frame}
 
@@ -396,10 +400,9 @@
 	\begin{itemize}
 		\item 1975. aastal pidi British Steel Corporation otsustama, kas ja kui mitu uudse tehnoloogiaga tehast Korfi korporatsioonilt osta 
 		\item Granada Television filmis kogu protsessi
-		\item Filmis jookseb korduvalt läbi fraas "kas üks või kaks tehast"
-		\item Strateegiline analüüs näitas, et tehast ei pruugi üldse vaja olla
+		\item Filmis jookseb korduvalt läbi fraas "kas üks või kaks tehast", kuigi samuti näha olnud strateegiline analüüs ütles, et tehast ei pruugi üldse vaja olla
 		\item Lõppotsus: osta kaks uue tehnoloogiaga tehast
-		\note{Põhjused mitmetahulised. Muu hulgas öeldakse, et aeti segi kaks eri otsust: kas uus või vana tehnoloogia ning kas osta või mitte osta. Oma rolli mängis ka ettevõttesisene poliitika.\\}
+		\note{Põhjused mitmetahulised. Muu hulgas öeldakse, et aeti segi kaks eri otsust: kas uus või vana tehnoloogia ning kas osta või mitte osta. Oma rolli mängis ka ettevõttesisene poliitika.\par Hästi dokumenteeritud case, huvi korral leiab materiali, kuigi filmi ennast ei õnnestunud kätte saada}
 		\item Neist üks pandi püsti kuid konserveeriti kohe. Teist ei pandud kunagi püsti ning müüdi alles mõned aastad tagasi
 	\end{itemize}
 	\begin{center}
@@ -424,15 +427,15 @@
 		\item Kogu veebidisaini äri sai võimalikuks vaid tänu veebile
 		\item Tekkis täiesti uus ärivaldkond
 		\item Disain muutus kriitiliseks edufaktoriks
-		\note{Google Ventures design for equity idee\\}
+		\note{Disain kui kriitiline edufaktor: Google Ventures design for equity idee\par}
 		\item Suurkorporatsioonid tajusid strateegilist riski ja tõid disaini majja
-		\note{IBMil ~1000 disainerit palgal, Barclays suurim disainimaja Londonis jne.\\}
+		\note{IBMil ~1000 disainerit palgal, Barclays suurim disainimaja Londonis jne.\par}
 		\item Tulemus: põhimõtteliselt on muutunud viis, kes ja kuidas tänapäeval kasutajakogemust disainib
 		\begin{itemize}
 			\item Muutunud on kogu \emph{toolchain}
-			\note{suurtel on jõudu mõjutada JSi ja brauserite arengut, kus on Dreamweaveri ja FrontPage analoogid?}
+			\note{suurtel on jõudu mõjutada JSi ja brauserite arengut, kus on Dreamweaveri ja FrontPage analoogid?\par}
 			\item UXi disain on integraalne osa tarkvara arendamise protsessist
-			\note{Kuigi meie tarkvaratehnika osas sellest palju ei rääkinud? How come?}
+			\note{UXi disain: Kuigi meie tarkvaratehnika osas sellest palju ei rääkinud? How come?\par}
 			\item On tekkinud reaalne \emph{design divide}
 		\end{itemize}		
 	\end{itemize}
@@ -471,6 +474,7 @@
 		\item Üksikute riskisündmuste asemel peame rääkima pidevast, kasvavast ja kuju muutvast survest
 		\item Riskifaktoreid ei saa enam suruda aktsepteeritavale tasemele
 	\end{itemize}
+	\note{Need on rohkm lahti kirjutatud märkmetes, meil ei ole aega.}
 \end{frame}
 
 \iffalse
@@ -558,7 +562,7 @@
 
 \begin{frame}[fragile]
   \frametitle{Süsteemiohutusest}
-	Levinuimad põhjuslikkuse mudelid eeldavad, et õnnetusi põhjustavad komponentide rikked ning et neid rikkeid vältides või neiks valmistudes võib õnnetusi vältida. Kuigi see eeldus on tõsi lihtsate elektromehaaniliste süsteemide puhul, pole see enam nii tänaste keeruliste sotsiotehniliste süsteemide korral \cite{leveson2011engineering}.
+	Levinuimad põhjuslikkuse mudelid eeldavad, et õnnetusi põhjustavad komponentide rikked ning et neid rikkeid vältides või neiks valmistudes võib õnnetusi vältida. Kuigi see eeldus on tõsi lihtsate elektromehaaniliste süsteemide puhul, pole see enam nii tänaste keeruliste sotsiotehniliste süsteemide korral. \cite{leveson2011engineering}.
 	\begin{itemize}
 		\item Rida varasemalt toiminud eeldusi enam ei kehti
 		\item Põhjused on nii süsteemide keerukuse tõusus kui ka maailma järjest keerulisemaks muutumises
