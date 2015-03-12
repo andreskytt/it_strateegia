@@ -8,6 +8,8 @@
 \usepackage{makeidx}
 \usepackage{tgpagella}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{eurosym}
 
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
@@ -326,15 +328,113 @@ Eelnevalt loetletu kõrvale seab \cite{leveson2011engineering} oma nimekirja asj
 Üks suurimaid probleeme slaididel ja loengus kirjeldatud paradigmamuutusega toime tulekul on inimeste hoiakud. Kui ühe serveri puhul võis loota, et see niipea katki ei lähe ja kui läheb, siis on teine varuks, siis 1000 serveri puhul läheb iga päev mõni katki. Sama lugu on küberrünnetega. Inimeste mõttemudel muutub aga aeglaselt. Probleemi on huvitavalt lahendanud Netflix \citep{monkey}. Nende vahend lihtsalt käib ja lülitab servereid välja, kõik teavad seda. Ehk, iga teenus peab olema suuteline sellist käitumist taluma. Sisuliselt on Netflix teadmata parameetritega rikete mürafooni asendanud palju tugevama kuid tuntud parameetritega signaaliga.   
 
 \section{Infoturve}
+Järgnevas on olulisel määral toetutud Riigi Infosüsteemi Ameti spetsialistide sisendile, mille eest autor on põhjatult tänulik.
+
 \subsection{Korea isikukoodi näide}
 2014. aastal tehti Lõuna-Koreas otsus vahetada välja isikukoodid\footnote{Lühike kokkuvõte ja edasisi viiteid saadaval siin \url{https://www.ria.ee/riigiarhitektuur/blog/2014/10/18/south-korea-about-to-overhaul-their-id-card/}}. Põhjuseks asjaolu, et sealne süstem oli üles ehitatud isikukoodi salajasusele. See viimane oli aga disainitud toetuma suhteliselt triviaalsetele turvameetmetele. Tulemuseks oli, et ühest küljest muutus isikukood ahvatlevaks ründeobjektiks ja teisalt olid rea intsidentide tulemusena kümne aasta jooksul sisuliselt kõigi kodanike isikukoodid lekkinud. Ja kuna identiteedivargus on üleüldine, tuleb isikukoodid välja vahetada.
 
-%\showslide
-%\showslide
-%\lipsum[1-5]
+\subsection{Infoturbe strateegiast}
+Meid ümbritsevad infosüsteemid on muutunud ülimalt keeruliseks. Seetõttu on sisuliselt võimatuks muutunud toimivate tagavarakoopiate tegemine ja haldamine ning, laiemalt, täielik kontroll süsteemi üle. Samuti on tõsiasi, et kõigist paljudest komponentidest on mõni kogu aeg kas katki või siis ründele haavatav. Lahenduseks tundub olevat terviklik riskikäsitlus, sealhulgas süsteemi turvaliseks disainimine. Kuidas seda aga päriselt ilma kontolli omamata teostada? Head vastust anda ei ole, kui ehk võib abiks olla \cite{leveson2011engineering} ja tema mõtteviis ning arusaam, et keeruliste süsteemide puhul ei saa strateegiliselt eesmärgiks võtta totaalkaitset. Ehk, me ei ürita mitte kõiki süsteemi osa täielikult kontrollida ja kaitsta vaid maandame riskid \emph{piisavale} tasemele jättes teatud riskid teadlikult üles. Sedalaadi lähenemine eeldab aga ülevaadet süsteemi osadest\footnote{Jälle kord kerkib küsimus süsteemi piiridest: kust alates võib riskid ja/või nende maandamise võimekuse lugeda piisavalt väikeseks?}, nende olulisusest süsteemi jaoks ning nende nõrkustest. Õnneks on tegemist riskijuhtimise aabitsatõdedega, vastav teadmine on olemas nii kirjanduses kui praktikas. 
 
-%\showslide
-%\lipsum[2]
+Väga suurel määral sõltub infoturbega tegelemine infost (vt. \ref{sec:valemid}). Järelikult on strateegiliselt oluline tegeleda riskide seirega. Ühest küljest tuleb jälgida oma süsteeme kuid vähemalt sama oluline on pidada silmas lähiümbruses (mis interneti mõistes ei tähenda loomulikult geograafilist lähedust) toimuvat. Siin on olulisel kohal mittetehniline seire: valdkonna kas avalikult või muul moel saada olev info tuleb pidevalt ohuhinnangute uuendamiseks ja prognooside tegemiseks läbi töötada. 
+
+Võib mõelda nii. Kui kõrge on piisavalt kõrge müür sõltub sellest, kui tihti patrull müüri kontrollib ning milline on nende võimekus reageerida. Samuti võib endale madalamaid müüre lubada juhul, kui skaudid ümbrusel silma peal hoiavad ning juba aegsasti pahalaste manöövreid märkavad. 
+
+\subsection{Kuvandi olulisus infoturbes}
+Nii valemi \ref{eq:tasuvus} (vt. lk \pageref{eq:tasuvus}) kui teiste riskimudelite puhul on olulisel kohal hinnangulisus. Ründajal on võimalik hinnata kohtuniku käitumist, õiguskaitse tõhusust ning kaitse taga asuva väärtust. Kuid tal ei ole võimalik neid teada. Järelikult on olulisel kohal infoturbes valemi parameetritest ebasoodsa mulje jätmine. Bütsantsi riik kasutas sama taktikat juba aastatuhandete eest, see toimib ka täna. Piltlikult öeldes võib seif olla valmistatud papist, kuid kuni kui kõik usuvad ta olevat läbimatust terasest, keegi talle kääridega ei lähene. Loomulikult on mulje ajutine ning raskesti juhitav ning seetõttu tuleb valmis olla selle purunemiseks. Kui levib info papist seifist, on maailmas kääre küllaga. Samuti ei ole ilmselt mõistlik tekitada kõrge väärtusega sihtmärgi kuvandit lisades ründest oodatavale kasule "feimi" komponendi. 
+
+Jättes kõrvale pideva automatiseeritud ründevoo, võetakse järgmised sihtmärgid kõige tõenäolisemalt ette:
+\begin{itemize}
+	\item Ettevõtted, millede ründamine on moraalselt õigustatav, mis kuuluvad \emph{fair game} kategooriasse
+	\item Ettevõtted, millede kohta on alust arvata, et küberrünne võib teha märkimisväärset kahju
+	\item Ettevõtted, millede ründamisel võib olla laiemaid tagajärgi väljaspool sihtmärki
+\end{itemize}
+
+\subsection{Rünnete tõsidus}
+Eri liiki ründed võib tõsiduse järgi jagada neljaks tasemeks, iga järgnev on eelmisest tõsisem
+
+\begin{enumerate}
+	\item Käitlustõrge (näiteks (D)DoS\footnote{\emph{(Distributed) Denial of Service} on rünne, mille käigus ülekoormatakse tahtlikult teenust pakkuv taristu kas ühesest või hajutatud allikast}. Samas on tegemist kõige kõrgema profiiliga ründega, sest paistab lihtsasti välja. Kui teenus puudub, on see kohe kõigile näha
+	\item Teenuste ja äritegevuse toimimine mittesoovitud moel. Näiteks Stuxnet, mis ei seisanud rünnatavaid seadmeid, vaid muutis nende tööre\v{z}iimi ning kuvas juhtimismoodulile ebakorrektset infot. Samasse kategooriasse kuulub rünne haigla infosüsteemi vastu millega muudetakse haigete diagnoose, veregruppe jne. 
+	\item Teenuse ja äritegevuse usaldusväärsuse langetamine. Kui teenuse usaldusväärsus langeb alla kriitilise piiri, teenust ei kasutata. Seejuures ei ole oluline, kas ja mil määral andmete terviklus või konfidentsiaalsus tegelikult ohus on. Eesti e-riik on selles osas suurepäraseks näiteks: meie riigi toimimine sõltub suurel määral usaldusest terve e-ökosüsteemi (riiklikud institutsioonid, pangad, id-kaart, tehnilised lahendused jne) vastu 
+	\item Kontrolli kaotamine teenuse või äritegevuse üle. Sel puhul võetakse üle andmed, kaob kontroll äriprotsesside toimimise üle, teenuste käideldavus kõigub jne.
+\end{enumerate}
+
+Arusaam rünnete tõsidusastmest on oluline eriti tänases pidevate rünnete kontekstis. Kuna keegi kogu aeg ründab on oluline keskendada ressursid tegelemaks kõrgema taseme rünnetega. Madalama taseme ründeid võib kas lihtsalt ignoreerida (kui oluline ikkagi on asutuse veebilehe kadumine internetist?) või rahuldaval määral automatiseerimise abil kontrolli alla võttes näiteks paigutades niigi avaliku veebilehe mõne teenusepakkuja elastsesse pilve.
+
+\subsection{Infoturbe valemid} 
+\label{sec:valemid}
+\subsubsection{Ründe tasuvus}
+\begin{equation}
+		S_p>P_f(S_a + P_c S_c)
+		\label{eq:tasuvus}
+\end{equation}
+
+	\begin{description}
+		\item[$S_p$] Ründest oodatav kasu
+		\item[$P_f$] Ründe ebaõnnestumise tõenäosus
+		\item[$S_a$] Ründe läbi viimise kulu
+		\item[$P_c$] Vahele jäämise tõenäosus
+		\item[$S_c$] Vahele jäämise kulu
+	\end{description}
+
+Toodud valemi puhul on oluline silmas pidada kahte asjaolu. 
+
+Esiteks, et ründe ebaõnnestumise tõenäosus on reaalselt alati väiksem kui üks. Põhjuseks lihtsalt sotsiotehniliste süsteemide ülikeerukas olemus. Sihitud ja hoolikalt kavandatud ründe puhul ei ole küsimus selles, kas kaitsest suudetakse läbi murda. Küsimus on selleks kuluvas ajas ja ressursis ning läbimurde sügavuses. Silmas tuleb pidada ka ründevektori "ülevoolavust": alati valitakse ründeks kõige madalama kulu/tulu suhtega vektor. Süsteemide turvalisuse tõstmisega teatud piirist edasi suureneb lihtsalt sotsiaalrünnete surve ning süsteemi kui terviku turvalisus ei tõuse. 
+
+Teiseks, muutujad on alati hinnangulised, neid ei ole ründajal võimalik otseselt mõõta. Siit tuleneb vajadus mõista ründajaid. Tegu on ju lõpuks nende poolt antud hinnangutega. Et eri osapoolte suhtelised võimekused ja huvid on erinevad, on erinevad ka nende hinnangud kulule ning ründest oodatavale kasule. On ju vahe, kas ründajaks on grupp internetiotsingut valdavaid teismelisi või mõne riigi APT\footnote{\emph{Advanced Persistent Threat} on varjatud ja pideva kübersurve oht, mis on suunatud konkreetse ospoole vastu} spetsialistid. 
+
+Kuna evolutsioon dikteerib kõigi osapoolte huvi maksimeerida kasu minimeerides kahju võimaldab ründe tasuvuse analüüs hinnata kõige tõenäolisemaid sihtmärke ning seega planeerida kaitset: kuhu ja kui kõrged müürid ehitada. 
+
+\subsubsection{Riski hinnang}
+
+\begin{equation}
+	RISK = Threat \times Consequence \times Vulnerabilities
+	\label{eq:risk}
+\end{equation}
+
+\begin{description}
+	\item[RISK] hinnang riskile
+	\item[Threat] hinnang ohule
+	\item[Consequence] hinnang riski ohu realiseerumise tagajärgedele
+	\item[Vulnerabilities] hinnang süsteemi haavatavusele
+\end{description}
+
+Valem \ref{eq:risk} ütleb, et risk on mittelineaarses sõltuvuses ohust, selle realiseerumise tõenäosusest ning süsteemi haavatavusest. Ehk, madala tõenäosuse kuid suure mõjuga oht, millele ollakse haavatavad on sama oluline kui kõrge tõenäosuse ja suure mõjuga oht, mille vastu ollakse hästi kaitstud. Samuti nähtub siit, et iga elemendi nulli viimine viib nulli ka riski. 
+
+Nagu ka valemi \ref{eq:tasuvus} puhul, on siin tegu hinnangutega. Kuid erinevalt ründe tasuvusest on siin ebatäpne mulje pigem probleem, kui lahendus. Kui, eelnevalt kasutatud analoogiat jätkates, seif on papist, on seda kasulik teada ning mitte uskuda teda terasest olevat. Vastasel juhul on oht haavatavust alahinnata. Sama kehtib ka tagajärgede ja ohu kohta. Järelikult on täpne ning teadmistepõhine teadmine olukorrast adekvaatse riskijuhtimise puhul ülioluline.
+
+Absoluutskaalade asemel võib valemi muutujate hindamisel kasutada suhtelisi. Näiteks võib toimida nii:
+
+\begin{enumerate}
+	\item Loetle ohud
+	\item Anna igale ohule ohuhinnang skaalal 1-10
+	\item Anna igale ohule sama skaalat kasutades tagajärje hinnang. Seejuures kata kinni ohuhinnang tagamaks muutujate sõltumatus
+	\item Anna igale ohule haavatavushinnang kasutades jällegi sama skaalat ja kattes teised hinnangud kinni
+\end{enumerate}
+
+Nüüd oled igale ohule saanud suhtelise riskihinnangu, mis võimaldab neid sorteerida, valida maandamiseks jne.  
+
+\subsubsection{Oodatav kahju} 
+
+	\begin{align}
+		Annualised\ Expected\ Loss &= Frequency\ of\ a\ given\ attack\ type \label{eq:loss}\\
+		&\times Potential\ Loss \nonumber \\
+		&\times Extent\ to\ which\ the\ loss\ occurs \nonumber
+	\end{align}
+
+\begin{description}
+	\item[Annualised Expected Loss] Oodatav aastane kahju
+	\item[Frequency of a given attack type] Konkreetset liiki ründe esinemissagedus
+	\item[Potential loss] Potentsiaalne kahju ründest
+	\item[Extent to which the loss occurs] Potentsiaalne kahju keskmine realiseerumise määr
+\end{description}
+
+Valem \ref{eq:loss} võimaldab hinnata oodatavat kahju ründest. Teades, kui tihti ründed esinevad\footnote{Rünnete esinemise jaotus ning selle hindamine sisuliselt pidevate rünnete tingimustes on keeruline valdkond, millesse siinkohal liigne süveneda}, mis on neist tekkida võiv kahju ning mil määral kahju tavaliselt realiseerub, võib hinnata tekkivat kogukahju. Näiteks, kui meil on keskmiselt kaks tõsisemat teenustõrkerünnet aastas, mis kumbki võivad tekitada 10 000.- \euro kahju ning eelnev kogemus võimaldab hinnata, et kümmekond protsenti kahju õnnestub ära hoida on oodatav kahju $E(L)=2 \times 10000 \times .9 = 18 000$. 
+
+Tegu ei ole infoturbespetsiifilise valemiga, täpselt samuti hinnatakse näiteks krediidiriske
+
+
 \nocite{*}
 \bibliographystyle{plainnat}
 \bibliography{it_strateegia} 
