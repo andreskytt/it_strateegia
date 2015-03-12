@@ -9,7 +9,7 @@
 	\begin{itemize}
 		\item Jätkusuutlikkus on oluline teema, kui pealispinna alla vaadata
 		\item Muudatused äris on vältimatud, nende tagajärjed ITle mittetriviaalsed
-		\item Riskijuhtimine klassikalisel kujul keeruliste süsteemide puhul ei toimi
+		\item Klassikaline riskijuhtimine keeruliste süsteemide puhul ei toimi
 	\end{itemize}
 \end{frame}
 
@@ -28,11 +28,12 @@
 	\begin{description}
 		\item[$S_p$] Ründest oodatav kasu
 		\item[$P_f$] Ründe ebaõnnestumise tõenäosus
-		\note{Ründe ebaõnnestumise tõenäosus on reaalselt alati väiksem kui üks: küsimus ei ole sisse saamises, küsimus on kiiruses, hinnas ja sügavuses. Kui otse rünnatakse, siis ka maha võetakse}
+		\note{Ründe ebaõnnestumise tõenäosus on reaalselt alati väiksem kui üks: küsimus ei ole sisse saamises, küsimus on kiiruses, hinnas ja sügavuses. Kui otse rünnatakse, siis ka maha võetakse\par}
 		\item[$S_a$] Ründe läbi viimise kulu
 		\item[$P_c$] Vahele jäämise tõenäosus
 		\item[$S_c$] Vahele jäämise kulu
 	\end{description}
+	\note{Selle valemi juures on oluline mõista, et tegu on alati ründaja poolt antud hinnanguga, järelikult on oluline osa probleemist avalikkussuhted ja avalikkusele kontrollitud mulje jätmine nii oodatavast kasust, õnnestumistõenäosusest kui vahele jäämise tagajärgedest ning tõenäosusest\par}
 	\end{center}
 
 \end{frame}
@@ -44,19 +45,20 @@
 			\begin{itemize}
 				\item Andmeid saab kasutada (ka) järgmise rünnakute jaoks (tagasiside) 
 				\item Interneti sõltuvus reklaamist ja seega privaatsest infost kasvab
+				\note{Maailmas investeeritakse aastas ca \$30 miljardit VC raha tarkvaraärisse. See peab kuskilt tagasi tulema. AId nõuavad samuti toitmist\par}
 				\item Eksisteerib toimiv andmete ja ründeteenuste must turg
 			\end{itemize}
 		\item $P_f$ kahaneb, kuna süsteemid lähevad järjest keerulisemaks
 		\item $S_a$ on dramaatiliselt langenud, kuna 
 			\begin{itemize}
 				\item Ründed on paljus automatiseeritud
-				\item Eksisteerib toimiv üle võetud arvutite must turg
+				\item Ründevahendid on \emph{commodity} ja odavnevad seega kogu aeg
 				\item Toimib tagasiside: mida rohkem arvuteid üle võetakse, seda rohkem arvuteid suudetakse rünnata ja seega ka üle võtta
 			\end{itemize}
 		\item $P_c$ arenenud riikides kasvab, mujal stabiilne
 		\item $S_c$ arenenud riikides kasvab kiiresti (vt. megauploadi juhtum)
 	\end{itemize}
-	\note{Võrratuse parem pool kasvab, kuna ründed lähevad odavamaks ja efektiivsemaks palju kiiremini, kui kasvab vahele jäämise tõenäosus}
+	\note{Võrratuse parem pool kasvab, kuna ründed lähevad odavamaks ja efektiivsemaks palju kiiremini, kui kasvab vahele jäämise tõenäosus. \par Sc väga palju kasvatamine enam ei õnnestu, ühiskond ei seedi ära väga suurt vahet mõrvari ja häkkeri karistuste vahel.}
 \end{frame}
 
 
@@ -64,7 +66,7 @@
   \frametitle{Võrratuse järelmid}
 	Üksikud intsidendid on asendunud pideva vooga
 	\begin{itemize}
-		\item Põhjuseks rünnete hinna langemine kiiremini, kui suudetakse tõsta vahele jäämise kulusid
+		\item Põhjuseks rünnete hinna langemine kiiremini, kui suudetakse tõsta vahele jäämise kulusid ja tõenäosust
 		\item CERT-EE hinnagul ei ole 2015 aasta alguseks enam märgata pause \emph{(spear) phishingu} kampaaniate vahel
 		\item Väga suurt rolli mängib automatiseerimine: kuigi automatiseeritud või \emph{drive-by} ründe $P_f$ on suhteliselt suur, on $S_a$ sisuliselt null
 	\end{itemize}
@@ -94,21 +96,24 @@
   \frametitle{Infoturbe strateegiast}
 	Mõned infoturbe strateegilised aspektid:
 	\begin{itemize}
-		\item Oluline on määratleda (ja kommunikeerida) aktsepteeritud riskitase
+		\item Tuleb määratleda ja kommunikeerida aktsepteeritud riskitase 
+		\note{Kuigi nuga on ohtlik, on ta meil siiski enamasti olemas. Kasulikkus kompenseerib riski\par}
+		\item Peab eksisteerima koostöö PRi ja infoturbeinimeste vahel
 		\begin{itemize}
-			\item Kuigi nuga on ohtlik, on ta meil siiski enamasti olemas
-			\note{Kasulikkus kompenseerib riski\par}
-			\item Järelikult peab olema paigas (kommunikatsiooni) plaan riski realiseerumise puhuks
+			\item Ründaja käitumine sõltub väga paljus kuvandist
+			\note{PRi kohta vt. märkmetest. Ründaja peab oma võrratuse parameetreid kuidagi hindama, seda hinnangut saab soovitud suunas mõjutada läbi kommunikatsiooni\par}
+			\item PR tegeleb (kriisi) kommunikatsiooniga
 		\end{itemize}
+
 		\item Strateegiline roll on kogukonnal:
 		\begin{itemize}
 			\item Süsteemi olulised komponendid ei ole tingimata teie kontrolli all
 			\item Tundliku info jagamise aluseks on usaldus
-			\note{õige käitumise aluseks on õigeaegne info\par}
-			\item Internet on liiga terviklik süsteem, et võiks üksi asju ajada
-			\note{Seepärast CERTide võrk tekkiski\par}
+			\note{Õige käitumise aluseks on õigeaegne info\par}
+			\item Internet on üksi hakkama saamiseks liiga terviklik süsteem
+			\note{CERTide võrk tekkis üsna kohe pärast internetti\par}
 			\item Panustage ja te saate vastu
-			\note{küberkaitseliit ja muud kogukondlikud ettevõtmised. Selle eelduseks on, et teil on inimesed, kes on suutelised reaalselt panustama\par}
+			\note{Teie infoturbevõimekus peab olema pisut üledimensioneeritud tagamaks sotsiaalse krediidi taastootmist. Küberkaitseliit ja muud kogukondlikud ettevõtmised. Selle eelduseks on, et teil on inimesed, kes on suutelised reaalselt panustama\par}
 		\end{itemize}
 
 	\end{itemize}
@@ -128,7 +133,7 @@
 \begin{frame}[fragile]
   \frametitle{Eetikast}
 	\begin{center}
-		Enne igasugust partneritega tegelemist veendu, et võtmeisikute arusaam eetikast kattub ning mahub mugavalt seaduse raamesse 
+		Enne igasugust partneritega tegelemist veendu, et võtmeisikute arusaamad eetikast omavahel kattuvad ning mahuvad kõik mugavalt seaduse raamesse 
 		\note{Kohtumine julgeolukuorganitega on pehmelt öeldes ebameeldiv ka siis, kui sa õigeks jääd. Ja kriminaalasi kindlasti mitte ei kiirenda tarkvara valmimist. Eetika pinnalt tekkinud väärtuskonflikt on samuti väga ebameeldiv ja tavaliselt ajakavale hukatuslik.}
 	\end{center}
 \end{frame}
@@ -196,7 +201,7 @@
 	\begin{itemize}
 		\item Mis vahet seal on, kes ja kuidas tarnib kohvi ja pastakaid?
 		\item Nii te ei saa täpselt seda, mida te tahate
-		\note{Aga kohvi puhul reeglina ei ole vahet}
+		\note{Aga kohvi puhul reeglina ei ole oluline saada täpselt seda, mida tahetakse}
 		\item Võib keskenduda ka lihtsalt koostöös parima tulevuse saavutamisele, jättes strateegilised mängud kõrvale
 	\end{itemize}
 \end{frame}
@@ -221,24 +226,23 @@
   \frametitle{Tee mittejuhtimiseni}
 		\textbf{Juhi ja/või kasuta standardeid}
 	\begin{itemize}
-		\item Selle asemel et juhtida partnereid, kasuta laialt levinud lahtisi standardeid
-		\item Vajadusel kirjuta uued
+		\item Selle asemel et juhtida partnereid, kasuta avatud standardeid, vajadusel kirjuta uued
 		\item Kui kogu tegevus on standardipõhine, on partneri vahetus suhteliselt lihtne ja valutu
 		\item Eriti kasulik kombinatsioonis "jaga ja valitse" strateegiaga
 		\item Töömahukas
-		\note{Eriti, kui sobivaid standardeid ei ole}
+		\note{Töömahukas, kui sobivaid standardeid ei ole}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Tee mittejuhtimiseni}
-	\textbf{	Juhi kogukonda}
+	\textbf{Juhi kogukonda}
 	\begin{itemize}
 		\item Ühe partneri juhtimise asemel tekita isereguleeruv seltskond 
-		\note{Näiteks open-source kogukond}
-		\item Osavalt käima lükatud kogukond hoiab end ise avatuna ja arenemas
+		\item Osavalt käima lükatud kogukond hoiab end ise püsti
 		\item Jälle kasulik koos "jaga ja valitse strateegiaga"
 		\item Keeruline teha kuid kuldne, kui käima läheb
+		\item Väga paljud \emph{open-source} asjad käivad nii, tegu on suhteliselt hästi tuntud praktikaga
 	\end{itemize}
 \end{frame}
 
@@ -275,7 +279,7 @@
   Kui siiski on vaja partnerit juhtida
 	\begin{itemize}
 		\item Vali sarnane partner: suurus, ajahorisont, küpsusaste
-		\note{Kerry King: Time is not a cool thing to waste\par Olukord, kus sellist saada ei ole, on ohu märk! Miks ei ole see teenus ostetav?}
+		\note{Kerry King: Time is not a cool thing to waste\par Olukord, kus sellist saada ei ole, on ohu märk! Miks ei ole see teenus ostetav?\par}
 		\item Käitu kehtestavalt: väljenda oma vajadusi selgelt ja järejekindlalt ning seisa nende eest
 		\item Kaasa riskijuhid, partnerid on olulised riskide allikad
 		\item Tee selgeks ökosüsteem
@@ -284,12 +288,12 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Toimida toimimata}
+  \frametitle{Isiklik kogemus}
 	\begin{center}
-			Isiklik kogemus:\par
 			\vfill
-			\textbf{Kui partner tundub rumala või pahatahtlikuna,\\ on reeglina põhjust peeglisse vaadata}
-			\note{Partnerist lahti saamine on reeglina ressursimahukam kui oma käitumise parandamine}
+			Kui partner tundub rumala või pahatahtlikuna,\\ on reeglina põhjust peeglisse vaadata
+			\vfill
+			\note{Partnerist lahti saamine on reeglina ressursimahukam kui oma käitumise parandamine. Samas on ka praegu riigis sigimas olukord, kus ühes asutuses tahetakse vahetada partnerit soovimata muuta oma käitumist. \par Miks te arvate, te teise partneriga põhimõtteliselt teisiti läheb?}
 	\end{center}
 \end{frame}
 
@@ -312,19 +316,18 @@
 			\item Ehk: kus tekib väärtus?
 			\note{Partnerluse kuldreegel: ära kunagi osta väljast väärtusloomet!\par}
 			\item Tänapäeval ei ole tarkvara lähtekood reeglina omaette väärtus 
-			\note{Järelikult ei ole kriitiline selle dokumenteerimine. X-tee oli võimalik kuue kuuga nullist uuesti kirjutada\par}
+			\note{Järelikult ei ole kriitiline tarkvara lähtekoodi dokumenteerimine. X-tee oli võimalik kuue kuuga nullist uuesti kirjutada\par}
 			\item Väga tihti sünnib väärtus kliendi juures
-			\note{Teadmine äriprotsessist. Ärianalüütik võib kogu teadmisega minema kõndida!\par}
+			\note{Teadmine äriprotsessist sünnib kliendi juures. Ärianalüütik võib kogu teadmisega minema kõndida!\par}
 			\item Küsimus on teadmuses
-			\note{Ja seda niisama lihtsalt paberi peal edasi ei anna\par}
+			\note{Teadmust niisama lihtsalt paberi peal edasi ei anna, paberil liigub info ja need kaks ei ole sünonüümid\par}
 		\end{itemize}
 
 	\end{itemize}
 	\begin{center}
 		\emph{Intellektuaalomandit kontrollib see, \\kes kontrollib seda loovaid inimesi}
-		\note{Mida rohkem sinu inimesi on võtmeotsuste juures, seda parem on sinu kontroll}
+		\note{Mida rohkem sinu inimesi on võtmeotsuste juures, seda parem on sinu kontroll, sest intellektuaalomand tekib IT vallas inimeste peas\par}
 	\end{center}
-		\note{Sest intellektuaalomand tekib IT vallas inimeste peas} 
 
 \end{frame}
 
@@ -337,12 +340,12 @@
 		\item Kontseptsioon on tihedalt seotud väärtuste, mõttemallide ja seeläbi organisatsiooni kultuuriga
 		\note{Arhitektuuri kontrollimata lasete te kellegi teise oma organisatsiooni kultuuri mõjutama\par}
 		\item Partner lähtub lokaalsest optimumist (või enda omast)
-		\note{Teie roll on aga arendada terviklikku süsteemi arhitektuuri\par}
+		\note{Partner järgib lokaalset optimumi, teie roll on arendada terviklikku süsteemi arhitektuuri\par}
 		\item Võõraste väärtuste ja mõttemallide üle võtmine on väga raske. 
 		\begin{itemize}
 			\item Ka siis, kui need on peidetud arhitektuuri
 			\item Vajadus võtta üle tellija mõttemall tasandab mänguvälja
-			\note{Aga tõstab hinda! Valikukoht\par}
+			\note{Vajaduse kelle iganes mõttemalli üle võtta tõstab hinda! Valikukoht!\par}
 		\end{itemize}
 		\note{Seetõttu ongi arendaja vahetamine reeglina keeruline: igaühel on oma juurdunud viis asju ehitada ja ümber harjumine on keeruline/kallis}
 	\end{itemize}
@@ -453,7 +456,7 @@
   \frametitle{Strateegilised implikatsioonid}
 	\begin{itemize}
 		\item On oluline määratleda, millal lõpetada testimine
-		\note{Sest puhta rakenduseni ei jõuta eales\par}
+		\note{On oluline testimise lõpp määratleda, sest puhta rakenduseni ei jõuta eales\par}
 		\begin{itemize}
 			\item Järelikult peab eksisteerima toimiv veahaldus koos hooldus- ja hindamisprotsessiga
 			\item Peab arvesse võtma spetsifikatsiooni täpsust: ei ole mõtet testida detaile, mida spetsifikatsioonis ei ole
@@ -539,7 +542,7 @@
 		\item Kvaliteet tuleneb tööd otseselt tegevast inimesest
 		\note{Kui programmeerija ei hooli oma töö tulemusest (või ei suuda seda tagada), ei saa süsteem olla kvaliteetne\par}
 		\item Kvaliteedi juhtimine on süstemaatiline protsess
-		\note{Kvaliteedi juhtimine ei seisne üle aia visatud koodi valideerimises kellegi arvamuse vastu süsteemi käitumisest}
+		\note{Kvaliteedi juhtimine ei seisne üle aia visatud koodi valideerimises kellegi arvamuse vastu süsteemi käitumisest\par}
 		\item Kvaliteedi juhtimine on pidev protsess
 		\note{Kuna koodis on definitsiooni järgi alati vead, ei lõpe kvaliteedi taga ajamine kunagi}		
 	\end{itemize}
@@ -663,7 +666,7 @@
 			\item Mitte kõik süsteemi komponendid ei ole teie kontrolli all
 			\note{Tuletage meelde juttu süsteemi piiridest. Tüüpiliseks näiteks on siin internetiühendus või näiteks Google. Kas teie teenus on kättesaadav, kui suurim ISP ei suuda nime lahendada ja teie domeen on Google blacklistis?\par}
 			\item Masinate mõõtmine on ka suhteliselt mõttetu: riistvara vead on suhteliselt teadaoleva jaotusega sündmused
-			\item Eriti oluline mitte-boolean parameetrite korral
+			\item Eriti oluline on teenusekesksus numbriliste mõõdikute korral
 			\note{Veebilehe vasteaeg ei võrdu HTMLi serverist väljastamise ajaga. Tänapäeval väga keeruline teema (CDNid, eri DNSi pakkujad, pilvetehnoloogiad jne.). Ärge investeerige ilma selge vajaduseta, see teenus on võimalik sisse osta.\par}
 			\item Strateegiliselt on oluline vaadata teenuse kvaliteeti kui tervikut eristamata tehnilist komponenti
 			\note{Ehk, teie süsadmine peaks mõõtma NPSi abil.}
@@ -673,7 +676,7 @@
 \begin{frame}[fragile]
   \frametitle{Modelleerimisest}
 	On oluline panna vastu kiusatusele modelleerida süsteemi tõrkeid leidmaks seost serveri ja teenuse tõrke vahel
-	\note{Strateegiliselt väga riskantne samm. Räägin, sest olen seda kiusatust palju näinud ka mõistlike inimeste puhul}
+	\note{Strateegiliselt väga riskantne samm. Räägin, sest olen seda kiusatust palju näinud ka mõistlike inimeste puhul\par}
 		\begin{itemize}
 			\item On kiusatus siduda organisatsiooni eri taseme mudelid
 			\note{Kui kõik neli on olemas, saame riistvaravea viia läbi konfiguratsioonihalduse arhitektuurimudelini, kust paistab välja mõjutatud teenus\par}
