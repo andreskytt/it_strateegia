@@ -82,7 +82,7 @@
 
 \section{Arhitektuur}
 \subsection{Printsiipidest}
-Arhitektuuriga süvitsi tegelemisel on hea mõte pidada printsiipide päevikut. Arhitektuuris on mõttemudelil oluline koht ja seega on mõistlik tegeleda oma isikliku mõttemudeli arendamise ning dokumenteerimisega. Printsiibipäevik on üks viis seda teha. Printsiip on miski, mis tundub kehtivat alati ning mis ei sõltu teistest. Teatavas mõttes on tegemist universaalse tõega. Üheks näiteks printsiipidest arvutivõrkude vallas on \cite{callon1996rfc}. Printsiibipäeviku mõte on selles, et iga kord, kui igapäevases töös tundub mõni printsiip silma jäävat, kirjutatakse see jalamaid üles. Perioodiliselt vaadatakse päevik üle lootuses destilleerida kirja pandust veel universaalsemaid ja üldisemaid põhimõtteid. Üks näide sellisest päevikust on \cite{archprinciples}. 
+Arhitektuuriga süvitsi tegelemisel on hea mõte pidada printsiipide päevikut. Arhitektuuris on mõttemudelil oluline koht ja seega on mõistlik tegeleda oma isikliku mõttemudeli arendamise ning dokumenteerimisega. Printsiibipäevik on üks viis seda teha. Printsiip on miski, mis tundub kehtivat alati ning mis ei sõltu teistest. Teatavas mõttes on tegemist universaalse tõega. Üheks näiteks printsiipidest arvutivõrkude vallas on \cite{callon1996rfc}. Printsiibipäeviku mõte on selles, et iga kord, kui igapäevases töös tundub mõni printsiip silma jäävat, kirjutatakse see jalamaid üles. Perioodiliselt vaadatakse päevik üle lootuses destilleerida kirja pandust veel universaalsemaid ja üldisemaid põhimõtteid. Üks näide sellisest päevikust on \cite{archprinciples}. Ka \cite{crawley2015systems} sisaldab hulka printsiipe (TODO: inkorporeeri crawley).
 
 \subsection{Emergentsusest}
 Ingliskeelsel terminil \emph{emergence} on eesti keeles vasteks emergentsus\footnote{Vahel öeldakse ka ``ilmnemine``: Emergent behaviour tõlgitakse kui ilmnev käitumine}. Nii tähistatakse süsteemi omadust, mis seisneb millegi ilmnemises tänu mingitele muudele süsteemi omadustele. Arhitektuuri kontekstis on emergentsus süsteemide omadus lisaks disaini kaudu eesmärgiks seatud omadustele ka teiste omaduste ilmnemiseks. Tüüpiline emergentne omadus on võime inimesi tappa: suur hulk tehnoloogiaid alates tulest ja lõpetades tuumareaktsiooniga on mingil hetkel osutunud efektiivseks vaenlastest vabanemise vahendiks. Esimene nuga ei olnud mõledud mõrvaks kuid seda on nii aegade algusest kasutatud. Tüüpiliselt ei ole probleem mitte niivõrd süsteemi enda emergentsed omadused vaid emergents, mis sünnib eri objektide kombinatsioonist. Laua funktsioon on toetada asju. Joonlaua funktsioon on sirgeid jooni tõmmata. Kui aga asetada joonlaud poolenisti lauale, oleme saanud, sõltuvalt vaatepunktist, kas muusikariista või inimeste ärritamise vahendi. 
@@ -358,6 +358,7 @@ Järgnevas on olulisel määral toetutud Riigi Infosüsteemi Ameti spetsialistid
 2014. aastal tehti Lõuna-Koreas otsus vahetada välja isikukoodid\footnote{Lühike kokkuvõte ja edasisi viiteid saadaval siin \url{https://www.ria.ee/riigiarhitektuur/blog/2014/10/18/south-korea-about-to-overhaul-their-id-card/}}. Põhjuseks asjaolu, et sealne süstem oli üles ehitatud isikukoodi salajasusele. See viimane oli aga disainitud toetuma suhteliselt triviaalsetele turvameetmetele. Tulemuseks oli, et ühest küljest muutus isikukood ahvatlevaks ründeobjektiks ja teisalt olid rea intsidentide tulemusena kümne aasta jooksul sisuliselt kõigi kodanike isikukoodid lekkinud. Ja kuna identiteedivargus on üleüldine, tuleb isikukoodid välja vahetada.
 
 \subsection{Infoturbe strateegiast}
+TODO: inkorporeeri \url{http://www.opensecurityarchitecture.org/cms/foundations/osa-taxonomy}
 Meid ümbritsevad infosüsteemid on muutunud ülimalt keeruliseks. Seetõttu on sisuliselt võimatuks muutunud toimivate tagavarakoopiate tegemine ja haldamine ning, laiemalt, täielik kontroll süsteemi üle. Samuti on tõsiasi, et kõigist paljudest komponentidest on mõni kogu aeg kas katki või siis ründele haavatav. Lahenduseks tundub olevat terviklik riskikäsitlus, sealhulgas süsteemi turvaliseks disainimine. Kuidas seda aga päriselt ilma kontolli omamata teostada? Head vastust anda ei ole, kui ehk võib abiks olla \cite{leveson2011engineering} ja tema mõtteviis ning arusaam, et keeruliste süsteemide puhul ei saa strateegiliselt eesmärgiks võtta totaalkaitset. Ehk, me ei ürita mitte kõiki süsteemi osa täielikult kontrollida ja kaitsta vaid maandame riskid \emph{piisavale} tasemele jättes teatud riskid teadlikult üles. Sedalaadi lähenemine eeldab aga ülevaadet süsteemi osadest\footnote{Jälle kord kerkib küsimus süsteemi piiridest: kust alates võib riskid ja/või nende maandamise võimekuse lugeda piisavalt väikeseks?}, nende olulisusest süsteemi jaoks ning nende nõrkustest. Õnneks on tegemist riskijuhtimise aabitsatõdedega, vastav teadmine on olemas nii kirjanduses kui praktikas. 
 
 Väga suurel määral sõltub infoturbega tegelemine infost (vt. \ref{sec:valemid}). Järelikult on strateegiliselt oluline tegeleda riskide seirega. Ühest küljest tuleb jälgida oma süsteeme kuid vähemalt sama oluline on pidada silmas lähiümbruses (mis interneti mõistes ei tähenda loomulikult geograafilist lähedust) toimuvat. Siin on olulisel kohal mittetehniline seire: valdkonna kas avalikult või muul moel saada olev info tuleb pidevalt ohuhinnangute uuendamiseks ja prognooside tegemiseks läbi töötada. 
@@ -413,7 +414,7 @@ Kuna evolutsioon dikteerib kõigi osapoolte huvi maksimeerida kasu minimeerides 
 \subsubsection{Riski hinnang}
 
 \begin{equation}
-	RISK = Threat \times Consequence \times Vulnerabilities
+	RISK(Threat) = Threat \times Consequence \times Vulnerabilities
 	\label{eq:risk}
 \end{equation}
 
@@ -438,6 +439,31 @@ Absoluutskaalade asemel võib valemi muutujate hindamisel kasutada suhtelisi. N�
 \end{enumerate}
 
 Nüüd oled igale ohule saanud suhtelise riskihinnangu, mis võimaldab neid sorteerida, valida maandamiseks jne.  
+
+\subsubsection{Alternatiivide kaalumine}
+\begin{equation}
+	(B_1 - E_1) - (B_2 - E_2) > RISK(\varepsilon_1)-RISK(\varepsilon_2)
+	\label{eq:alternative}
+\end{equation}
+
+\begin{description}
+	\item[B] Kasu alternatiivi rakendamisest
+	\item[E] Alternatiivi rakendamisega seotud kulud, sealhulgas riskide maandamiseks tehtavad kulud 
+	\item[$\varepsilon$] Jääkoht, ehk ohud mis säilivad pärast kõigi meetmete rakendamist
+\end{description}
+
+Kuigi tavaliselt kasutatakse samalaadset valemit äriprojektide hindamisel (kasu peab üles kaaluma riskid) siis valemit \ref{eq:alternative} saab kasutada alternavtiivide hindamiseks. Siinjuures on oluline aru saada, et riski saab liigutada võrratuse paremalt poolelt vasakule ja vastupidi tehes või vähendades kulutusi jääkriski vähendamiseks või suurendamiseks. Teine kriitiline punkt siinkohal on ajaline mõõde: nii $B$, $E$ kui $RISK(\varepsilon)$ tuleb arvutada nüüdisväärtusena.
+
+Olgu meil näiteks küsimus, kas võime oma andmeid hoida avaliku pilveteenuse pakkuja juures. Sel juhul 
+\begin{itemize}
+	\item $B_1-E_1$ on hinnang oma serverite pidamisest saadud kasule, millest on lahutatud serverite majutamise kulud (sealhulgas riskide maandamisele tehtavad kulutused). Kui oma serverite hoidmine iseensest tulu ei teeni, siis võib arvestada, et $B_1=0$. 
+	\item $B_2-E_2$ on hinnang pilveteenusest saadavale kasule, millest on lahutatud tehtavad kulutused mis jällegi koosnevad nii riskide maandamiseks tehtavatest kuludest kui ka perioodilisest arvest. Jällegi, kui pilveteenus iseensest näiteks läbi parema käideldavuse kasu ei too, siis $B_2=0$
+	\item $\varepsilon_1$ on jääkoht juhul, kui servereid majutatakse ise
+	\item $\varepsilon_2$ on jääkoht pilveteenuse majutamise puhul
+\end{itemize}
+
+Pilve puhul me tõenäoliselt leiame, et riskid suurenevad, tekib teatav lisandväärtus ja kulud vähenevad. Küsimust pilve kasutamisest saab aga positiivselt otsustada vaid juhul, kui võrratus kehtib ning meie tegevuse tulud ületavad jätkuvalt riske.
+
 
 \subsubsection{Oodatav kahju} 
 
