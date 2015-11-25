@@ -95,6 +95,65 @@ Kui rääkida süsteemist, tekib alati küsimus süsteemi piiridest: kus algab m
 
 Lisaks konkreetsele osapoolte kaardistamise raamistikule annab artikkel ka mõningase ülevaate erinevatest EA raamistikest.
 
+\subsection{Keerukusest}
+\label{sec:complexity}
+\cite{mitchell2009complexity} toob välja rea keerukuse mõõtmise viise. \citeauthor{crawley2015systems} \citep[p. 287]{crawley2015systems} toob välja mitmeid konkreetseid valemeid keerukuse arvutamiseks. Kuna variatsioone teema ümber on arvukalt ning nende erivused ei ole siinkohal määrava tähtsusega, kasutame keerukuse hindamisel järgmist valemit. 
+
+\begin{equation}
+	C = \sqrt[3]{N_e + N_et + N_s + N_st}
+	\label{eq:complexity}
+\end{equation}
+
+\begin{itemize}
+	\item $N_e$ on elementide hulk süsteemis
+	\item $N_et$ on elementide tüüpide hulk süsteemis
+	\item $N_s$ on elementidevaheliste seoste hulk süsteemis
+	\item $N_st$ on elementidevaheliste seoste hulk süsteemis
+\end{itemize}
+
+Valemi sisu on lihtne: süsteemi keerukus määratletakse kui lineaarsest aeglasemalt kasvavat summat elementidest, seostest ja nende liikidest. 
+
+Vaatleme selle valemi rakendamist lihta ülesande näitel. Olgu meil ülesanne liiklust läbi kahest komponendi - turvaserverist ja infosüsteemist - koosnevas süsteemis. Turvaserver saab väliskeskkonnast päringu ja edastab selle infosüsteemile töötlemiseks. Süsteemi põhimõtteline paigaldusskeem on toodud jooonisel \ref{fig:complexity:pure}.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=.7\textwidth]{puhas.png}
+		\caption{Jälgitava süsteemi põhimõtteline paigaldusskeem}
+		\label{fig:complexity:pure}
+	\end{center}
+\end{figure}
+
+Süvenemata realisatsiooni detailidesse võib öelda, et leidub kaks põhimõttelist viisi liikluse jälgimiseks. Esimene koosneb eraldi paigaldatavast vahendajast turvaserveri ja infosüsteemi vahel. Vahendaja pakub sama liidest, mis infosüsteem ja edastab ühele poole päringuid ja teisele vastuseid. Teine koosneb turvaserveri ümber mässitavast lahendusest, mis jälgib turvaserverisse sisenevat liiklust ning edastab selle turvaserverile. Peamine vahe alternatiivide vahel on eraldi (virtuaal)serveri vajadus esimesel juhul. Alternatiivid on toodud joonisel \ref{fig:complexity:added}.
+
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=9cm]{lisakomponent.png}
+		\includegraphics[width=9cm]{ohuke.png}
+		\caption{Kaks alternatiivi andmete jälgimiseks}
+		\label{fig:complexity:added}
+	\end{center}
+\end{figure}
+
+Esmapilgul ei ole alternativiide erinevus keerukuse mõttes ilmselged. Loendades valemi \ref{eq:complexity} muutujate väärutsi ilma andmejälgijata leiame, et süsteemis on viis elementi (kaks konteinerit ja kolm tarkvarakomponenti), neli liidest (turvaserveri sisenev, infosüsteemi sisenev ning monitooringuliidesed) ning et nii elemente kui liideseid on kahte tüüpi. Eraldi paigaldatava andmejälgija puhul saame vastavalt väärtused 7, 7, 2 ja 2. Õhukese lahenduse puhul väheneb küll elementide arv kuid lisandub uus liidese tüüp protsesside vaheliseks suhtluseks konteineri sees. Tulemused võtab kokku tabel \ref{tab:complexity}. 
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{p{3.6 cm}rrr}
+		\toprule
+& Puhas & Eraldi AJ & Õhuke AJ \\
+		\midruleElemente ($N_e$) &	5 &	7 &	6\\Liideseid  ($N_s$)	& 4 &	7 &	6\\Elementide liike  ($N_et$)&	2	&2	&2\\Liideste liike  ($N_st$)&	2 &	2 &	3\\
+		\midruleKeerukus &	2.35 &	2.62	 &2.57\\
+		\bottomrule
+		\end{tabular}
+		\caption{Kokkuvõte alternatiivide keerukusest}
+		\label{tab:complexity}
+
+	\end{center}
+\end{table}
+
+Näeme, et andmejälgija iseenesest lisab süsteemi oluliselt keerukust. Samas on alternatiivne, turvaserveriga kokku paigaldatav, lahendus õige pisut väiksema keerukusega. Loomulikult on tegu lihtsustatud näitega kuid tegu on reaalse viisiga kvantifitseerida arhitektuursete lahenduste erinevusi. Tasub ka tähele panna, et süsteemi piiride määratlemisel on oluline mõju: kui lugeda süsteemi keerukuse hulka ka turvaserverisse sisenev liides, suureneb alternatiivide poolt jagatud liideste hulk ning seega väheneb suhteline erinevus. 
+	
 \section{Äriplaan}
 \subsection{Arendus- ja halduskuludest}
 \label{sec:kulud}
@@ -195,7 +254,7 @@ Tehnilise võla juhtimine on teatavas mõttes sarnane finantsvõla juhtimisega: 
 \label{humble}
 Edsger W. Dijkstra on inimene, kes arvuti-inimeste hulgas tutvustamist ei vaja ja kel tiitleid rohkem, kui loetleda jõuab. Muu hulgas on ta 1972. aastal saanud Turingi Auhinna. Nagu kombeks, järgnes auhinnale avalik loeng \citep{yourdon1979classics}, mille pealkirjaks Alandlik Programmeerija. Pika ja tõeliseks nautimiseks mõningast arvutiteaduse tausta vajava jutu peamised teesid on järgmised\footnote{Tõlgitud ja mugandatud aadressilt \url{http://c2.com/cgi/wiki?TheHumbleProgrammer}}:
 \begin{itemize}
-	\item Kui pürgida töökindla tarkvara ja efektiivse töökorralduse poole, peate leidma viisivigade vältimiseks nende hilisema otsimise asemel. Selle tulemusena muutub programmeerimine kui protsess odavamaks.
+	\item Kui pürgida töökindla tarkvara ja efektiivse töökorralduse poole, peate leidma viisi vigade vältimiseks nende hilisema otsimise asemel. Selle tulemusena muutub programmeerimine kui protsess odavamaks.
 	\item Programmeerijad peaksid tegelema vaid intellektuaalselt hoomatava tarkvaraga
 	\item Programmeerijad ei peaks unustama, et nende ülesanne ei ole programmeerida. Nende ülesanne on disainida lahendusi, mis käituvad soovitud viisil
 	\item Tavaliselt kirjutatakse programm ja siis seda testitakse. Kuid testimine on paremal juhul efektiivne viis vigade olemasolu tuvastamiseks. Vigade puudumise  tõestamiseks on testimine lootusetu
@@ -330,6 +389,7 @@ Riskijuhtimise paradigmamuutust tingivad järgmised trendid:
 	\end{itemize}
 
 \end{itemize}
+
 \subsection{Süsteemiohutuse vaatenurk}
 Eelnevalt loetletu kõrvale seab \cite{leveson2011engineering} oma nimekirja asjaoludest, mis sunnivad loobuma senistest süsteemide ohutust käsitlevatest mudelitest:
 \begin{itemize}
@@ -347,6 +407,12 @@ Eelnevalt loetletu kõrvale seab \cite{leveson2011engineering} oma nimekirja asj
 Ta jõuab järeldusele, et süsteemi ohutus ja turvalisus on süsteemi ilmnevad omadused. Seejuures tuleb süsteemi all mõista terviklikku sotsiotehnilist süsteemi\footnote{Süsteemi piiride kohta vt. \ref{sec:boundary}}, mis sisaldab hulka omavahel suhestuvaid tehnilisi ja mittetehnilisi elemente. Sedalaadi mõtteviisi\footnote{Süsteemiohutuse kohta loe lähemalt kolmanda loengu slaididest} juured on sügaval ulatudes USA ICBM\footnote{Intercontinental Ballistic Missile - Mandritevaheline ballistiline rakett} programmi algusaegadesse. Tegu ei ole teoreetilise mõlgutusega, just tänu süsteemiohutusele on USA tuumalaevastikul seljataga 5400 reaktori-aastat intsidentideta tööd \citep{navy}. 
 
 Süsteemiohutust rakendatakse edukalt ka küberturvalisuse valdkonnas. \citeauthor{hbrcyber} kirjeldavad \citep{hbrcyber} just USA tuumalaevastiku kogemusele viidates, kuidas süsteemi turvalisus sõltub mitte ainult tehnilistest süsteemidest vaid ka inimeste koolitusest, neid sisaldavast organisatsioonistruktuurist, organisatsioonis toimivatest protsesidest jne. Ehk, tegeletakse süsteemi kui terviku turvalisusega.
+
+Cook \citep{cook1998complex} võtab 18 punktis kokku keerulist süsteemide katki mineku olemuse. Eriti oluline on aru saada punktist 2: Rikke tõsised tagajärjed viivad selleni, et aja jooksul lisatakse järjest uusi kihte rikkekaitse mehhanisme. Tõepoolest: kuna ohutus on süsteemi emergentne omadus ei ole võimalik kõiki rikkeid ennustada ning kas rikked või rikkelähedased olukorrad viivad aja jooksul parema arusaamani võimalikest riketest. Siit tuleneb kaks olulist järeldust:
+\begin{itemize}
+	\item Kuna rikkekaitse mehhanismid on süsteemi osad, siis nende lisamisega süsteemi keerukus vältimatult kasvab (vt. ka peatükk \ref{sec:complexity}). Kuid süsteemi keerukus ja süsteemi ohutus on reeglina pöördvõrdelises seoses: keerukuse kasvades kasvab võimalike rikkestsenaariumide hulk. Ehk, kõikvõimalike kaitsemehhanismide lisamine suurendab süsteemi ohutust eksponenti mööda. Teatud piirist edasi ei suuda ka väga hästi konstrueeritud mehhanism süsteemi ohutust tõsta
+	\item Eksisteerib konkreetne ja inimeste ohutusest tulenev surve süsteemi arendada lähtudes mitte selle algsest funktsioonist (ja seega ka arhitektuurist) vaid lähtudes ohutusest. Tegu on olulise ja juhtimist vajava survega süsteemi arhitektuuri terviklusele
+\end{itemize} 
 
 \subsection{Kaos ja ahvid}
 Üks suurimaid probleeme slaididel ja loengus kirjeldatud paradigmamuutusega toime tulekul on inimeste hoiakud. Kui ühe serveri puhul võis loota, et see niipea katki ei lähe ja kui läheb, siis on teine varuks, siis 1000 serveri puhul läheb iga päev mõni katki. Sama lugu on küberrünnetega. Inimeste mõttemudel muutub aga aeglaselt. Probleemi on huvitavalt lahendanud Netflix \citep{monkey}. Nende vahend lihtsalt käib ja lülitab servereid välja, kõik teavad seda. Ehk, iga teenus peab olema suuteline sellist käitumist taluma. Sisuliselt on Netflix teadmata parameetritega rikete mürafooni asendanud palju tugevama kuid tuntud parameetritega signaaliga.   
