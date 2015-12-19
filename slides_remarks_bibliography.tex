@@ -58,24 +58,12 @@
 \subtitle{Märkmed ja kommentaarid}
 \date{\today}
 \author{Andres Kütt}
-%\institute{Riigi Infosüsteemi Amet}
 
-\newcounter{slidenum}
-\setcounter{slidenum}{2} % set to 2 if want to exclude title page of presentation
-
-\newcommand\showslide{
-%  \clearpage 
-  \begin{center}
-    \framebox{\includegraphics[page=\arabic{slidenum},width=.99\textwidth]{esimene_kontakt_beamer.pdf}}
-%	\includegraphics[page=\arabic{slidenum},width=.65\textwidth]{esimene_kontakt_beamer.pdf}
-    \stepcounter{slidenum}
-  \end{center}
-  \clearpage
-}
 
 \begin{document}
 \maketitle
 \clearpage
+\setcounter{tocdepth}{2}
 \tableofcontents
 \clearpage
 
@@ -142,8 +130,13 @@ Esmapilgul ei ole alternativiide erinevus keerukuse mõttes ilmselged. Loendades
 		\begin{tabular}{p{3.6 cm}rrr}
 		\toprule
 & Puhas & Eraldi AJ & Õhuke AJ \\
-		\midruleElemente ($N_e$) &	5 &	7 &	6\\Liideseid  ($N_s$)	& 4 &	7 &	6\\Elementide liike  ($N_et$)&	2	&2	&2\\Liideste liike  ($N_st$)&	2 &	2 &	3\\
-		\midruleKeerukus &	2.35 &	2.62	 &2.57\\
+		\midrule
+Elemente ($N_e$) &	5 &	7 &	6\\
+Liideseid  ($N_s$)	& 4 &	7 &	6\\
+Elementide liike  ($N_et$)&	2	&2	&2\\
+Liideste liike  ($N_st$)&	2 &	2 &	3\\
+		\midrule
+Keerukus &	2.35 &	2.62	 &2.57\\
 		\bottomrule
 		\end{tabular}
 		\caption{Kokkuvõte alternatiivide keerukusest}
@@ -194,7 +187,13 @@ Toote või teenuse arhitektuur mõjutab otseselt orgranisatsiooni ärilist posit
 On oluline mõista, et hea arhitektuur ei ole kasumiks piisav vaid pelgalt tarvilik: lisaks arhitektuurile on vaja veel paljut alates näiteks korralikust turundusest kuid ilma arhitektuurita ei ole kasum mõeldav. 
 
 Kasumi ja arhitektuuri seoseid illustreerivaid näiteid on nii kaugemast kui lähemast minevikust mitmeid. Positiivsena tasub esile tuua Black \& Deckeri strateegilist tooteinnovatsiooni seitsmekümnendatel ning Volkswageni platvormistrateegiat. Negatiivsena on üks tuntumaid General Motorsi lähenemine platvormidele. 
+TODO: refaktoreerida väärtuse mõiste ümber
 
+
+\subsection{Ettevõtte arhitektuurist}
+Traditsioonilised EA\footnote{ingl. \emph{Enterprise Architecture}} raamistikud räägivad palju äriarhitektuurist kuid teevad seda abstraktselt. Detailidesse minnakse reeglina vaid infosüsteemide puhul. Paremal juhul eeldadatakse, et muude organisatsiooni aspektide juhtimine võtab üle IT terminoloogia, lähenemise ja mõtteviisi. Organisatsioon koosneb aga liiga paljudest eri taustaga inimeste eri fookusega vastutusaladest, et oleks lootust neile kõigile üht metoodikat rakendada.  Seetõttu on EA kui distsipliin end sageli diskrediteerinud jäädes kageks nii ärist (kes lihtsalt mõtlevad oma probleemidest teisel viisil) kui inseneridest (kes peavad igapäevaselt tegelema ärilise keerukuse valamisega infosüsteemidesse).
+
+Mida siis teha? Soovitusi annab \cite{fowlerlean}. Artiklis on oluline alltekst: kuigi räägitakse arhitekti rollist agiilses organisatsioonis, isegi ei mainita võimalust, et organisatsioon agiilseks \emph{ei muutuks}. Arhitekti roll kaasaegses organisatsioonis peab muutuma. Otsuste tegijast otsuste toetajaks. Suuna andjast sildade ehitajaks. Õpetajast õppiva kogukonna keskmeks. 
 
 \section{Tarkvaratehnika}
 \subsection{Kokkuhoiust programmeerijatelt}
@@ -557,7 +556,7 @@ Enne, kui asuda end lahutamatult sisse söönud partnerist, "puugist", lahutama,
 On hea teha järgnevat:
 \begin{itemize}
 	\item Vii kas ise läbi või telli audit hindamaks süsteemi kvaliteeti ning strateegilist positsiooni. Hinnata tuleks nii koodi kui sellist, arhitektuurset lahendust kui ka süsteemi üldist avatust (dokumentatsiooni tase, APIde olemasolu jne.). Audit on kasulik ka sõltumatu argumendina põhjendamaks potentsiaalselt kõrgeid kulusid, mis süsteemide ümber kirjutamise või asendamisega paratamatult kaasnevad (vt. ka \ref{sec:rooste})
-	\item Hinda alternatiive. "Puugist" lahti saamine ei ole väga mõistlik, kui järgmisel hankel jälle vaid seesama ettevõte tõsiseltvõetava pakkumise suudab esitada  
+	\item Hinda alternatiive. ``Puugist`` lahti saamine ei ole väga mõistlik, kui järgmisel hankel jälle vaid seesama ettevõte tõsiseltvõetava pakkumise suudab esitada  
 \end{itemize}
 
 \subsection{Kvaliteedi juhtimine}
@@ -580,8 +579,57 @@ samas:
 
 Kui esimesed kaks tingimust on täidetavad, võib vaidlused lõppenuks lugeda ning asuda teenustaset jutima.
 
+\subsection{Projektijuhtimine}
+Projektijuhtimine on väga keeruline teema ja sellest on kirjutatud palju. Siiski on mõned IT juhtimise vaatenurgast olulised asjad, millest on oluline aru saada. 
 
+Võtkem näiteks projekti lõpptähtaja hindamise. Hindamine toimub tavaliselt nii, et projekt jagatakse sammudeks, iga sammu eest vastutaja annab oma hinnangu ja tulemus liidetakse kokku. Kõlab mõistlikult, eks? Kuid vaatame lähemalt. Iga vastutaja on tõenäoliselt kogenud inimene. Seega oskab ta anda hinnangu oma sammu mediaankestvust: kestvust, millest pooltel juhtudel õnnestub samm kiiremini läbida ja pooltel aeglasemalt. Eriti kogenud inimesed lisavad ka puhvri andes hinnangu, mis peab vett umbes neljal juhul viiest. Ühe sammu puhul on kõik hästi. Kuid kui samme on kaks? Et projekt ei hilineks, peaks oodatust kiiremini valmis saama \emph{mõlemad} sammud. Ehk, $P_{edu}=P(S_1\cap S_2)=P(S_1)P(S_2)=0.8\times0.8=0.64$. Üldisemalt, projekti hinnatust kiiremaks valmimiseks peab oodatust kiiremini valmima üks rohkem kui pooled sammud. Natuke arvutades saame, et viie sammu puhul on tõenäosus pisut üle poole ning kümne puhul juba veerandi ligi. Kokkuvõte on toodud tabelis \ref{tab:success}. Kuna vähegi keerukam it-projekt sisaldab sadu tegevusi on üks olulisi projektide venimise põhjusi käes.
 
+Juba paarikümne sammu puhul ütleb statistika, et projekti õigeaegselt või paremini lõppemise tõenäosus langeb kaheksa protsendi juurde. Ja seda eeldades, et sammude kestvuse jaotus on sümmeetriline. Mis aga kindlasti ei pea paika\footnote{\url{http://priceonomics.com/why-are-projects-always-behind-schedule/} toob ära jaotuse, mis põhineb 70 000 projektitundi sisaldava andmehulga analüüsil. Sealt on pärit ka toodud argumentatsiooni idee.}. 
+
+Milles siis asi? Probleem on selles, et tõenäosuslikke muutujaid ei saa niisama lihtsasti liita. Tuleb aru saada, et hinnang projekti kestvusele on samuti tõenäosusjaotus nagu on seda ka üksikute sammude hinnangud. Kuna projekti tegevuste seosed on mittetriviaalsed, läheb jaotuste liitmine kiiresti liig keeruliseks. Agiilsed arendusmetoodikad keelduvadki tolle keerukusega tegelemast ja annavad lubadusi vaid lühikese ajaperioodi kohta. Siiski on ka mitte-agiilsete projektide puhul võimalik rääkida näiteks analüüsi, arenduse ja testimise sammudest millede jaotustega on võimalik tegeleda.  
+
+Kindlasti aga tuleb vältida lihtsat hinnangute liitmist.
+
+\begin{table}
+	\begin{center}
+\begin{tabular}{lll}
+
+\toprule
+Samme & Mediaan & 80\% hinnang \\
+\midrule
+1 & 0.5 & 0.8 \\
+2 & 0.25 & 0.64 \\
+3 & 0.25 & 0.64 \\
+4 & 0.125 & 0.512 \\
+5 & 0.125 & 0.512 \\
+6 & 0.0625 & 0.4096 \\
+7 & 0.0625 & 0.4096 \\
+8 & 0.03125 & 0.32768 \\
+9 & 0.03125 & 0.32768 \\
+10 & 0.015625 & 0.262144 \\
+11 & 0.015625 & 0.262144 \\
+12 & 0.0078125 & 0.2097152 \\
+13 & 0.0078125 & 0.2097152 \\
+14 & 0.00390625 & 0.16777216 \\
+15 & 0.00390625 & 0.16777216 \\
+16 & 0.001953125 & 0.134217728 \\
+17 & 0.001953125 & 0.134217728 \\
+18 & 0.000976563 & 0.107374182 \\
+19 & 0.000976563 & 0.107374182 \\
+20 & 0.000488281 & 0.085899346 \\
+21 & 0.000488281 & 0.085899346 \\
+22 & 0.000244141 & 0.068719477 \\
+23 & 0.000244141 & 0.068719477 \\
+24 & 0.00012207 & 0.054975581 \\
+25 & 0.00012207 & 0.054975581 \\
+
+\bottomrule
+\end{tabular}
+		\caption{Projekti edukuse tõenäosus}
+		\label{tab:success}
+
+	\end{center}
+\end{table}
 
 \nocite{*}
 \bibliographystyle{plainnat}
