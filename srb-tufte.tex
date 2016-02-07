@@ -229,7 +229,28 @@ See dokument on kogum märkmeid ja bibliograafiat, mis on kogutud ette valmistad
 
 
 \chapter{Arhitektuur}
-\section{Paradigmamuutus}
+\section{Arhitektuuri ajaloost}
+Inimesed on aastatuhandeid maju ehitanud. Ja sama vana on arhietkuuri mõiste. Ka meie esivanematel oli väga selge ettekujutus, kui suur üks hea rehetare peaks olema, mis ilmakaarde vaatama ning kuidas paiknema vee suhtes. Mis see muu on, kui arhitektuur?
+
+\begin{marginfigure}
+	\begin{center}
+		\includegraphics[width=.84\linewidth]{vitruvio.jpg}
+		\caption{Marcus Vitruvius Pollio, 80-70 eKr.- 15 pKr}
+		\label{fig:vitruvius}
+	\end{center}
+\end{marginfigure}
+
+Siinkandis\sidenote{Induse orus tekkisid linnastud juba 2600 e.k., ilmselt tegeldi seal ka arhitektuuriga} ehk kõige kuulsamad majaehitajad olid kreeklased. Rooma impeeriumi laienemisega oli kõikjale vaja luua uusi asundusi ja kindlustatud tugipunkte. Seega oli suur vajadus ka arhitektide järele. Meie ajaarvamise alguse Rooma riigist pärinebki ehk esimene terviklik kästilus arhitektuurist\cite{pollio1914vitruvius}. 
+
+Too Vitruviuse teos on tänaseni märkimisväärselt loetav ja aktuaalne. Samm-sammult kirjeldatakse eritüübiliste hoonete planeerimise ja konstrueerimise detaile alates üldisetest põhimõtetest (Alati ehita linna peatänav risti talviste tuulte peamise suunaga) kuni sammaste täpsete mõõtmeteni. Sellisena on tegemist tavapärasest arhitektuurist oluliselt laiema kandepinnaga teosega. Rõhk kasutaja vajadustel, juhised konteksti arvestamiseks ning tugev seos insenerikunstiga on kõik asjad, mis on tänasele tarkvaraarhitektile täpselt sama olulised kui toonasele majaehitejale. 
+
+Ehk kõige olulisem Vitruviuse pärand on tema kolm üldist printsiipi, millele kõik ruumiga tegelevad kunstid alluma peaksid: tugevus (püsivus), otstarbekus, ilu.\cite{vitruviusest}. Tol ajal arvuteid polnud kuid samade printsiipide rakenduvuse vastu tänapäevases tarkvara arhitektuuris on raske vaielda. 
+
+Viimase paarisaja aasta jooksul on arhitektuurimõte küll edasi arenenud, kuid, huvitaval kombel, ei ole esile kerkinud ühtset arhitektuuri definitsiooni. Enamasti mõeldakse arhikektuuri all millegi osiste ning nende seoste skemaatilist kirjeldust. Selline lähenemine on aga piiratud, sest räägib vähe tolle kirjelduse tekkeprotsessist või ka arhitektuuri kui sellise väärtusest. Läheb kaotsi arhitekti töö loominguline komponent. Samuti on nii mõeldes lihtne takerduda valdkondade piiridesse: arhitektuuridokumente toodetakse ju eesmärgiga ühe või teise elukutse esindajale juhiseid anda. Aga kuhu jääb tervik? 
+
+IT strateegia kontekstis on tüüpiliselt objektiks, mida disainida, organisatsiooni tegevust toetav infosüsteem. Et sedalaadi infosüsteemide disain on olulise ärilise tähendusega, on arenenud terve tarkvara arhitektuuri haru, ettevõttearhitektuur\sidenote{Ingl. \emph{Enterprise Architecture}. Tegemist on mõnevõrra eksitava mõistega, kuna tüüpiliselt on tähelepanu ettevõtte infosüsteemide ja mitte ettevõtte kui sellise arhitektuuril}.
+
+\section{Paradigmamuutus ettevõttearhitektuuris}
 Ettevõtte arhitektuuriraamistike\index{EA} ajalugu algab 1987. aastal Zachmani klassikalise paberiga \cite{zachman1987framework}. Sellest alates on toimunud päris oluline areng, mille üldjoontes võtab kokku joonis \ref{fig:architecture:EA}. 
 
 \begin{figure}%
@@ -252,8 +273,36 @@ Põhjusi on ilmselt mitmeid, kuid tõenäoliselt on oma roll nii organisatsiooni
 
 \textbf{Kasutusel on selgepiirilised kontrollitult toimivad infosüsteemid}. Eestis lõi omal ajal laineid Tiigrihüppe programm, mille oluline rõhk oli inimeste õpetamisel arvutit kasutama. Ja põhjusega: arvutid ja tarkvara olid keerulised ning vajasid vähegi komplekssema ülesannete lahendamiseks eriväljaõppega kasutajaid.  Infosüsteemid täitsid organisatsioonis kindlat rolli ning suhestusid teiste äriprotsessi osadega suhteliselt kitsa tehnoloogiapreestrite kasti vahendusel. Tänapäeval on tiigrihüpe oma rolli täitnud ning nutiseadme kasutamiseks on ka kolme-aastane piisavalt nutikas. Tarkvara ning eri kommunikatsioonitehnoloogiad on üha enam universaalselt kasutatavad ning imbunud organisatsioonide toimimise kõigisse aspektidesse sotsiaalsetest suhetest äriprotsessi juhtimiseni. 
 
-Ehk, ettevõttearhitektuuri kuldajast alates on organisatsioonide toimimise eeldused põhjalikult raputada saanud. Seetõttu on vaja uut lähenemist ettevõtete arhitektuuri käsitlemiseks. Süsteemimõtlemine sellise lähenemise ka pakub.
+Ehk, ettevõttearhitektuuri kuldajast alates on organisatsioonide toimimise eeldused põhjalikult raputada saanud. Kirjeldatud muutused tähendavad ühest küljest keerukuse olulist kasvu ja teisalt piiride hävustumist ettevõtte kui sellise, teda toetav infosüsteemi ning nende mõlema toimimise füüsilise konteksti vahel. Seega on vaja lähenemist, mis võimaldaks need kolm tervikuks siduda.
 
+\section{Moodne vaade arhitektuurile}
+Üheks võimaluseks ületada klassikalise lähenemise kitsaskohad on kasutada süsteemimõtlemist\index{Süsteemimõtlemine}. Süsteemimõtlemine\sidenote{Ingl. \emph{system thinking}. Mõtteviisi juured on eelmise sajandi alguse holistiliste mõtlejate töödes kuid oma praeguse kuju on nad saanud Jay Forresteri ja Peter Senge töödes} on lihtsalt mõtlemine olukorrast või probleemist kui süsteemist. Suhteliselt lihtsasti määratletava lähenemise võti on holismis: uuritakse süsteemi kui tervikut sõltumata tehnoloogiatest, distsipliinidest või vastutusvaldkondadest. Kui tavapärane lähenemine tarkvara arhitektuurile seab fookusse tarkvara siis süsteemimõtlemisest tulenev vaade käsitleb tark- ja riistvara, kasutajaid, organisatsioone jms. võrdväärsetena.
+
+\begin{marginfigure}
+	\begin{center}
+		\includegraphics[height=3.3cm]{Peter_Senge_at_Quest_to_Learn.jpg}
+		\includegraphics[height=3.3cm]{jayforrester.jpg}
+		\caption{Peter Senge\index{Peter Senge} (By Beyond My Ken - Own work, GFDL, \url{https://commons.wikimedia.org/w/index.php?curid=24627572}) ja Jay Forrester}
+		\label{fig:legendid}
+	\end{center}
+\end{marginfigure}
+
+
+\begin{marginfigure}
+	\begin{center}
+		\includegraphics[height=3.3cm]{MIT-Ed-Crawley_0.jpg}
+		\caption{Edward Crawley}
+		\label{fig:ed}
+	\end{center}
+	Kauaaegne MIT professor Ed Crawley\index{Edward Crawley} on töötanud koos NASAga ISSi kallal, asutanud mitmeid ettevõtteid ning olnud Skoltechi esimene rektor. Prof. Crawley süsteemiarhitektuuri üks vaieldamatuid suurkujusid maailmas.
+\end{marginfigure}
+
+Edward Crawley defineerib arhitektuuri nii:
+\quote{The embodiment of concept, and the allocation of physical/informational function to elements of form, and definition of interfaces among the elements and with the surrounding context.}
+
+Vaadakem seda definitsiooni lähemalt. 
+
+Esmalt rõhtutatakse kontseptsiooni mõistet. Kontpsetsioon\index{Kontseptsioon!Definitsioon} on süsteemi peamine mõttemudel ja lähenemisviis, mis seob funktsiooni just selle konkreetse lahendusega. On tähenduslik, et seda mainitakse esimesena: just see osis seob definitsiooni tervikuks olles samas ka mainitud mõistetest kõige hoomamatum. Funktsioon\index{Funktsioon!Definitsioon} on see, mida süsteem \emph{teeb}. Siit tuleneb süsteemi kasulikkus ja ta on teenitult paigutatud järgmisele kohale. Vorm\index{Vorm!Definitsioon} on see, mis süsteem \emph{on}. Siit tulenevad süsteemiga seotud kulud. Näeme, et süsteemi puhul on oluline kolmik vorm, funktsioon ja kontseptsioon ning et tegu on üldise definitsiooniga. Ei funktsiooni ega vormi kohta ei öelda muud, kui et neil on mingisugune sisemine struktuur. Järgnevalt mainitakse liideseid\index{Liidesed} elementide vahel. Ehk, süsteemi puhul on oluline ka viis, kuidas tema elemendid suhestuvad nii omavahel kui ka ümbritseva keskkonnaga.
 
 \section{Printsiipidest}
 Arhitektuuriga süvitsi tegelemisel on hea mõte pidada printsiipide päevikut. Arhitektuuris on mõttemudelil oluline koht ja seega on mõistlik tegeleda oma isikliku mõttemudeli arendamise ning dokumenteerimisega. Printsiibipäevik on üks viis seda teha. Printsiip on miski, mis tundub kehtivat alati ning mis ei sõltu teistest. Teatavas mõttes on tegemist universaalse tõega. Üheks näiteks printsiipidest arvutivõrkude vallas on RFC 1925\cite{callon1996rfc}. Printsiibipäeviku mõte on selles, et iga kord, kui igapäevases töös tundub mõni printsiip silma jäävat, kirjutatakse see jalamaid üles. Perioodiliselt vaadatakse päevik üle lootuses destilleerida kirja pandust veel universaalsemaid ja üldisemaid põhimõtteid. Üks näide sellisest päevikust on \cite{archprinciples}. 
