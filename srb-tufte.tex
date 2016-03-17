@@ -6,7 +6,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[estonian]{babel}
 \usepackage[style=english]{csquotes}
-
 \usepackage{nameref}
 
 \hypersetup{colorlinks}% uncomment this line if you prefer colored hyperlinks (e.g., for onscreen viewing)
@@ -234,6 +233,8 @@ See dokument on kogum märkmeid ja bibliograafiat, mis on kogutud ette valmistad
 
 Dokumendi struktuur tugineb loengute struktuurile, mis omakorda tugineb IT juhi kutsestandardile. Joonis \ref{fig:intro:structure} kujutab teemade ja peatükkide loogilisi seoseid (nooled) ja järjekorda (numbrid).
 
+Iga peatüki lõpus on eraldi lõik aruteluküsimustega. Tegu ei ole mitte suurte lahendamatute probleemidega või isegi kõige kriitilisemate küsimustega. Need on probleemid, mille üle mõtlemine aitab usutavasti paremini mõttestada konkreetse peatüki sisu ning siduda seda IT juhi igapäevaeluga. Lisaks põgusale taustale iga küsimuse kohta sisaldab iga lõik nii autori mõtteid antud teemal kui ka loengus viibinud tudengite arutelu tulemusi.
+
 %%
 % Start the main matter (normal chapters)
 \mainmatter
@@ -299,7 +300,7 @@ Boyd'i idee seisnes selles, et võitmiseks\sidenote{Freedman osundab, et võit o
 
 
 \section{Strateegiamõtte ajaloost}
-Strateegia mõiste sellisena, nagu me teda täna tunneme, kerkis esile militaarvaldkonnas 18. sajandil seoses Napoleoni võitudega\sidenote{Vt. Lawrence Freedmani loengut \url{https://www.youtube.com/watch?v=-R7kjNT8hkI}}. Sõna \emph{stratagos} tähendabki kreeka keeles kindralit ja seega on strateegia läbi ajaloo olnud seotud just militaarvaldkonnaga.
+Strateegia mõiste sellisena, nagu me teda täna tunneme, kerkis esile militaarvaldkonnas 18. sajandil. Sõna \emph{stratagos} tähendabki kreeka keeles kindralit ja seega on strateegia läbi ajaloo olnud seotud just militaarvaldkonnaga.
 
 \index{Sõjakunst}Siiani on kasutatav näiteks klassikaline\sidenote{Tegu on sel määral klassikalise teosega, et ka selle kommentaarid on juba klassika. Ongi mõistlik hankida kõige põhjalikuma võimaliku kommentaariumiga väljalase, kommentaarid koondavad strateegiamõtte väga paljude sajandite jooksul} sõjakunsti õpik The Art of War\cite{tzu2013art}. Seal määratleb autor muu hulgas viis võidu peamist osist. Nende otsene rakendatavus tänapäeval on heaks näiteks vanameistri mõttesügavusest. Tema järgi võidab see, kes
 
@@ -315,9 +316,11 @@ Sun Tzu kriitikud, sealhulgas Freedman\index{Freedman, Lawrence}, väidavad, et 
 
 Juhtimisse jõudis strateegia alles eelmise sajandi kuuekümnendatel surevestatuna suuresti korporatsioonide jõudmisest ekspansiivse kasvu piirideni. Kuna seadused hakkasin piirama edasist ühinemist ja turu haaramist, tuli keskenduda kasumlikkusele. Seega on varane strateegiamõte suuresti suunatud organisatsioonide sisse\sidenote{Ehk, ta on olemuselt sarnane IT juhi väljakutsetega, kes samuti tegeleb olemasolevast maksimumi võtmisega.} ja ei tegele eriti konkurentsiga. 
 
-Strateegia kui valdkonna arengust seitsmekümnendatel ja kaheksakümnendatel (ning suurepärase nimekirja klassikalistest artiklitest annab) \cite{rumelt1991strategic}.
+Strateegia kui valdkonna arengust seitsmekümnendatel ja kaheksakümnendatel (ning suurepärase nimekirja klassikalistest artiklitest) annab \citeauthor{rumelt1991strategic} essee\cite{rumelt1991strategic} .
 
-\section{Hea ja halb arhitektuur}
+\section{Hea ja halb strateegia}
+\label{sec:strategy:goodbad}
+
 \begin{marginfigure}
 	\begin{center}
 		\includegraphics[trim={5cm 0 5cm 0},clip,width=.7\linewidth]{richard_rumelt.jpg}
@@ -344,8 +347,71 @@ Hea strateegia tunnused pakub Rumelt välja järgmised:
 \begin{description}
 	\item[Tal on selge kolmeosaline tuum] Hea strateegia peab sisaldama diagnoosi (kuidas me mõttestame meie ees seisva probleemi\sidenote{Huvitaval kombel teeb Rumelt eelduse, et kõigil on probleemid. Et kõigil on keskne hulk jõude, milledele vastu seismine nõuab pingutust. On üsna keeruline ette kujutada, millised on need jõud näiteks Apple või Google puhul. Kahtlemata on neil väljakutseid kuid tõenäoliselt on raske välja tuua üht ja eksistentsiaalset.} tuuma), juhtpoliitikat (milles meie lahendus seisneb) ja koherentset tegevusplaani (millised sammud võetakse ette probleemi lahendamiseks)
 	\item[Sisaldab saavutatavat eesmärki] Hea strateegia osa on miski, mida on võimalik teatud pingutusega usutavalt saavutada. See miski peab olema konkreetne ning suhteliselt lühikese ajahorisondiga. Selline eesmärk annab tegevusele suuna ning aitab hinnata progressi
-	\item[Eeldab entroopiat ja inertsi] Strateegia rakendamise puhul on kõige suuremaks raskuseks tõenäoliselt organisatsioon ise. Algne plaan muutub ajas ja organisatsiooni hierarhias liikudes järjest hägusamaks ja sellega tuleb arvestada. Samuti on alust eeldada, et muutused organisatsioonis vastuseisu tekitavad ning plaan peab seda peegeldama
+	\item[Eeldab entroopiat ja inertsi] \index{Entroopia}Strateegia rakendamise puhul on kõige suuremaks raskuseks tõenäoliselt organisatsioon ise. Algne plaan muutub ajas ja organisatsiooni hierarhias liikudes järjest hägusamaks ja sellega tuleb arvestada. Samuti on alust eeldada, et muutused organisatsioonis vastuseisu tekitavad ning plaan peab seda peegeldama
 \end{description}
+
+\section{Strateegia kasutusest}
+\label{sec:strateegia:kasutu}
+Oma strateegia ajaloos osundab Freedman, et Lääne kultuuriruumis kerkis strateegia kui oluline kontseptsioon esile alles kaheksateistkümnendal sajandil seoses sõja kui sellise keerukuse kasvuga\cite{freedman2013strategy}. Ühest küljest tekkis arvamus, et sõda, nagu teisedki eluvaldkonnad võiks süsteemsest mõtlemisest kasu saada. Kuid teisalt muutus sõda oma massiarmeede ja logistika-ahelatega ühte peasse mahtumiseks liiga keeruliseks. Enam ei olnud võimalik strateegia formuleerimist ja ellu viimist mõistlikult ühendada. Ka äristrateegia esile kerkimist seostab ta ettevõtete praktilise vajadusega liikuda kvantitatiivselt kasvult kvalitatiivsele.
+
+See, loomulikult, ei tähenda, et varasemalt kuidagi oskamatult sõditud või firmasid juhitud oleks. Puudus lihtsalt praktiline vajadus eraldiseisva strateegia kontseptsiooni järele. Piisas kas lihtsast õnnest või usust geniaalsesse sõjapealikkusse. Strateegia oli suuresti välja hääldamata ning juurtega kommetes ning tavades\sidenote{Keeley war before civilization via Freedman}
+
+Siit tuleneb oluline järeldus: strateegiat ei ole alati vaja. Kuna töö on ressursi- ja ajamahukas (ning kasutu strateegia taustal võib kergesti rumalasse olukorda jääda), siis on oluline mõista, millal strateegiaga tegeleda ei ole mõtet.
+
+Skype\index{Skype} varastel aastatel puudus ettevõttel strateegiadokument selle klassikalises mõttes. Ei toimunud ka eraldi strateegia arendamise protsessi. Ometi võis juhusliku kontoris kohatud inimese käest saada küsimusele \enquote{millega te siin tegeleme?} konkreetse ja ammendava vastuse. Ja need vastused langesid põhijoontes kokku. Kuidas nii? Meie ees toona seisnud probleem oli väga konkreetne ja üheselt arusaadav ka ilma suuri sõnu tegemata. Oli vaja ise ellu jäädes telekomiturg pikali lükata. Suhteliselt väikeses kitsa ringi inimeste ümber koondunud organisatsioonis on tegemist vajav selge ka ilma eksplitsiidse strateegiata. 
+
+Piibel ütleb, et \enquote{võidujooks pole kiiretele ja lahing tugevatele}. Ja, tõesti, suure hulga ressursside igasugune enam-vähem mõistlik kasutamine viib reeglina soovitud tulemusele ka ilma suurema strateegiata. Võib kuluda vähem või rohkem aega või ressursse aga töö saab tehtud. Nagu insenerid vahel ütlevad: \enquote{Ei ole lahendamatuid probleeme, on liiga väikesed haamrid}. Kui paras haamer käepärast ei ole mõtet arutada, kas võtta ta paremasse või vasakusse kätte.
+
+Kolmas põhjus strateegiat mitte omada on kontrolli puudumine. Isegi kui käsitleda strateegiat kui suure hulga isiklike strateegiate sünergeetilist summat, on strateegia kujundamiseks ikkagai vaja neid isiklikke lähenemisi suunata. Kontroll võib puududa kas ülemiste juhtimistasandite poolt seatud reeglite, alumiste tasandite vastuseisu või usalduskreedidi puudumise tõttu juhi vastu. Kuidas ka ei oleks, sellisel juhul strateegiaga tegelemine on kindel viis end lolliks teha. 
+
+Kokkuvõttes, strateegiaga ei ole mõtet tegeleda kolmel juhul:
+\begin{itemize}
+	\item Kui ollakse väike ning keskendunud
+	\item Kui ollakse suur ja tugev
+	\item Kui olukorda ei kontrollita piisavalt
+\end{itemize}
+
+Tähelepanelik lugeja kindlasti märkab, et ükski toodutest ei ole selgepiiriline või ühene. Millal ollakse \enquote{suur ja tugev}? Lapsed ja organisatsioonid võivad ootamatult kiiresti kasvada, tänane tugevus võib homme olla nõrkus ning ka suurim juht võib end nurka mängida. On oluline järjepidavalt hinnata oma organisatsiooni ning selle vajadust strateegia järele. Nii tegelemine mitteproduktiivsete asjadega kui mittetoimivast strateegiast tulenev võlts kindlustunne võivad organisatsioonile hukatuslikuks osutuda. 
+
+\section{Küsimusi aruteluks}
+\subsection{Kuidas lahutada IT strateegia äristrateegiast?}
+\label{sec:strategy:q1}
+Kui meie loengute kandev teema on \enquote{Infotehnoloogia strateegiline juhtimine} tundub sellest järelduvat, et on võimalik tegeleda IT strateegia kui millegi äristrateegiast eraldi seisvaga. Samas on ilmselt selge, et IT ei saa toimida ärist eraldi ning seosed peavad olema tugevad.
+
+Kindlasti ei ole mõtet rääkida IT strateegiast juhtudel, kui strateegiat kui sellist üldse vaja pole \sidenote{Vt. lõik \nameref{sec:strateegia:kasutu}}. IT kontekstis on tüüpiliselt põhjuseks liig range korporatiivne keskkond, mis ühtlustab IT organisatsioonis kõik alates personalipoliitikast (tasustamine, värbamine, tulemuste hindamine jne.) kuni operatiivmudelini (osta/ehita otsused, lepingulised suhted, mõõdikud jne.). Sel juhul võib ja peab IT-juht küll vastutama kõigi strateegiliste valdkondade toimimise eest kuid saab seda teha vaid rangelt etteantud piirides muutudes strateegist strateegia koostajast selle elluviijaks.
+
+Siit järeldub, et IT juhile on oma strateegia ellu viimiseks hädavajalik olla juhtkonnale tõsiseltvõetav partner. Vaid nii õnnestub kaasa rääkida äristrateegia kujundamisel ning saavutada vabadus toimetada IT strateegiaga. 
+
+IT ja äristrateegia seoseid saab mõtestada näiteks kasutades Rumelti hea strateegia tunnuseid (vt.\nameref{sec:strategy:goodbad}). Hea IT strateegia peaks
+\begin{description}
+	\item[Omama probleemi, leitmotiivi ja tegevusplaani]. Probleemi sõnastamiseks tuleb aluseks võtta tuumprobleem äristrateegiast\sidenote{Selle puudumisel on mõistlik sõnastada probleem, mille taha on IT organisatsioon nõus koonduma. Vt. ka \ref{sec:strategy:q3}}. Seos ei saa olla aga automaatne. Kui äri probleemiks on liig kõrged kulud võib IT oma probleemi sõnasta nii läbi kulude kui ka näiteks informatsiooni kogumise ja kättesaaavaks tegemise. Kuidas ikkagi juhtus, et meie kulud kasvasid? Kui äri juhtiv poliitika on piisavalt üldine (\enquote{Jaga ja valitse}), sobib see ka ITle. Spetsiifilisematel juhtudel tuleb ilmselt sõnastada valdkonnaspetsiifiline lähenemine. IT tegevusplaani iga samm peaks olema seotud äristrateegia tegevusplaaniga
+	\item[Sisaldama saavutatavat eesmärki] Nagu ka tegevusplaani puhul peaks IT eesmärk toetama organisatsiooni üldise eesmärgi saavutamist. Samas peab eesmärk olema ka tehnoloogilises plaanis saavutatav IT-juhi kontrolli all olevate vahendite abil. Tasub mõelda süsteemi piiride\index{Süsteem!Piirid} probleemist (vt. \nameref{sec:boundary})
+	\item[Eeldama entroopiat ja inertsi] Nagu ka organisatsiooni oma, peab IT strateegia arvestama muutustega. Seda nii eesmärkide saavutatavuse kui tegevuskava mõttes. IT kontekstis võib siinkohal mõelda ka riskide juhtimisest kuid mitte ainult. IT on olemuslikult eesliinitööle lähemal (ja omab tugevamat tehnilist kompetentsi) ja võib näha inertsi seal, kus äri tasemel on lihtne muutus. Näiteks võib andmebaasiplatvormi vahetus ka tehnikule suhteliselt lihtsana tunduda kuni kellelegi ei meenu, et miskipärast on kunagi otsustatud massiivses koodibaasis läbivalt kasutada vanale platvormile spetsiifilisi lahendusi. Sel juhul on ülioluline, et äristrateegia muudetud saaks
+\end{description}
+
+\subsection{Kui kiiresti sumbuvad muutused organisatsioonis?}
+\index{Muutused}
+Ehk, \enquote{Kas äristrateegia muutus võib muuta majutus-strateegiat?}. Organisatsiooni kihilises mudelis (vt. joonis \ref{fig:stack}) on kõik kihid omavahel seotud. Muutus ühes põhjustab muutusi järgmistes. Seega tekib tahes tahmata küsimus sellest, kui kiiresti sellised muutused organisatsioonis sumbuvad. Ühest küljest võib IT tegeleda vaid tellija soovide täitmisega kuid teisalt võib ta ka investeerida paindlikku taristusse, mis sisuliselt ärist ei sõltu. Smauti sõltub vastus küsimusele olulisel määral muutuse olemusest.
+
+\begin{marginfigure}
+	\begin{center}
+		\includegraphics[width=\linewidth]{stack.pdf}
+		\caption{Organisatsiooni kihiline mudel}
+		\label{fig:stack}
+	\end{center}
+\end{marginfigure}
+
+Peamine sõnum auditooriumist: tuleb leida tasakaal lihtsa käsutäitmise ning täiesti paindliku lahenduse vahel, kumbki ei ole soovitav.
+
+\TODO vajab viidet N juhtumile ja stacki põhjalikku lahtikirjutust koos arutluskäiguga
+
+\subsection{Kuidas juhtida mõistlikult ITd kui organisatsioon kui tervik ei ole mõistlikult juhitud?}
+\label{sec:strategy:q3}
+Elu näitab, et organisatsioone võib pikalt juhtida viisil, mida kindlasti mõistlikuks pidada ei saa. Kindlasti võib äriettevõtete langus kesta aastaid ning ka avalikus sektoris võivad demokraatlikud mehhanismid tekitada olukorra, mis tingimata juhtimislikult mõistlik ei ole. Seega tekib küsimus, kas ja kuidas mittemõistlikus organisatsioonis on võimalik tegeleda mõistliku IT juhtimisega.
+
+Peamine sõnum auditooriumist: proovime pakkuda paremaid lahendusi (mõisnik ja banaan), seletame otsuste mõju (ajahorisondi küsimus).
+\ref{sec:strategy:q1}
+\TODO korralikult lahti kirjutada
 
 \chapter{Arhitektuur}
 \section{Arhitektuuri ajaloost}
@@ -396,6 +462,7 @@ Põhjusi on ilmselt mitmeid, kuid tõenäoliselt on oma roll nii organisatsiooni
 Ehk, ettevõttearhitektuuri kuldajast alates on organisatsioonide toimimise eeldused põhjalikult raputada saanud. Kirjeldatud muutused tähendavad ühest küljest keerukuse olulist kasvu ja teisalt piiride hävustumist ettevõtte kui sellise, teda toetav infosüsteemi ning nende mõlema toimimise füüsilise konteksti vahel. Seega on vaja lähenemist, mis võimaldaks need kolm tervikuks siduda.
 
 \section{Moodne vaade arhitektuurile}
+\label{sec:arch:fcc}
 Üheks võimaluseks ületada klassikalise lähenemise kitsaskohad on kasutada süsteemimõtlemist\index{Süsteemimõtlemine}. Süsteemimõtlemine\sidenote{Ingl. \emph{system thinking}. Mõtteviisi juured on eelmise sajandi alguse holistiliste mõtlejate töödes kuid oma praeguse kuju on nad saanud Jay Forresteri ja Peter Senge töödes} on lihtsalt mõtlemine olukorrast või probleemist kui süsteemist. Suhteliselt lihtsasti määratletava lähenemise võti on holismis: uuritakse süsteemi kui tervikut sõltumata tehnoloogiatest, distsipliinidest või vastutusvaldkondadest. Kui tavapärane lähenemine tarkvara arhitektuurile seab fookusse tarkvara siis süsteemimõtlemisest tulenev vaade käsitleb tark- ja riistvara, kasutajaid, organisatsioone jms. võrdväärsetena.
 
 \begin{marginfigure}
@@ -437,6 +504,7 @@ Mitte kõik emergentsed omadused ei ole lihtsalt ebasoovitavad või ootamatud \c
 
 \section{Süsteemi piiride probleem}
 \label{sec:boundary}
+\index{Süsteem!Piirid}
 Kui rääkida süsteemist, tekib alati küsimus süsteemi piiridest: kus algab meie kontrolli all olev ala ja kus ta lõpeb? \cite{wood2013framework} räägib osapoolte kaasamisest ning probleemipüstituse juures küsib õigesti: kuidas saada kontrolli alla konkreetse rakenduse teise ja kolmanda järgu efektid? Ehk, kuidas vältida projekti ebaõnnestumist, sest temast tõusis kahju meie olulise kliendi olulisele partnerile? Lahendusteks pakutakse osapoolte omavaheliste suhete analüüsi sotsiaalvõrkude puhul kasutatavate meetoditega. Siiski ei anta ka siin vastust küsimusele kirjeldatud võrgu piiridest: ei ole selge, kuidas otsustatakse, keda võrku kaasata ja keda mitte (kas kliendi kliendi klient on ka oluline?). 
 
 Lisaks konkreetsele osapoolte kaardistamise raamistikule annab artikkel ka mõningase ülevaate erinevatest EA raamistikest.
@@ -463,7 +531,7 @@ Vaatleme selle valemi rakendamist lihta ülesande näitel. Olgu meil ülesanne l
 
 \begin{figure}[htp]
 	\begin{center}
-		\includegraphics[width=.7\textwidth]{puhas.png}
+		\includegraphics[width=.6\textwidth]{puhas.png}
 		\caption{Jälgitava süsteemi põhimõtteline paigaldusskeem}
 		\label{fig:complexity:pure}
 	\end{center}
@@ -472,14 +540,16 @@ Vaatleme selle valemi rakendamist lihta ülesande näitel. Olgu meil ülesanne l
 Süvenemata realisatsiooni detailidesse võib öelda, et leidub kaks põhimõttelist viisi liikluse jälgimiseks. Esimene koosneb eraldi paigaldatavast vahendajast turvaserveri ja infosüsteemi vahel. Vahendaja pakub sama liidest, mis infosüsteem ja edastab ühele poole päringuid ja teisele vastuseid. Teine koosneb turvaserveri ümber mässitavast lahendusest, mis jälgib turvaserverisse sisenevat liiklust ning edastab selle turvaserverile. Peamine vahe alternatiivide vahel on eraldi (virtuaal)serveri vajadus esimesel juhul. Alternatiivid on toodud joonisel \ref{fig:complexity:added}.
 
 
-\begin{figure}[htp]
-		\includegraphics[width=9cm]{lisakomponent.png}
-		\includegraphics[width=9cm]{ohuke.png}
+\begin{figure}[ht]
+		\includegraphics[width=8cm]{lisakomponent.png}
+		\includegraphics[width=8cm]{ohuke.png}
 		\caption{Kaks alternatiivi andmete jälgimiseks}
 		\label{fig:complexity:added}
 \end{figure}
 
 Esmapilgul ei ole alternativiide erinevus keerukuse mõttes ilmselged. Loendades valemi \ref{eq:complexity} muutujate väärutsi ilma andmejälgijata leiame, et süsteemis on viis elementi (kaks konteinerit ja kolm tarkvarakomponenti), neli liidest (turvaserveri sisenev, infosüsteemi sisenev ning monitooringuliidesed) ning et nii elemente kui liideseid on kahte tüüpi. Eraldi paigaldatava andmejälgija puhul saame vastavalt väärtused 7, 7, 2 ja 2. Õhukese lahenduse puhul väheneb küll elementide arv kuid lisandub uus liidese tüüp protsesside vaheliseks suhtluseks konteineri sees. Tulemused võtab kokku tabel \ref{tab:complexity}. 
+
+Näeme, et andmejälgija iseenesest lisab süsteemi oluliselt keerukust. Samas on alternatiivne, turvaserveriga kokku paigaldatav, lahendus õige pisut väiksema keerukusega. Loomulikult on tegu lihtsustatud näitega kuid tegu on reaalse viisiga kvantifitseerida arhitektuursete lahenduste erinevusi. Tasub ka tähele panna, et süsteemi piiride määratlemisel on oluline mõju: kui lugeda süsteemi keerukuse hulka ka turvaserverisse sisenev liides, suureneb alternatiivide poolt jagatud liideste hulk ning seega väheneb suhteline erinevus. 
 
 \begin{table}
 	\begin{center}
@@ -501,18 +571,28 @@ Keerukus &	2.35 &	2.62	 &2.57\\
 	\end{center}
 \end{table}
 
-Näeme, et andmejälgija iseenesest lisab süsteemi oluliselt keerukust. Samas on alternatiivne, turvaserveriga kokku paigaldatav, lahendus õige pisut väiksema keerukusega. Loomulikult on tegu lihtsustatud näitega kuid tegu on reaalse viisiga kvantifitseerida arhitektuursete lahenduste erinevusi. Tasub ka tähele panna, et süsteemi piiride määratlemisel on oluline mõju: kui lugeda süsteemi keerukuse hulka ka turvaserverisse sisenev liides, suureneb alternatiivide poolt jagatud liideste hulk ning seega väheneb suhteline erinevus. 
 	
+\section{Küsimusi aruteluks}
+\subsection{Millist väärtust loob arhitektuuriga tegelemine?}
+Arhitektuur tundub oluline kuid samas on ka selge, et arhitekti mitteilmumine tööle ei põhjusta tavaliselt kohest kadu produktiivsuses. Arhitekti töö väärtust on mõnevõrra keeruline hinnata. 
+
+Peamine sõnum auditooriumist: mõjuanalüüs, suur pilt, optimiseerimine/kulud
+\TODO kirjuta lahti
+
+\subsection{Kui palju erineb süsteemimõtlemisele tuginev mudel harjumuspärasest?}
+Palju.
+\TODO Näide testimise modelleerimisest. Lineaarne vs. mittelineaarne lähenemine
+
 \chapter{Äriplaan}
 \section{Arendus- ja halduskuludest}
 \label{sec:kulud}
-Laias laastus võib öelda, et kulud arendusele jagunevad kuludeks, mis tarnivad uut funktsionaalsust (ning mida tavaliselt tajutakse kui uut väärtust lisavatena) ning kuludeks, mis lähevad olemasoleva muutmiseks või parandamiseks. Neist esimesed lisavad selgesti halduskoormust ja halduskulusid luues uusi rakendusi, mida tuleb hallata, millede teenustase tuleb tagada. Teised aga võivad (aga ei pruugi) halduskulusid vähendada näiteks tehnilist tehnilist võlga likvideerides. Arenduskulusid võib vaadata ka keerukuse vaatepunktist: esimest liiki kulud suurendavad, teised võivad aga keerukust vähendada. Kokkuvõte kuludest ja nende mõjudest on toodud tabelis \ref{tab:arendus}.
+Laias laastus võib öelda, et kulud arendusele jagunevad kuludeks\index{Kulud!Arendus}index{Kulud!Haldus}, mis tarnivad uut funktsionaalsust (ning mida tavaliselt tajutakse kui uut väärtust\index{Väärtus} lisavatena) ning kuludeks, mis lähevad olemasoleva muutmiseks või parandamiseks. Neist esimesed lisavad selgesti halduskoormust ja halduskulusid luues uusi rakendusi, mida tuleb hallata, millede teenustase tuleb tagada. Teised aga võivad (aga ei pruugi) halduskulusid vähendada näiteks tehnilist tehnilist võlga likvideerides. Arenduskulusid võib vaadata ka keerukuse vaatepunktist: esimest liiki kulud suurendavad, teised võivad aga keerukust vähendada. Kokkuvõte kuludest ja nende mõjudest on toodud tabelis \ref{tab:arendus}.
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{p{3cm}p{1.9cm}p{1.7cm}p{2.2cm}}
+		\begin{tabular}{p{2.8cm}p{1.7cm}p{1.5cm}p{2cm}}
 		\toprule
-Kulu & Mõju \mbox{halduskuludele} & Mõju tajutud väärtusele & Mõju \mbox{keerukusele} \\
+Kulu & Mõju haldus\-kuludele & Mõju tajutud väärtusele & Mõju \mbox{keerukusele} \\
 \midrule
 
 Uue funktsionaaluse \mbox{lisamine} & Selgesti \mbox{suurendab} & Selgesti \mbox{suurendab} & Selgesti \mbox{suurendab} \\
@@ -526,30 +606,85 @@ Olemasoleva muutmine või parandamine & Neutraalne või vähendab & Reeglina \mb
 	\end{center}
 \end{table}
 
-Siit tuleneb oluline tõdemus: arenduskulud, mis suurendavad tajutud väärtust tekitavad juurde ka halduskoormust ja lisavad keerukust viies seega alla organisatsiooni võime tulevikus uut väärtust lisada. Võtmeks tupikust välja on sõna "tautud". Muutes viisi, kuidas organisatsioon tajub ITst tulenevat väärtust on võiamlik saavutada tellija arusaam IT kulude dünaamikast. 
+Siit tuleneb oluline tõdemus: arenduskulud, mis suurendavad tajutud väärtust tekitavad juurde ka halduskoormust ja lisavad keerukust viies seega alla organisatsiooni võime tulevikus uut väärtust lisada. Võtmeks tupikust välja on sõna "tajutud". Muutes viisi, kuidas organisatsioon tajub ITst tulenevat väärtust on võiamlik saavutada tellija arusaam IT kulude dünaamikast.
+
+Nagu kõik investeeringud, on investeeringud ITsse finantsjuhtimise objektiks. Investeeringud amortiseeritakse teatud perioodi  jooksul ja kulud kaetakse jooksvast eelarvest. Kui äriorganisatsioonil on fikseeritud aastane kulueelarve IT suunas, tekib kiusatud suuremahulised projektid teha investeeringutena ning hiljem katta vaid amortisatsioonikulusid. Selline lähenemine tuleneb kogemusest materiaalse põhivaraga, kus põhivara haldamiseks tehtavad kulutused on oluliselt väiksemad amortisatsioonikuludest. Investeerides näiteks mõnda masinasse, see kulub kuni ei ole enam mõistlikult kasutatav. Jah, igakuiselt tuleb maksta hooldusarveid, kuid need on tüüpiliselt oluliselt väiksemad, kui liisingmakse. Samuti on hoolduskulud tavaliselt äriplaanis juba toote omahinnana arvesse võetud. 
+
+Infosüsteemide puhul on olukord oluliselt erinev. Pärast algset investeeringut tarkvara loomisse, hakkavad jooksvalt tekkima vähemalt järgmised kulud:
+\begin{description}
+	\item[Serverid, võrguseadmed ja nende majutus] Serverid amortiseeruvad, neid peab hoidma jahedas valvatavas ruumis ning nad võtavad elektrit
+	\item[Süsteemi monitooring] Keerukad infosüsteemid vajavad tüüpiliselt mingit jälgimist, halvemal juhul 24/7. 
+	\item[Klienditugi] Reeglina vajab infosüsteem teatud tuge kliendile. Olgu selleks õiguste lisamine ja eemaldamine, finantsaasta vahetusega seotud tegevused, tavapärane tõrkeotsing või lihtne kliendi õpetamine, peab leiduma keegi, kes vajadusel süsteemi kapoti alla vaatab
+	\item[Internetiühendus] Infosüsteemi kasutatakse reeglina läbi internetiühenduse. Korralik internetiühendus maksab raha ning see kulu ei pruugi olla väike. Keerukamatel juhtudel lisanduvad veel kulud CDNile\sidenote{CDN - \emph{Content Delivery Network}. Süsteem, mis vähendab kasutaja poolt tajutud latentsi tehes süsteemi osad kättesaadavaks lõppkasutajale interneti topoloogia mõttes soodsates asukohtades} ja muule sellisele
+	\item[Turvateenused ja riistvara] Infosüsteemid vajavad kaitset ning vastavat riist- ja tarkvara ning teenuseid on turul saadaval. Turvaseadmed on näiteks tulemüürid ja riistvaralised SSL-kiirendid ning teenusena võib sisse osta kõike alates operatsioonisüsteemi paikamisest kuni teenustõrkerünnete vastasest taristust  
+	\item[Infoturve] Lisaks riistvarale ja tarkvarale vajab iga infosüsteem pidevalt infotehnoloogilist tähelepanu. Küberruumis kasutatavad ründevahendid arenevad pidevalt ning nii teie loodud tarkvaras kui seda toetavates süsteemides tuvastatakse pidevalt turvavigu. Nende vigade järgimine ning tarkvara uuendamine vajavad küllalt spetsiifilist kompetentsti.
+\end{description}
+
+Kõigil neil kuludel on kolm omadust:
+\begin{enumerate}
+	\item Nad on üksteisest raskesti konkreetsele süsteemile allkoeeritavad. Kui organisatsioonil juba on 24/7 monitooringuvõimekus, eeldab see hulka hästi organiseeritud inimesi. On üsna keeruline hinnata, kui palju tööd lisab neile iga konkreetne uus lahendus. Inimene on öösel telefonivalves ju igal juhul? Kui suure osa serveriruumi külmast õhust võtavad just konkreetse süsteemi serverid?
+	\item Nad on arenduskulude\sidenote{Mis omakorda genereerivad halduskulusid käivitades omaette tagasiside} kaudu tagasisidestatud. Monitooring ja klienditugi võivad avastada süsteemist parandamist vajava vea, infoturve võib leida, et süsteemi riskide aktsepteerivale tasemele viimiseks on vaja teha arendustööd. Süsteemi piisava jõudluse tagamiseks ei pruugi olla võimalik enam riistvara lisada. Kõik muutused tarkvaras aga tekitavad uusi vigu, vajadust klienti toetada, jõnkse monitooringule, tegevust infoturbele jne. 
+\end{enumerate}
+
+Kõik need kulud moodustavad tüüpiliselt oluliselt suurema ning raskemini hinnatava\sidenote{Siit tuleb üks olulisi pilveteenuste\index{Pilveteenused} võlusid. Kuna need võimaldavad ressursikasutust täpselt hinnata, on nende abil võimalik süsteemide kulutatavat oluliselt selgemini eristada. Kasu tuleb nii privaat- kui avaliku pilve puhul.} protsendi algsest investeeringust, kui materiaalse põhivara puhul. 
+
+Kui pildile lisada veel asjaolu, et tehnoloogia kipub ajas vananema suurendades halduskulusid\sidenote{Vt. \nameref{sec:rooste}}, siis ei ole üldse selge, milline mõju saab olema arendusprojekti amortiseerimisel (hoides kulubaasi stabiilsena kuid vähendades kulusid jooksvale haldusele ning arendusele) või kohe kulusse kandmisel.
+
+Küsimus arenduskulude juhtimisest on eriti oluline avalikus sektoris. Ühest küljest puudub siin kasumlikkuse surve\sidenote{18f, USA föderaalvalitsuse digitaalagentuuri blog on hea allikas avaliku sektori it-probleeme lahkavate artiklite osas. \url{https://18f.gsa.gov/2016/02/23/software-maintenance-is-an-anti-pattern/} on selle lõigu inspiratsiooniks} ja teisalt on kulud ja investeeringud reeglina rangelt eraldatud. Mõlemad seavad süsteemi hooldamiseks tehtavad kulutused tugeva surve alla: esimene tekitab tunde, et hoolduskulud on ebavajalikud ja teine võimaldab taotleda finantseeringut projektidele, mille hooldamiseks puuduvad vahendid. Nii tekib olukord, kus oluline investeering ei tooda puuduva hoolitsuse tõttu maksumaksjale piisavalt väärtust. 
+
+Probleemi ületamiseks pakub 18f, et igal süsteemil peaks käivitusperioodi lõppedes tekkima eri osapoolte esindajatest (sh. arendajad) koosnev meeskond, mis tegeleb järgmisega
+\begin{description}
+	\item[Kasutaja vajadus] Kes süsteemi kasutab? Kas kasutajate rühm kattub algse sihtrühmaga? Kui ei, siis kuidas kasutajad oma vajadusi rahuldavad?
+	\item[Konkuretsianalüüs] Millised meie omale sarnased süsteemid turul eksisteerivad ning kas me peaksime neid täiendama (ehk, katma funktsionaalsust, mida nemad ei kata), asendama (pakkuma paremat kvaliteeti ja rohkem funktsionaalsust) või kasutama (sulgema oma teenuse ning ostma selle sisse)
+	\item[Kasutatavustestid] Kuidas olemasolevad kasutajad meie süsteemi kasutades käituvad, milline on üldine kasutajakogemus ning kas seda saab parandada?
+	\item[Arendussaba sugemine]\sidenote{\enquote{Arendussaba} on maakeelne vaste ingliskeelsele terminile \enquote{Backlog}. Mis oma olemuselt on süsteemi teadaolevate defektide, probleemide ja arendussoovide nimekiri. Mida, on ütlematagi selge, on mõistlik pidada ning aegajalt puhastada, ehk sugeda, eemaldades sealt aegunu ning ebavajaliku.}\index{Arendussaba} Millised read nimekirjas on ühe (millise?) probleemi sümptomid? Millised probleemid suudame olemasolevate vahendite raames parandada ja millised mitte?
+	\item[Meetrikate järgimine] Kas NPS\index{Net Promoter Score}\sidenote{\emph{NPS - Net Promoter Score} on kõige lihtsamas versioonis kasutajate keskmine vastus küsimusele \enquote{Kui tõenäoliselt soovitaksid käesolevat teenust sõbrale või kolleegile?}} või mõne muu meetrika väärtus vastab meie ootustele, soovidele ja vajadustele?
+\end{description}
 
 \section{Arhitektuur ja äri}
-Toote või teenuse arhitektuur mõjutab otseselt orgranisatsiooni ärilist positsiooni. Vaatleme neid seoseid Crawley arhitektuurimudeli taustal (joonis \ref{fig:arh}). Nagu loengus räägitud, on arhitektuuril kolm olulist komponenti: vorm, funktsioon ja kontseptsioon. Vorm on see, mis "on", funktsioon on see, mida tehakse ning kontseptsioon seob need tervikuks. Toote või teenuse väärtus tuleneb tema funktsioonist: mida täpsemalt vajadust täidetakse ning mida põletavam too vajadus, seda väärtuslikum toode või teenus. Süsteemi kulud tulenevad aga kogu elutsükli jooksul vormist: selleks tuleb hankida materialid, viia läbi tootmine ning lõpuks utiliseerimine. Järelikult tuleneb vormi ja funktsiooni vahekorrast (mida suuresti määratleb kontseptsioon), organisatsiooni võimekus kasumit teenida.
+Toote või teenuse arhitektuur mõjutab otseselt orgranisatsiooni ärilist positsiooni. Crawley järgi on igal süsteemil kolm olulist aspekti: vorm, funktsioon ja kontseptsioon (vt. \nameref{sec:arch:fcc}).
+
+Toote või teenuse väärtus tuleneb tema funktsioonist: mida täpsemalt vajadust täidetakse ning mida põletavam too vajadus, seda väärtuslikum toode või teenus. Süsteemiga seotud kulud tulenevad aga kogu elutsükli jooksul vormist: vormi loomiseks tuleb hankida materialid, viia läbi tootmine ning lõpuks utiliseerimine. Järelikult tuleneb vormi ja funktsiooni vahekorrast (mida suuresti määratleb kontseptsioon), süsteemi võimekus väärtust lisada. 
 
 \begin{marginfigure}
 	\begin{center}
 		\includegraphics[width=\linewidth]{ffc_profit.pdf}
-		\caption{Organisatsiooni finantside seos arhitektuuriga}
+		\caption{Organisatsiooni eri aspektide seosed omavahel ja organnisatsioon majanduseduga}
 		\label{fig:arh}
 	\end{center}
 \end{marginfigure}
 
-
-On oluline mõista, et hea arhitektuur ei ole kasumiks piisav vaid pelgalt tarvilik: lisaks arhitektuurile on vaja veel paljut alates näiteks korralikust turundusest kuid ilma arhitektuurita ei ole kasum mõeldav. 
+Toote või teenuse võimest väärtust lisada tuleneb aga organisatsiooni kui terviku väärtuse lisamise võime ning seega ka majanduslik jätkusuutlikkus. 
 
 Kasumi ja arhitektuuri seoseid illustreerivaid näiteid on nii kaugemast kui lähemast minevikust mitmeid. Positiivsena tasub esile tuua Black \& Deckeri strateegilist tooteinnovatsiooni seitsmekümnendatel ning Volkswageni platvormistrateegiat. Negatiivsena on üks tuntumaid General Motorsi lähenemine platvormidele. 
-\TODO: refaktoreerida väärtuse mõiste ümber
 
 
 \section{Ettevõtte arhitektuurist}
-Traditsioonilised EA\footnote{ingl. \emph{Enterprise Architecture}}\index{EA} raamistikud räägivad palju äriarhitektuurist kuid teevad seda abstraktselt. Detailidesse minnakse reeglina vaid infosüsteemide puhul. Paremal juhul eeldadatakse, et muude organisatsiooni aspektide juhtimine võtab üle IT terminoloogia, lähenemise ja mõtteviisi. Organisatsioon koosneb aga liiga paljudest eri taustaga inimeste eri fookusega vastutusaladest, et oleks lootust neile kõigile üht metoodikat rakendada.  Seetõttu on EA kui distsipliin end sageli diskrediteerinud jäädes kageks nii ärist (kes lihtsalt mõtlevad oma probleemidest teisel viisil) kui inseneridest (kes peavad igapäevaselt tegelema ärilise keerukuse valamisega infosüsteemidesse).
+Traditsioonilised EA\footnote{ingl. \emph{Enterprise Architecture}}\index{EA} raamistikud räägivad palju äriarhitektuurist kuid teevad seda abstraktselt. Detailidesse minnakse reeglina vaid infosüsteemide puhul. Paremal juhul eeldadatakse, et muude organisatsiooni aspektide juhtimine võtab üle IT terminoloogia, lähenemise ja mõtteviisi. Organisatsioon koosneb aga liiga paljudest eri taustaga inimeste eri fookusega vastutusaladest, et oleks lootust neile kõigile üht metoodikat rakendada.  Seetõttu on EA kui distsipliin end sageli diskrediteerinud jäädes kageks nii ärist (kes lihtsalt mõtlevad oma probleemidest teisel viisil) kui inseneridest (kes peavad igapäevaselt tegelema ärilise keerukuse valamisega infosüsteemidesse). \sidenote{Vaata ka \nameref{sec:architecture:paradigm}}
 
 Mida siis teha? Soovitusi annab \cite{fowlerlean}. Artiklis on oluline alltekst: kuigi räägitakse arhitekti rollist agiilses organisatsioonis, isegi ei mainita võimalust, et organisatsioon agiilseks \emph{ei muutuks}. Arhitekti roll kaasaegses organisatsioonis peab muutuma. Otsuste tegijast otsuste toetajaks. Suuna andjast sildade ehitajaks. Õpetajast õppiva kogukonna keskmeks. 
+
+\section{Küsimusi aruteluks}
+\subsection{Kuidas seletada kliendile, et tema eilsel otsusel on mõju tema tänasele kulubaasile?}
+\label{sec:business:q1}
+Inimesed, tundub, ei suuda hästi siduda põhjust ja tagajärge. Kindlasti on üheks põhjuseks meie vajadus säilitada positiivset minapilti (\enquote{Ma olen ülekaalus, kuna mu geneetika on selline, mitte seepärast, et ma ei suuda end söömisel ohjeldada}) kuid tõenäoliselt ka evolutsioonilised faktorid. Meid ümbritsev maailm on äärmiselt mittelineaarne ning põhjuse seos tagajärjega muutub aja möödudes järjest ebaselgemaks. 
+
+Kuidas ka ei oleks, inimeste esimene järeldus probleemi põhjuste osas ei ole reeglina endogeenne. Kuigi teooria näitab, et probleemid on harva eksogeensed. 
+
+Ehk, kliendi käitumine ei ole mitte puuduliku personalipoliitika või isikliku küündimatuse tulemus vaid inimesed üldiselt nii käituvadki. Siinkohal olekski lihtne panna punkt, lugeda kogu probleem inimloomuse tõttu lahendamatuks. Siiski on organisatsioon tervikuna keeruline dünaamiline süsteem mille emergentse käitumisena kliendi lühiajalist fookust ka seletada saab. 
+
+\begin{marginfigure}
+	\begin{center}
+		\includegraphics[width=\linewidth]{shiftingburden.png}
+		\caption{Koorma nihutamise arhtetüüp.}
+		Allikas: Peter Senge
+		\label{fig:shifting}
+	\end{center}
+\end{marginfigure}
+
+Juba viidatud Peter Senge kirjeldab oma raamatus\cite{senge19905th} tervert rida süsteemiarhetüüpe, mis kirjeldavad ettevõtetes ette tulevaid tüüp-probleeme. Üks neist on \enquote{koorma nihutamine}. Juurprobleemiga tegelemise asemel tegeletakse sümptomitega, kuni võimekus päris probleemiga tegeleda või seda isegi ära tunda kaob. Selline käitumine tõesti tihti klienti ka iseloomustab. Kuna juurprobleem (infosüsteemi kõrge hoodlusvajadus elutsükli käigus) ei ole lihtsasti lahendatav, tegeletakse üha uue funktsionaalsuse tellimisega (mis läheb ajas seda kallimaks, mida halvemini hooldatud meie infosüsteem on) kuni kogu kupatus kuulutatakse hallatamatuks, asendatakse uuega ning tsükkel algab otsast.
+
+Senge ütleb, et sellisel puhul ei ole muud väljapääsu, kui tuumprobleemile silma vaatamine. Äriplaanid on liiga optimistlikud (sest jooksvad kulud on nende keerulise struktuuri tõttu raskesti hinnatavad ja ebameeldivalt suured) ja organisatsiooni kulujuhtimine ebapiisav (sest paljud materiaalse põhivara puhul toimivad skeemid immateriaalse puhul hästi ei toimi). Infosüsteem on pigem loom, kelle eest sa taltsutamise järel vastutad, mitte oma amortisatsiooni lõpu poole tiksuv masin.
 
 \chapter{Tarkvaratehnika}
 \section{Kokkuhoiust programmeerijatelt}
@@ -575,7 +710,7 @@ Eesti IT-ettevõtted jagunevad ITLi andmetel suhteliselt radikaalselt kaheks: su
 
 \section{Kood ei roosteta. Või siiski?}
 \label{sec:rooste}
-Joel Spolsky ütleb, et reeglina on väga halb mõte oma koodibaasi ümber kirjutada, sest kood ju "ei roosteta" \citep{joelrust}. Ta toob mitu näidet väga ebameeldivate tagajärgedega ümber-kirjutamis ettevõtmiste kohta ning, tõesti, neid on ka siinkirjutaja praktikas mitmeid ette tulnud. Põhjuseid on mitmeid, peamiseks ehk paratamatu teadmuskadu: iga tükki koodi on juba enne rakenduse valmimist kümneid kui mitte sadu kordi muudetud ja parandatud parandamaks vigu, ületamaks nõuete ebatäielikkust jne. Nii kaob igasugune võimalus hinnata, kas kood on selline, nagu ta on, põhjusega või põhjuseta. Rääkimata analüüsist, kas põhjus jätkuvalt kehtib. Miks siis tekib vahel siiski kohu asju ümber teha ning miks on Eestis kehtestatud \emph{no legacy policy}?
+Joel Spolsky\index{Spolsky, Joel} ütleb, et reeglina on väga halb mõte oma koodibaasi ümber kirjutada, sest kood ju "ei roosteta" \citep{joelrust}. Ta toob mitu näidet väga ebameeldivate tagajärgedega ümber-kirjutamis ettevõtmiste kohta ning, tõesti, neid on ka siinkirjutaja praktikas mitmeid ette tulnud. Põhjuseid on mitmeid, peamiseks ehk paratamatu teadmuskadu: iga tükki koodi on juba enne rakenduse valmimist kümneid kui mitte sadu kordi muudetud ja parandatud\sidenote{Seejuures parandatud vigu me teame. Aga mis saab vigadest, mida kunagi eri raporteerita, millest me definitsiooni järgi midagi ei tea kuid millega kasutajad ja partnerid elama on õppinud?} parandamaks vigu, ületamaks nõuete ebatäielikkust jne. Nii kaob igasugune võimalus hinnata, kas kood on selline, nagu ta on, põhjusega või põhjuseta. Rääkimata analüüsist, kas põhjus jätkuvalt kehtib. Miks siis tekib vahel siiski kihu asju ümber teha ning miks on Eestis kehtestatud \emph{no legacy policy}?
 
 Ühest küljest on asja taga kindlasti programmeerijad. Nagu Spolsky õigesti osundab, on koodi lugemine palju keerulisem, kui selle kirjutamine. Seega, eriti kui tegu on kellegi teise koodiga, on programmeerijale oluliselt lihtsam kirjutada uus kood kui üritada vanast aru saada. Loomulikult tõlgitakse vahe rahanumbriks ning uue süsteemi ehitamine võib vana turgutamisest oluliselt odavam näida. Erinevalt uue süsteemi ehitamisest, ei ole vana muutmine kergesti hinnatav ning tellija ees on kas väike fikseeritud number ebamäärase kahjuga või suur riskantne number ebamäärase tuluga. 
 
@@ -594,18 +729,18 @@ Olemasoleva koodi puhul võib tegu olla ka "pusaga": süsteemiga, mis on aja joo
 
 Niisiis, koodi ümber kirjutamine on kallis, keeruline ning seotud oluliste riskidega. Samas on olemasoleva rakenduse putitamisel samuti üks oluline puudus: me toimime jätkuvalt kord juba defineeritud arhitektuuri, täpsemalt öeldes kontseptsiooni, raamides. Ehk, asjade ümber kirjutamine annab võimaluse innovatsiooniks ning asjade puhtalt lehelt uuesti mõtestamiseks. Jah, spanjelist on ilmselt võimalik mastifi-laadne elukas aretada aga võibolla on efektiivsem alustada siiski nende ühisest eellasest, hundist? Kindlasti tuleks keskenduda mitte tehnilisele vaid ärilisele innovatsioonile ümber mõtestades äriprotsesse, automatiseerides ning efektiivistades. Seejuures on muidugi eelduseks, et meil on piisavalt aega ja raha seda mõttetööd põhjalikult ette võtta ning et on alust eeldada, et tulemus praegusest olukorrast oluliselt erineb.
 
-Lõpuks tuleb panna kõrvuti süsteemi ümber kirjutamise kulu (korrutades esiaglse hinnangu vähemalt kahega), olemasoleva muutmise ning mõlema alternatiivi halduskulude nüüdisväärtus. Kui nüüd tundub, et rakenduse uuesti kirjutamine on siiski mõistlik, on oluline aru saada, miks nii läks. Jällegi Joelile toetudes, ei ole mõistlik eeldada, et kui ühel korral ei õnnestunud hankida mõistlikku süsteemi või seda pusaks muutumast hoida, siis teisel korral asjad teisiti lähevad. On oluline, et suudetakse välja tuua konkreetsed tegevused, mille abil hoidutakse vajadusest süsteem uuesti ümber kirjutada. Siinkohal kuuleb ilmselt argumenti \emph{build one to throw away} aga sel juhul peaks olema võimalik vähemalt üles kirjutada, mida esimesest korrast täpselt õpiti.
+Lõpuks tuleb panna kõrvuti süsteemi ümber kirjutamise kulu, olemasoleva muutmise ning mõlema alternatiivi halduskulude nüüdisväärtus. Kui nüüd tundub, et rakenduse uuesti kirjutamine on siiski mõistlik, on oluline aru saada, miks nii läks. Jällegi Joelile toetudes, ei ole mõistlik eeldada, et kui ühel korral ei õnnestunud hankida mõistlikku süsteemi või seda pusaks muutumast hoida, siis teisel korral asjad teisiti lähevad. On oluline, et suudetakse välja tuua konkreetsed tegevused, mille abil hoidutakse vajadusest süsteem uuesti ümber kirjutada. Siinkohal kuuleb ilmselt argumenti \emph{build one to throw away} aga sel juhul peaks olema võimalik vähemalt üles kirjutada, mida esimesest korrast täpselt õpiti.
 
 \section{Tehniline võlg}
-On kriitiline, et tellija saaks aru oma tegevuse tagajärgedest. Mis, arvestades teo ja selle tagajärje ajalist vahet, on väga keeruline. Põhjus on selles, et tehnilise võla likvideerimine tuleb arenduse läbilaskevõime arvelt. Järelikult tähendab tehnilise võla kuhjumine, et arenduse läbilaskevõime ajas kahaneb. Kui tellija ei saa aru, et tema otsus tekitas tehnilise võla, on IT-juhil kaks põhimõttelist otsust. Ta kas keeldub tehnilist võlga tekitamast, näib paindumatu ja lastakse lahti või ta võtab tehnilise võla, asub seda IT võimekust vähendades likvideerima ning ta lastakse lahti. Ehk, häid valikuid ei ole. Järelikult ei ole IT juhil muud valikut peale tellija harimise.
+On kriitiline, et tellija\index{Tellija} saaks aru oma tegevuse tagajärgedest. Mis, arvestades teo ja selle tagajärje ajalist vahet, on väga keeruline. Põhjus on selles, et tehnilise võla likvideerimine tuleb arenduse läbilaskevõime arvelt. Järelikult tähendab tehnilise võla kuhjumine, et arenduse läbilaskevõime ajas kahaneb. Kui tellija ei saa aru, et tema otsus tekitas tehnilise võla, on IT-juhil kaks põhimõttelist otsust. Ta kas keeldub tehnilist võlga tekitamast, näib paindumatu ja lastakse lahti või ta võtab tehnilise võla, asub seda IT võimekust vähendades likvideerima ning ta lastakse lahti. Ehk, häid valikuid ei ole. Järelikult ei ole IT juhil muud valikut peale tellija harimise.
 
 Tehnilise võla oluline aspekt on seotud süsteemi piiride küsimusega. Kuna tehniline võlg on seotud konkreetse süsteemiga kuid, definitsiooni järgi, on süsteemi piirid alati suvalised, võib rääkida tehnilise võla skoobist. On võimalik olukord, kus lokaalsete optimumide saavutamise läbi võetakse süsteemi kui terviku suhtes tehnilist võlga. Näiteks võib ehitada kõik süsteemid tähtajaks kuid mitte arvestades teiste süsteemi osade integratsioonivajadusi. Üksiku süsteemi vaatepunktist võlga ei ole. Süsteem kui tervik aga võib vajada olulist investeeringut oma komponentide suhtluse tagamiseks. 
 
-Tehnilise võla juhtimine on teatavas mõttes sarnane finantsvõla juhtimisega: rahavoogude nüüdisväärtuse abil on võimalik teha otsuseid. Tehnilisel võlal on siiski ka aspekte, mida lihtsasti finantsmudelisse valada ei õnnestu. Teatavast piirist alates hakkab tehniline võlg takistama värbamist ja inimeste hoidmist. Tegemist on raskestivarjatava stressifaktoriga ning üha vähem leidub inimesi, kes "selle supiga" on nõus tegelema. Nii võib alata lõigus \ref{sec:kokkuhoid} kirjeldatuga sarnane tagasiside, kus kompetentsete inimeste lahkumine viib võla suurenemiseni mis omakorda tõrjub kompetentseid inimesi. 
+Tehnilise võla juhtimine on teatavas mõttes sarnane finantsvõla juhtimisega: rahavoogude nüüdisväärtuse abil on võimalik teha otsuseid. Tehnilisel võlal on siiski ka aspekte, mida lihtsasti finantsmudelisse valada ei õnnestu. Teatavast piirist alates hakkab tehniline võlg takistama värbamist ja inimeste hoidmist. Tegemist on raskestivarjatava stressifaktoriga ning üha vähem leidub inimesi, kes \enquote{selle supiga} on nõus tegelema. Nii võib alata lõigus \ref{sec:kokkuhoid} kirjeldatuga sarnane tagasiside, kus kompetentsete inimeste lahkumine viib võla suurenemiseni mis omakorda tõrjub kompetentseid inimesi. 
 
 \section{Alandlik programmeerija}
 \label{humble}
-Edsger W. Dijkstra on inimene, kes arvuti-inimeste hulgas tutvustamist ei vaja ja kel tiitleid rohkem, kui loetleda jõuab. Muu hulgas on ta 1972. aastal saanud Turingi Auhinna. Nagu kombeks, järgnes auhinnale avalik loeng \citep{yourdon1979classics}, mille pealkirjaks Alandlik Programmeerija. Pika ja tõeliseks nautimiseks mõningast arvutiteaduse tausta vajava jutu peamised teesid on järgmised\footnote{Tõlgitud ja mugandatud aadressilt \url{http://c2.com/cgi/wiki?TheHumbleProgrammer}}:
+Edsger W. Dijkstra\index{Dijkstra, Edsger W.} on inimene, kes arvuti-inimeste hulgas tutvustamist ei vaja ja kel tiitleid rohkem, kui loetleda jõuab. Muu hulgas on ta 1972. aastal saanud Turingi Auhinna. Nagu kombeks, järgnes auhinnale avalik loeng \citep{yourdon1979classics}, mille pealkirjaks Alandlik Programmeerija. Pika ja tõeliseks nautimiseks mõningast arvutiteaduse tausta vajava jutu peamised teesid on järgmised\footnote{Tõlgitud ja mugandatud aadressilt \url{http://c2.com/cgi/wiki?TheHumbleProgrammer}}:
 \begin{itemize}
 	\item Kui pürgida töökindla tarkvara ja efektiivse töökorralduse poole, peate leidma viisi vigade vältimiseks nende hilisema otsimise asemel. Selle tulemusena muutub programmeerimine kui protsess odavamaks.
 	\item Programmeerijad peaksid tegelema vaid intellektuaalselt hoomatava tarkvaraga
@@ -614,6 +749,46 @@ Edsger W. Dijkstra on inimene, kes arvuti-inimeste hulgas tutvustamist ei vaja j
 	\item Kompetentne programmeerija on teadlik oma pea väga piiratud suurusest. Seega läheneb ta programmeerimisülesandele alandlikus meeles ning, muu hulgas, väldib nutikaid trikke nagu katku
 	\item Kohmakas tarkvaratehnika on talutav vaid senikaua, kuni riistvara moodustab suurema osa projekti eelarvest
 \end{itemize}
+
+\section{Küsimusi aruteluks}
+\subsection{Mis teeb programmeerimise keeruliseks?}
+
+Brooks\index{Brooks, Frederick P.} ütleb, et programmeerimine on põhimõtteliselt keeruline\cite{brooks1975mythical}. Ta jagab tarkvaratehnilise keerukuse kaheks, mitteolemuslikuks ja olemuslikuks, ning väidab, et neist esimene on vähendatav ja teine tõenäoliselt mitte. Olemuslik keerukus seisneb peamiselt tarkvara kontseptuaalse mudeli spetsifitseerimises, disainis ja testimises ja mitteolemuslik tolle mudeli võimalikult täpses koodi valamises. 
+
+Kuid Brooks ei seleta väga põhjalikult \emph{miks} töö tarkvara kontseptuaalse mudeliga (mis on sisuliselt seesama, mida me eespool süsteemi kontseptsiooniks nimetasime) põhimõtteliselt keeruline on. Tõenäoliselt on vähemalt üks põhjus arvutite duaalses olemuses. Kogu tänapäevane digitaalne arvutustehnika on üles ehitatud kahevalentsele loogikale. Null ja üks, tõsi ja vale. Täidetakse kas üks koodi haru või teine. Samas pole reaalne maailm sugugi duaalne. Ei leidu ei puhast musta ega valget. Loodus ei tekita ei päris ümmargusi ega päris kandilisi objekte. Ja nii peabki programmeerija suutma konstrueerida mudeli mis ühest küljest peegeldab reaalsuses toimivat ja sellisena ebatäiuslikku äriprotsessi ja teisalt on realiseeritav digitaalarvutiga. Selline tegevus ei ole olemuslikult lineaarne ja tõenäoliselt praeguses tarkvaratehnika paradigmas hästi automatiseeritav ei ole. 
+
+\begin{marginfigure}
+		\begin{center}
+		\includegraphics[width=.7\linewidth]{682px-Frederick_Brooks_IMG_2279.jpg}
+		\caption{Fred Brooks. Pilt: wikimedia:user:David.Monniaux}
+		\label{fig:brooks}
+		\end{center}
+		Fred Brooks on legendaarne arvutitegelane, kes juhtis IBM System/360 ja OS/360 arendust. Saadud kogemusest kirjutas ta oma põhiteose, The Mythical Man-Month ning oli hiljem tegev arvutiteadlasena. 
+\end{marginfigure}
+
+Kui miski on keeruline, tekitab see kulusid. Kui miski tekitab kulusid, siis on võimalik müüa vahendeid tolle miski vähendamiseks. Ja kuna olemusliku ja mitteolemusliku eristamine mitte lihtne ei ole, siis on läbi ajaloo üritatud üle saada ka tarkvara ehitamise keerukuse probleemist:
+
+\begin{description}
+	\item[Nõuete kirjeldamine] Kui me ainult suudaksime nõudeid piisavalt täpselt kirjeldada (ehk oma maailmamudeli võimalikult täpseks ajada), siis on seda võimalik ka üheselt tarkvaras realiseerida. Täna ei leidu vast praktikut, kes sellise väitega nõus oleks. Siiski panustavad mõned metoodikad siiani nõuete ülitäpsesse kirjeldamisse. Mudeli lahutuse tõstmine viib järjest uute detailide esilekerkimiseni mis paratamtult omakorda paljastavad uusi detaile. Kas laud on sile näpuga katsudes, molekuli, aatomi või elektroni tasemel? Äkki peaks rääkima hoopis väljavõrranditest?
+	\item[Protsessi järgimine] Kui me ainult suudaksime välja mõelda deterministliku tarkvara loomise protsessi ja panna kõik osapooled seda järgima, peab tulemus olema deterministlik. Paraku ei ole ka parim lineaarne protsess täielik mittelineaarse tegevuse lähend. Nagu ka nõuete juures ilmneb ka parima protsessi puhul järjest uusi nüansse, mida protsessis arvesse võttes paljastub järgmine kiht keerukust
+	\item[Artefaktide tootmine] Kui me ainult suudaksime määratleda iga tegevuse täpse tulemi ja sisendi, võiks neid tegevusi vabalt kombineerides saada vähemalt täieliku pildi projektis toimuvast. Ka see tee ei vii suurt kuhugi. Järjest täpsem loova inimese peas toimuva kirjeldamine võtab järjest rohkem aega, viies projekti hilinemiseni, mida ma ju teadupärast lahendame järjest rohkemate ja detailsemalt määratletud artefaktide nõudmise abil
+	\item[Protsessist loobumine] Kui me oleme kõike eeltoodut juba proovinud, siis kui me vaid suudaksime kogu selle massi alt programmeerija üles leida ja vabastada, siis hakkaksid ju projektid kohe paremini välja tulema? Selles mõtteviisis on agiilsete meetodite juured. Paraku tavaliselt selgub peagi, et ilma protsessita toimetamine nõuab palju suuremat distsipliini, kui protsessiga ning piiravaks teguriks saab inimeste võimekus omavahel abstraktseid ideid jagada. 
+\end{description}
+
+Kõiki neid lahendusi on eri aegadel müüdud kui lahendust tarkvara keerukusele ning ilmsel toob tulevik uusi sedalaadseid. Kuid kuni inimene koodi kirjutab, on ja jääb tarkvara tegemine keeruliseks ning mao-õli müüjatesse tasub suhtuda skepsisega.
+
+\subsection{Kuidas seletada juhtkonnale tehnilist võlga?}
+Oma otsuste (eeldades, et võlg on võetud ärilistel põhjustel) tagajärgedega silmtsi seismine ei ole kunagi lihtne\sidenote{Osalt on sellest küsimusest juba eelnevalt räägitud, vt. \nameref{sec:business:q1}}. Põhimõtteliselt on probleem selles, et isegi suhteliselt lihtsa dünaamilise mudeli käitumine ei ole intuitiivne ning lihtsasti mõistetav. \citeauthor{ledet1994manufacturing} on tegelenud keeruliste dünaamiliste mudelitega tootmisettevõtetes\cite{ledet1994manufacturing}. Nad leidsid, et probleemi tuvastamine arvutimudelite abil on suhteliselt lihtne kuid tulemuse presenteerimine viisil, mis ka organisatsioonilise muutuse esile kutsuks, on keerukas. Nad proovisid kolme lähenemisviisi.
+
+Esmalt üritasid nad seletada mudelit, selle eeldusi ning näidata tulemusi. Tulemus oli pettumustvalmistav. Kuna mudeli tulemus on reeglina suhteliselt triviaalne, tekkis tihti küsimus \enquote{kas tõesti pidi mudel teile seda ütlema?} ning eelduste selgitamine oli kõigile osapooltele frustreeriv.
+
+Teiseks presenteeriti mudeli tulemusi seletamata nende saamise viisi. Tegu oli küllalt efektiivse lähenemisega, mille tulemused kergesti omaks võeti. Kuna, jällegi, mudeli tulemus on triviaalne kostis tihti kommentaare stiilis \enquote{ma olen seda juba aastaid rääkinud!}.\sidenote{Tekib siiski küsimus, kust ja miks said analüütikud nende tõsiselt võtmiseks piisava usalduskrediidi}
+
+Kolmandaks loodi simulatsioonimäng ja mängiti see multidistsiplinaarse meeskonnaga ka läbi. Nii oli osalistel võimalik mitte ainult modelleerimise tulemust näha vaid selleni ka iseseisvalt ja ohutus keskkonnas jõuda. 
+
+Sarnaste tulemusteni on jõutud ka mujal. MIT Sloan School of Management uurijad arendasid kuuekümnendatel välja \enquote{õllemängu}\cite{sterman1984instructions}. Mängu mõte on demonstreerida osalistele ka lihtsate tarneahelate kõrget dünaamilist keerukust ning võimaldada kasutada erinevaid sellega toime tuleku strateegiaid. Mängus osalejad simuleerivad poest, hulgimüüjast ja tootjast koosnevat õlle tarneahelat, kus iga sammu vahel on ajaline nihe. Tuleb välja, et ka mõne käigu kaugusele ulatuv vahe põhjuse ja tagajärje vahel ei ole lihtsasti hoomatav ning osapooled kipuvad kergesti pankrotti minema. Seda ka pärast põhjalikku mängu ja tema olemusega tutvumist. 
+
+Ehk, tulles tagasi algse probleemipüstituse juurde, ei ole juhkonnale tehnilise võla selgitamine lihtne ülesanne. Enamasti ei ole IT juhi kästuses ei mänguvõimalust ega ka modellerimisvõimekust. Mida tavaliselt siiski teha õnnestub, on tehnilise võla läbipaistvaks muutmine näiteks arendussaba\index{Arendussaba} nähtavaks muutmise läbi. Seda saab omakorda teha tavalise veahaldustarkvara abil. Oluline on silmas pidada, et too saba siis ka tõesti soetud oleks ning sisaldaks igal hetkel selgelt markeerituna asju, mida on eksplitsiitselt otsustatud mitte teha. 
 
 \chapter{IT valitsemine}
 \section{Parimatest praktikatest}
@@ -627,6 +802,7 @@ Veelgi enam, seda keskmist ei olegi olemas\cite{averages}. On hulk organisatsioo
 Loomulikult on hulk valdkondi, kus eristuma ei peagi, mille kallal pea murdmine ei loo piisavalt väärtust. Kuid tänapäeval on üha väiksem hulk neist infotehnoloogias sest efektiivset eristumisvõijust otsitakse järjest enam just ITst.
 
 \section{Poliitikavastasus. Hundid ja jänesed}
+\index{Poliitikavastasus}
 Kujutlegem lihtsat ökosüsteemi, mis koosneb huntidest ja jänestest. Hundid söövad jäneseid, jänesed elavad õhust ja armastusest (mida mõlemat on piisavalt). Oletagem, et meil on soov tõsta huntide arvukust. Seepärast tuuakse mujalt ja lastakse metsa lahti viis emast ja viis isast hunti. Mis juhtub? 
 \begin{itemize}
 	\item Huntide arvukus tõuseb kümne lisandunud hundi võrra
@@ -640,6 +816,7 @@ Kujutlegem lihtsat ökosüsteemi, mis koosneb huntidest ja jänestest. Hundid s�
 \end{itemize}
 
 Nii taastub esialgne olukord, algne huntide lisamine ei ole andnud soovitud tulemust. Huntide arvukus võiks tõusta hoopis tõstes jäneselaste arvu jäneseperekonnas ehk nende juurdekasvu kiiruse tõstmisega. 
+\TODO joonista diagramm
 
 \section{Inimeste valitsemine}
 Valitsemise üsna lahutamatu osa on paraku vajadus inimesed organisatsioonist eemaldada. Jättes kõrvale juriidilised ja muud nüansid, on oluline aru saada, et mõtteliidri (\emph{thought leader}) lahkumine on meeskonna dünaamika jaoks oluline sündmus. Samuti on oluline mõista, et tegu on vältimatu protsessiga, mis seega on mõistlik läbi viia kontrollitult ja minimaalsete kadudega. Järgnevas selleks mõned näpunäited: 
@@ -689,9 +866,33 @@ Et ootejärjekord on pikk, tuleb ühel või teisel viisil sealt kas projekte vä
 
 Taoliste olukordade vältimiseks on kriitiline, et järjekorrast projektide välja jäätmine oleks põhjalikult dokumenteeritud kui \enquote{sellega-me-ei-tegele-siin-majas} otsus ning et eksisteeriks ülevaade barjääri taga toimuvast. Samuti võib soovitada eraldi protsessi väikesemahulisteks arendusteks, mille abil on võimalik väikesed kuid olulised asjad tehtud saada. Tavaliselt on abi ka heast suhtest klientorganisatsiooni kõigi osadega, siin on abiks tugev ning suhtlemisaldis valdkonnajuht.
 
+\TODO Faktorid, mis tekitavad tagasiside ootejärjekorraga:
+\begin{itemize}
+	\item Programmeerija context switch
+	\item Paberimäärimine
+	\item Isearendus
+	\item Mikrojuhtimine
+\end{itemize}
+
+\section{Küsimused aruteluks}
+\subsection{Milline on põhimõtteline vahe IT juhtimise ja IT valitsemise vahel?}
+Leadership vs. Management.
+
+\subsection{Kuidas ja miks mõõta programmeerija tulemust?}
+Auditooriumist
+\begin{itemize}
+	\item Kvaliteet
+	\item Ajahinnangute hajuvus
+\end{itemize}
+
+Juhtum projektide boonustega, \enquote{saad, mida mõõdad}.
+
+\subsection{Mida teha, kui klient ei kuula?}
+Auditooriumist: karjuda. Kirjuta lahti põhimõttelise väärtuskonflikti küsimus. Newtoni essee lõik. 
+
 \chapter{Jätkusuutlik areng}
 \section{Konteksti kaardistamine}
-Väärtusahel on ikka olnud üheks viisiks ärimudelit visualiseerida ja sellest mõelda. Tegu on siiski ka makrotasandil üllatavalt kasuliku vahendiga keeruliste suhtevõrgustike analüüsimiseks. Meetod on lõtv ja vabalt kohaldatav, kuid laias laastus saab talle siiski struktuuri anda. Kontekstikaardistus käib nii. 
+Väärtusahel\index{Väärtusahel} on ikka olnud üheks viisiks ärimudelit visualiseerida ja sellest mõelda. Tegu on siiski ka makrotasandil üllatavalt kasuliku vahendiga keeruliste suhtevõrgustike analüüsimiseks. Meetod on lõtv ja vabalt kohaldatav, kuid laias laastus saab talle siiski struktuuri anda. Kontekstikaardistus käib nii. 
 
 Grupp inimesi viib valge tahvliga ruumis läbi järgmised sammud:
 \begin{enumerate}
@@ -708,7 +909,7 @@ Grupp inimesi viib valge tahvliga ruumis läbi järgmised sammud:
 
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[width=.7\textwidth]{seosed.jpg}
+		\includegraphics[width=.6\textwidth]{seosed.jpg}
 		\caption{Näide seoste diagrammist}
 		\label{fig:seosed}
 	\end{center}
@@ -718,8 +919,46 @@ Grupp inimesi viib valge tahvliga ruumis läbi järgmised sammud:
 \section{Piiridest ja nende ületamisest}
 Eelmise sajandi seitsmekümnendatel töötas Jay Forrester Rooma Klubi tellimusel välja mudeli maailma rahvastiku kasvu uurimiseks. Forresteri õpilased on mudelit hiljem täiendanud, hetkel on ehk parim lugemismaterial \cite{meadows1992beyond}. Ennustused ei ole roosilised, pigem vastupidi. Ühe tõenäolise võimalusena nähakse ette, et rahavastik ületab suurelt piirid, mida tehnoloogia võimaldab planeedil Maa ära toita ning mahutada ja et järgneb mõõdukas kollaps. Rahvastik kahaneb kiiresti ning palju ning toimub tugev konkurents ressursside pärast (sest kõigile lihtsalt ei jätku). 
 
+\section{Küsimused aruteluks}
+\subsection{Miks on kõrge PUE oluline?}
+PUE\sidenote{PUE - \emph{Power usage effectiveness} näitab, milline osa kogu kulutatavast energiast kulutatakse arvutustehnika käitamisele}\index{PUE} on küllalt populaarne viis andmekeskuste efektiivsuse hindamiseks. Kõige ilmselgemalt on tema maksimeerimine kasulik majanduslikult: kui PUE on üks, kulub kogu elektriarve arvutamiseks ja seega väärtuse loomiseks. Samas on PUE kasvatamine ka selgesti kahaneva piirkasulikkusega protsess\sidenote{Iga järgmine ühik PUEd tuleb kallimalt kui eelmine. Tegemist on dünaamiliste süsteemide puhul tavapärase asümptootilise lähenemisega sihile. Ehk, PUE küll saab ideaalile, ühikule, läheneda kuid ei saa ealeski kohale jõuda}. Järelikult nõuab PUE kasvatamine investeeringut. Loogiliselt võttes ei ole mõistlik investeerida rohkem, kui läbi energiasäästu tagasi tuleb\sidenote{Formaalselt tuleb lahendada võrrand $I_0=\sum_{t} \frac{C_t(I_0)}{(1+r)^t}$ $I_0$ jaoks. Ehk, igakuine sääst elektriarvelt peab meid huvitava perioodi jooksul intressimäära r juures võrduma algse investeeringuga. Paraku, nagu öeldud, on $C_t$ mittelineaarne funktsioon ja seega eeldab tasakaalupunkti leidmine tavaliselt suhteliselt keerukat stsenaariumide läbi arvutamist.}. Igasugune nüüdisväärtuse arvutus sõltub olemuslikult ka ajaperioodist ning seega oleme saanud seose ettevõtte toimetamise ajalise perspektiivi ning jätkusuutlikkuse vahel. 
+
+Teine PUE kasvatamise põhjus võib olla keskkonnast tulenev. Kui kogu energia kulutatakse arvutamisele, peaks see ju vähendama organisatsiooni ökoloogilist jalajälge, vähendama koormust keskkonnale? Kindlasti on tegemist olulise põhjusega kuid tuleb teha vahet keskkonnasõbraliku maine ja reaalse keskkonnasõbralikkuse vahel. Nimelt mõõdab PUE energiaefektiivsust vaid andmekeskuse sees. Tuletades meelde diskussiooni süsteemi piiridest\index{Süsteem!Piirid} on lihtne näha probleemi. Nimelt võib küll andmekeskus toimida äärmiselt efektiivselt juhtides arvutamise käigus tekkivad jääksoojust keskkonda, kuid ta ei ütle midagi keskkonnas toimuva kohta. On suhteliselt lihtne disainida soojusvahetusele tuginev süsteem, mis talvel eraldab väga efektiivselt keskkonnas ruumide kütmiseks piisavalt soojust ning suvel viib liigsoojuse sinnasamma tagasi. Kuid kuna arvuti on ikkagi kütteallikas, võib maasse pumbatav energiahulk oluliselt ületada sealt võetava. Põhimõtteliselt köetakse serveriruumi ümbritsevat pinnast ning see ei pruugi ökosüsteemi vaatepunktist kasulik olla. 
+
+Kui nüüd regulaator otsustab näiteks seada PUEle teatud sihtväärtused kuid ei rakenda piiranguid keskkonna mõjutamisele, saame täiesti ebasoovitava tulemuse. Energiatõhususe läbi keskkonnasäästu soovides tekitame keskkonnale koormuse, mille suhe saavutatud kokkuhoidu ei ole sugugi ilmne. Ettevõtte kuvand käitub sarnaselt regulaatoriga. Ka avalikkusel on teatav ootus ettevõtte teatud käitumise suhtes ning oodatud käitumise ning tegeliku kekskonnamõju vahel ei pruugi olla üksühest seost.
+
+Juba suhteliselt lihtsa arutluse käigus ühest serveriruumi efektiivsusnäitaja üle tõusid esile keeruline mittelineaarne optimiseerimisülesanne, dünaamiline keerukus, küsimus ajahorisonidst ja avalikkussuhted. Küsimus terve ettevõtte jätkusuutlikkusest on veelgi keerulisem. 
+
+
+\subsection{Kuidas tuvastada jätkusuutmatust?}
+Lähtudes jätkusuutlikkuse definitsioonist \enquote{jätkusuutlik on tegevus, mida võib mingites ajaraamides sarnaste tulemustega jätkata} on jätkusuutmatuse täielik tuvastamine keeruline. Selleks on definitsioon liiga üldine. Küll aga võib suhteliselt kergesti tuvastada konkreetseid käitumisi, mille jätkusuutmatus tuleneb nende olemusest. Eksponentsiaalne kasv, näiteks, ei saa lõputult jätkuda, varem või hiljem saavad mingid ressursid otsa. Ülesande teeb lihtsamaks asjaolu, et süsteemide probleemid on reeglina endogeensed, seega võime välised tegurid rahulikult kõrvale jätta.
+
+Millised siis on käitumised, mis ei ole olemuslikult jätkusuutlikud? Toetudes Senge\cite{senge19905th} süsteemiarhetüüpidele võib välja joonistada järgmised peamised jätkusuutmatud mustrid
+\begin{description}
+	\item[Piiratud kasv] Protsess toidab iseennast viies kiireneva kasvu või ekspansioonini. Ühel hetkel hakkab kasv aeglustuma kuni peatub või (ülereageerimise korral) muutub kiirenevaks kahanemiseks. Põhjuseks on üks või mitu välist tasakaalustavat mehhanismi. Näitena võib tuua MySpace'i\sidenote{Asutati 2003. aastal, oli 2005-2008 suurim sotsiaalvõrk maailmas} sotsiaalvõrgustiku. Mida rohkem seal inimesi käis, seda kasulikum oli kontot omada ja seda rohkem inimesi keskkonda ka külastas. Võrgustiku populaarsus aga tekitas järjest kasvava innovatsioonihuvi konkurentide poolt. Kuni ühel hetkel kerkis esile Facebook ning algne kasv pöördus. Mida vähem inimesi MySpace kasutajaks jäi, seda vähem oli seal põhjust käia.
+	\item[Eskalatsioon] Kaks osapoolt näevad oma edu suhtelise ülekaaluna teisest. Mida paremaid tulemusi üks osapool saavutab, seda rohkem teine pingutab tõstes oma tulemust mis viib omakorda suurema pingutuseni esimeselt osapoolelt. On selge, et ühel hetkel sekkub piiratud kasvu stsenaarium ning olukord ei ole jätkusuutlik. Siiski on tavaliselt enne lõppu kulutatud palju rohkem ressursse, kui mõistlik oleks. Heaks näiteks eskalatsioonist on külma sõja aegne tuuma-arsenali kuhjamine. Hetkeks, kui Nõukogude süsteemi piirid kätte jõudsid, oli valmis ehitatud oluliselt rohkem relvastust, kui võiks eales sisulist väärtust omada.
+	\item[Jagatud ressursi tragöödia] Osapooled kasutavad ühist kuid piiratud ressurssi. Seejuures on ressursikasutus end taastootev. Mida vähemaks jääb ressurssi, seda rohkem pingutatakse selle kasutamiseks ning seda intensiivsemaks ressursikasutus kõigi osapoolte poolt muutub. Lõpuks saab ühine ressurss otsa. Näitena võib tuua IT arenduse. Tavaliselt on tegemist eri osakondade jaoks jagatud ressursiga. Mida rohkem mõni osakond arendust vajab, seda edukam ta on ja seda suurem huvi on majasisese konkurentsi tingimustes ka teistel oma süsteeme arendada. Tulemuseks on IT-arenduse \enquote{pikali jooksmine} ning kõigi osapoolte võimekus midagi tehtud saada.
+	
+\end{description}
+
+Kindlasti on erisuguseid jätkusuutmatuse näiteid veel, kuid kirjeldatud kolm katavad ära peamised süsteemide tüübid, mis oma käitumist lõputult jätkata ei saa.
+
+
 \chapter{Muutused äris}
 \TODO Täida sisuga
+\section{Küsimused aruteluks}
+\subsection{Kas IT saab algatada organisatsiooni äri muutuse? Kui jah, siis kuidas?}
+Üheks viisiks küsimuse üle arutleda on tagasipöördumine süsteemi kolme aspekti - vormi, funktsiooni ja kontseptsiooni - juurde. Nagu räägitud, annab kontseptsioon aluse vajaliku funktsionaalsuse realiseerimiseks konkreetse vormi abil. Kuna sama funktsiooni võib täita mitu vormi ja vastupidi, vajame kontseptsiooni, mis kahe hulga vahele seose tekitaks. 
+
+Siit järeldub, et ka konkreetset funktsiooni realiseeriv vorm võib täita erinevaid funktsioone. Nuga loodi algul ilmselt tööriistana kuid võeti kiiresti kasutusele relvana. Ja siit tulebki üks IT võimalustest äri muuta: kui olemasolev vorm suudaks lisaks planeeritule veel midagi, saaks tolle miski äriks keerata investeerimata sentigi vormi muutusse ning kohandades vaid kontseptsiooni. 
+
+Heaks näiteks on e-residentsus\index{E-residentsus}. Kuna kogu ID-kaarti ja e-teenuseid toetav taristu on igal juhul olemas (ning koormuse mõttes väga kaugel skaleeruvusprobleemidest) ei nõua paljut nonde kaartide välja andmine kellele iganes. Muutes riigi kodaniku kontseptsiooni\index{Kontseptsioon}, saab sama vormi abil realiseerida oluliselt laiemat funktsiooni. 
+
+Siit ei tulene, et kogu loodav vorm peaks olema nii laia kasutusvõimalusega, kui võimalik. Tihti nii mõeldakse ja tulemuseks on kasutud platvormid, üliabstraktsed \enquote{konfigureeritavad} süsteemid ja, laias plaanis, üleinvesteerimine ITsse. Vorm peab olema optimaalne olemasoleva kontseptsiooni piirides. Järelikult on IT ülesanne lisaks potentsiaalsete uute funktsioonide tuvastamisele ka sellise süstemi kontseptsiooni arendamine, mis viiks võimalikult \enquote{lahtiste} ja mitmekülgsete vormideni. Kuigi kontseptsioon tuleneb suurel määral organisatsiooni kultuurist, on teda konkreetsetel juhtudel siiski võimalik mõjutada peegeldades kliendile tagasi sisendist mõnevõrra üldisemaid kontseptsioone. 
+
+Ka siin tuleb loomulikult silmas pidada arenduse-halduse-äri kolmikut ning anda endale aru, millal soov kontseptsiooni arendada on tegelikult maskeeritud soov endale monumenti ehitada.
+\subsection{Kuidas mõõta infosüsteemi keerukust?}
+
 
 \chapter{Riskijuhtimine ja infoturve}
 Järgnevas on olulisel määral toetutud Riigi Infosüsteemi Ameti spetsialistide sisendile, mille eest autor on põhjatult tänulik.
@@ -1017,6 +1256,8 @@ Selleks, et midagi juhtida, peab meil olema mingit liiki mudel juhitavast objekt
 Lühidalt ütleb Box, et me kõigeapelt koostame teooria või mudeli reaalsuse kohta, siis disainime ja viime läbi eksperimendi mudeli valideerimiseks, saame uusi andmeid ning nende abil kohendame mudelit, millest tuleneb uue eksperimendi disain. Artiklis räägitakse küll teadlastest ja statistikutest kuid üldine lähenemine on  väga relevantne üldises keeruliste süsteemide juhtimise kontekstis: kirjeldatakse nii liigset teooriakesksust (vrdl. ``arhitektuursed astronaudid``) kui ka teooriapuudust ning rõhutatakse vajadust püsida kontaktis uuritava objektiga. Olulisimana jääb siiski kõlama vajadus eristada olemuslikult piiratud mudelit tema kirjeldatavast reaalsusest.  
 
 
+\chapter{Lisad}
+\section{Tagasisidediagrammide lugemisest}
 
 
 %%

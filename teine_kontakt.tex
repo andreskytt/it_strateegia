@@ -38,6 +38,7 @@
 				\item Halduskulud on funktsioon eelmise perioodi halduskuludest ja \emph{eelmise perioodi arenduskuludest}
 				\item Tehniline võlg tuleb tellija juurest ja läheb tellija juurde saades vahepeal IT probleemiks
 				\item Kui $a_{vana}\equiv0$, siis H kasvab isegi, kui $A_n=const$
+				\item Tarkvara amortiseerub mõnevõrra kulukamalt, kui materiaalsed varad
 			\end{itemize}
 		\end{column}
 		\begin{column}[T]{3.5cm}
@@ -60,6 +61,8 @@
 		\item Järelikult on IT-juhi jaoks oluline olla kapitaliseerimisotsuste juures laua taga
 		\item Tehniline võlg on oluline
 		\note{Sellega mõistega kohtume natuke hiljem täpsemalt\\}
+		\item Tuleb olla ettevaatlik investeeringute kogumisega
+		\note{Investeeritu hooldamine, arendamine, kasutajatugi, varukoopiad jne. vajavad kõik raha\\}
 	\end{itemize}
 \note{Et olla kapitaliseerimisotsuste juures laua taga, peab IT-juht suutma seal tõsiseltvõetavalt kaasa rääkida}
 \end{frame}
@@ -68,14 +71,14 @@
 \begin{frame}[fragile]
   \frametitle{Arhitektuur ja äri}
   	\begin{center}
-			\includegraphics[width=.7\textwidth]{ffc_profit.pdf}
+			\includegraphics[width=.9\textwidth]{ffc_profit.pdf}
 	\end{center}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Arhitektuur ja äri}
 			\begin{itemize}
-				\item Arhitektuur määrab toote või teenuse \emph{võimekuse} kasumit teenida
+				\item Arhitektuur määrab toote või teenuse võimekuse väärtust lisada
 				\item Sealhulgas
 				\begin{itemize}
 					\item Tootmiskulud. Kui kallist programmeerijat teie arhitektuur eeldab?
@@ -88,10 +91,11 @@
 \note{Oluline rõhk võimekusel. Mäletate: arhitektuur määrab vektorid, mille sisustab disain. Kui aga parameetrid on paigast ära, ei tule kasumist midagi. Ehk. Vale arhitektuur tähendab, et äri ei saa olla kasumlik, õige arhitektuur ei tähenda, et äri on kasumlik.\par Black \& Deckeri platvormi näide seitsmekümnendatest, Volkswagen vs. GM}
 
 %Arutelu koht
-\begin{frame}[fragile]
+\begin{frame}
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kuidas seletada kliendile, \\et ta saab sama raha eest täna vähem, kui eile?}
+			\textbf{Kuidas seletada kliendile, et tema eilsel otsusel\\ on mõju tema tänasele kulubaasile?}
+			\note{WTF?}
 		\end{center}
 \end{frame}
 
@@ -133,7 +137,7 @@
 		  \begin{itemize}
 		  	\item Kas probleemile lähenetakse raha või mõtlemisega?
 			\item Kui oluline on toodetud koodi kvaliteet?
-			\item Kas protsess toetab on kiiret rabelemist või jätkusuutlikku arengut?
+			\item Kas protsess toetab kiiret rabelemist või jätkusuutlikku arengut?
 		  \end{itemize}
 	\item Õige vastus sõltub valitud strateegiast. Seega
   \end{itemize}
@@ -141,7 +145,7 @@
 	  \textbf{Otsusta üheselt, kas oled Amazon või Ben \& Jerry's}
   \end{center}
 \end{frame}
-\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam \par Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti. \par Veelkord: kuidas te tarkvara ehitate, nagu ka kõik muu, mida te teete, peab toetama äristrateegiat}
+\note{Lugege Joeli, ta on hea. Suurem osa sisu veebis tasuta saadaval aga raamat on mugavam \par Muidugi on toodud vastuolu vaid üks võimalikke, kuid illustreerib seoseid kenasti. \par Veelkord: kuidas te tarkvara ehitate, nagu ka kõik muu, mida te teete, peab toetama äristrateegiat\\ Märkustes eraldi pikk jutt sellest, kuidas strateegia peab olema selgepiiriline ja otsuseid toetav}
 
 \begin{frame}[fragile]
   \frametitle{Tarkvaratehnika keerukus}
@@ -199,12 +203,11 @@
 	Tehniline võlg tekib, kui mõistliku lahenduse asemel tehakse mittemõistlik. NB! Tegu on \emph{metafooriga} ja tal on piirid.
   \begin{itemize}
 	\item Teda võib teatud piirini võrrelda rahalise kohustusega
-	\item Ta tuleb investeerida viisil, mis katab hilisemad intressikulud
-	\item Tehnilise võla põhjus peaks olema äriline, kuid võib olla ka tehniline 
+	\item Ta tuleb investeerida tulukusega, mis katab hilisemad intressikulud
 	\item Vaid ITl on võimekus hallata tehnilise võla portfelli
 	\item Tehnilise võla likvideerimisel on reeglina ärilised põhjused kuid võivad olla ka tehnilised
   \end{itemize}
-\note{Shipping is a feature. A really important feature. Your product must have it. Spolsky, duct tape programmer}
+\note{Shipping is a feature. A really important feature. Your product must have it. Spolsky, duct tape programmer\\Äril on täpselt samasugused võlad. Ainult juhtimisalases kirjanduses seda väga ei puudutata.}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -220,7 +223,7 @@
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kuidas seletada tehnilist võlga juhtkonnale?}
+			\textbf{Kuidas seletada juhtkonnale tehnilist võlga?}
 		\end{center}
 \end{frame}
 
@@ -307,6 +310,7 @@
 		\item peab tehnilise võla juhtimine olema läbipaistev, tellija peab aru saama oma otsuste pikaajalisest mõjust
 		\note{Sest tehnilise võla intresside maksmine võtab ressursse, mis on antud sulle ärilise eesmärgi täitmiseks ja mitte võlgade klaarimiseks. Vt. märkus IT juhi valikute kohta}
 	\end{itemize}
+	\note{Lugege märkust it-strateegia ja äristrateegia seoste kohta. Mis on IT probleem ja kuidas ta on seotud äri omaga?}
 \end{frame}
 
 
@@ -336,9 +340,9 @@
 \begin{frame}[fragile]
   \frametitle{Arenduse sisendi juhtimine}
   \begin{center}
-	  Probleem: kuidas otsustada, mis järjekorras tellija soove täita
-\bigskip
-	\emph{Võimekust vajadusi rahuldada on alati, definitsiooni järgi, vähem, kui vajadusi}
+	  Probleem: \textbf{kuidas otsustada, mis järjekorras tellija soove täita}
+		\\[3mm]
+	\emph{Võimekust vajadusi rahuldada on alati, \\definitsiooni järgi, vähem, kui vajadusi}
   \end{center}
 \end{frame}
 	  \note{Kuigi olemuselt taktikaline, on tegu tihti probleemse valdkonnaga. Sellest ka väike kõrvalepõige.}

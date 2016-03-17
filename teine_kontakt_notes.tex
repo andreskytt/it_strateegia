@@ -1,11 +1,11 @@
 \documentclass[10pt, compress]{beamer} 
-\usetheme{m}
-\setbeameroption{show notes}
+\usetheme{metropolis}
+%\setbeameroption{show notes}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
 \usepackage{minted}
-
+\usepackage{pgfpages}
 \usepackage[round]{natbib}
 
 \hypersetup{
@@ -17,8 +17,8 @@
 }
 
 \urlstyle{same}
-\usepgfplotslibrary{dateplot}
-
+%\usepgfplotslibrary{dateplot}
+\setbeameroption{show notes on second screen=right} 
 \usemintedstyle{trac}
 
 \title{IT Strateegiline juhtimine}
@@ -27,5 +27,16 @@
 \author{Andres Kütt}
 \institute{Riigi Infosüsteemi Amet}
 
+\AtBeginSection{
+    \frame{\insertsectionhead}
+}
+
+\makeatletter 
+\def\beamer@framenotesbegin{% at beginning of slide
+     \usebeamercolor[fg]{normal text}
+      \gdef\beamer@noteitems{}% 
+      \gdef\beamer@notes{}% 
+}
+\makeatother
 
 \input{teine_kontakt.tex}

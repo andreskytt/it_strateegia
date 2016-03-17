@@ -69,6 +69,29 @@
 
 
 \section{Arhitektuur}
+\subsection{Paradigmamuutus}
+Ettevõtte arhitektuuriraamistike ajalugu algab 1987. aastal Zachmani klassikalise paberiga \citep{zachman1987framework}. Sellest alates on toimunud päris oluline areng, mille üldjoontes võtab kokku joonis \ref{fig:architecture:EA}. 
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=.8\textwidth]{eaevolution.png}
+		\caption{Arhitektuuriraamistike evolutsiooniline kontekst.\cite{togafmodaf}}
+		\label{fig:architecture:EA}
+	\end{center}
+\end{figure}
+
+Jooniselt paistab nii mõndagi huvitavat. Kõigepealt on näha, et raamistikud uuenevad jämedalt viie-aastase kadentsiga. Teiseks on märgatav militaarorganisatsioonide oluline mõju. Kolmandaks näeme, et joonis lõpeb aastaga 2007. 2009. aastal on üllitatud küll DoDAF v. 2.02 aastal 2010 kuid isegi raamistikke võrdlevat kirjandust on sel kümnendil ilmunud vähe. Siit võib järeldada, et ühel või teisel põhjusel liiguvad arhitektuuriraamistikud tehnoloogia arengust oluliselt aeglasemalt ning et valdkond on teatavas mõttes kriisis. Tõenäoliselt saavad üksikud spetsiifiliste vajadustega organisatsioonid nagu NATO või USA kaitseministeerium oma raamistikest väärtust, kuid nende rakendatavus väljaspool militaarvaldkonda on küsitav. 
+
+Põhjusi on ilmselt mitmeid, kuid tõenäoliselt on oma roll nii organisatsioonide kui nende keskkonna keerukuse kasvul. Võib välja tuua neli eeldust, mis raamistike kuldajal sajandivahetuse paiku veel enamasti kehtisid kuid täna on tõesed järjest väiksema hulga ettevõttearhitektuurist kasu saada võivate organisatsioonide puhul.
+
+\textbf{Organisatsioonid on kultuuriliselt, tehniliselt jne. homogeensed}. Isegi, kui tegu oli rahvusvaheliste organisatsioonidega, ei pruukinud eraldiseisvad üksused olla tihedalt integreeritud. Integratsioon eeldab kommunikatsiooni ja seda on ilma internetita keeruline efektiivselt korraldada. \cite{cfmcommnetworks} näitab, et keskmine teadmustöötaja USAs suhtles veel sajandivahetuse paiku isegi e-posti olemasolul vaid temast väga piiratud füüsilises raadiuses olevate inimestega. See tähendas, et mitmesuguseid kultuurilisi, tehnilisi vms. piire tuli igapäevases töös ületada suhteliselt harva. Tänapäeval on ka Eestis vähegi edukamate ettevõtete kliendid ja töötajad maailmas laiali. Otsuste tegemisel ei saa enam eeldada, et otsuse täideviijat õnnestub efektiivselt mõjutada ning et tollel täideviijal, kui kohaliku konteksti tundjal, ei ole head põhjust otsuse vastu tõrkuda. 
+
+\textbf{Organisatsioonilised ja juriidilised piirid on selgelt määratletud}. Klassikaliselt on organisatsioonide ning rahvusriikide piirid ning vastutusala selgelt määratletud. Iga organisatsioon ajab äri suhteliselt iseseisvalt ning iga rahvusriik omab suveräänset kontrolli oma territooriumi üle. Tänapäevases globaliseeruvas maailmas ei ole kumbki enam tõsi. Ettevõtted on üha enam osad rahvusvahelisest tarnijate ja klientide võrgustikust, mida läbivad tihedalt integreeritud tarneahelad. Rahvusriigid aga üritavad leida oma kohta olukorras, kus kriitiline mass sotsiaalseid, ärilisi ja juriidilisi suhteid on riigipire ületavad. Vaid tõeliselt suured ettevõtted nagu Apple suudavad väärtusahelat pidi üles- ja allapoole märkimisväärset mõju avaldada. Ülejäänud peavad leppima keeruliste sõltuvustega kolmandatest osapooltest. 
+
+\textbf{Organisatsioonid on suhteliselt sõltumatud globaalsetest probleemidest}. Kuigi inimkonna kui terviku ees seisvate probleemide eskaleerumisest on räägitud juba alates möödunud sajandi seitsmekümnendatest \citep{forrester1971world}, hakkavad toona mudelite ennustatud kriisid pärale jõudma alles nüüd. Globaliseeruvas maailmas ei ole rahvastiku kasvu, kliimamuutuse, ökoloogilise katastroofi ning teiste probleemide eest kellelgi pääsu. Kui inimkond probleemidega toime ei tule, kannatavad kõik. Kui aga tuleb, on selge eelis muutustega kaasa läinud ning probleeme õigesti mõttestanud ettevõtetel. 
+
+\textbf{Kasutusel on selgepiirilised kontrollitult toimivad infosüsteemid}. Eestis lõi omal ajal laineid Tiigrihüppe programm, mille oluline rõhk oli inimeste õpetamisel arvutit kasutama. Ja põhjusega: arvutid ja tarkvara olid keerulised ning vajasid vähegi komplekssema ülesannete lahendamiseks eriväljaõppega kasutajaid.  Infosüsteemid täitsid organisatsioonis kindlat rolli ning suhestusid teiste äriprotsessi osadega suhteliselt kitsa tehnoloogiapreestrite kasti vahendusel. Tänapäeval on tiigrihüpe oma rolli täitnud ning nutiseadme kasutamiseks on ka kolme-aastane piisavalt nutikas. Tarkvara ning eri kommunikatsioonitehnoloogiad on üha enam universaalselt kasutatavad ning imbunud organisatsioonide toimimise kõigisse aspektidesse sotsiaalsetest suhetest äriprotsessi juhtimiseni. 
+
 \subsection{Printsiipidest}
 Arhitektuuriga süvitsi tegelemisel on hea mõte pidada printsiipide päevikut. Arhitektuuris on mõttemudelil oluline koht ja seega on mõistlik tegeleda oma isikliku mõttemudeli arendamise ning dokumenteerimisega. Printsiibipäevik on üks viis seda teha. Printsiip on miski, mis tundub kehtivat alati ning mis ei sõltu teistest. Teatavas mõttes on tegemist universaalse tõega. Üheks näiteks printsiipidest arvutivõrkude vallas on \cite{callon1996rfc}. Printsiibipäeviku mõte on selles, et iga kord, kui igapäevases töös tundub mõni printsiip silma jäävat, kirjutatakse see jalamaid üles. Perioodiliselt vaadatakse päevik üle lootuses destilleerida kirja pandust veel universaalsemaid ja üldisemaid põhimõtteid. Üks näide sellisest päevikust on \cite{archprinciples}. Ka \cite{crawley2015systems} sisaldab hulka printsiipe (TODO: inkorporeeri crawley).
 
