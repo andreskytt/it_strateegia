@@ -1,12 +1,20 @@
 \documentclass[10pt, compress]{beamer} 
-\usetheme{m}
-\setbeameroption{show notes}
+\usetheme{metropolis}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
 \usepackage{minted}
+\usepackage{pgfpages}
 
 \usepackage[round]{natbib}
+
+\makeatletter 
+\def\beamer@framenotesbegin{% at beginning of slide
+     \usebeamercolor[fg]{normal text}
+      \gdef\beamer@noteitems{}% 
+      \gdef\beamer@notes{}% 
+}
+\makeatother
 
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
@@ -17,7 +25,7 @@
 }
 
 \urlstyle{same}
-\usepgfplotslibrary{dateplot}
+\setbeameroption{show notes on second screen=right}
 
 \usemintedstyle{trac}
 

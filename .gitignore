@@ -132,3 +132,8 @@ sympy-plots-for-*.tex/
 *.tmp
 *.top
 *.tui
+.Rproj.user
+
+*.mdl
+*.2mdl
+

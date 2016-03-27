@@ -67,22 +67,14 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Jätkusuutlikkus kui piirang}
- Vajadust jätkusuutlikkuse järele võib vaadelda kui kõrgemalt strateegia tasemelt seatud piirangut
-\note{Sisuliselt: organisatsioon peab toimima viisil, mis ei kuluta mingit ressurssi mingi aja jooksul lõpuni\par}
-	\begin{itemize}
-		\item Seatakse ka muid piiranguid, mitte ainult jätkusuutlikkuse kohta
-		\note{Omanike otsus panna kinni tuumajaamad ja keskenduda hüdroenergiale on samaväärne otsusega maksta üle keskmise palka\par}
-		\item Piirangud võivad tulla ka mujalt
-			\begin{itemize}
-				\item Riigilt
-				\note{Hollandis peavad suuremahulised maasoojuspumbad näitama viie aasta lõikes null-saldot: maasse pannakse sama palju kui sealt välja võetakse\par}
-				\item Kohalikult omavalitsuselt
-				\item Maaomanikult
-			\end{itemize}
-		\item Igast välisest piirangust minnakse mööda, kui selle kulud on väiksemad, kui reeglite järgimise kulu
-		\note{Reeglitest mööda minemise kulus sisaldub ka vahele jäämise kulu x vahele jäämise tõenäosus. \par NB! Ka kulu mõistes on sees ajahorisont, NPVd arvutatakse ju ajaperioodi ja intressimäära kaudu}
-	\end{itemize}
+  \frametitle{Jätkusuutmatu käitumine}
+	Peter Senge toob ära rea erinevaid ebasoovitava käitumise arhetüüpe. Neist kolm väljendavad jätkusuutmatut käitumist:
+	
+	\begin{description}
+		\item[Piiratud kasv] Eksponentsiaalne kasv ei jätku reeglina lõputult
+		\item[Eskalatsioon] Kahe või rohkema osapoole vastastikune üksteise ületamine ei saa lõputult kesta
+		\item[Jagatud ressursi tragöödia] Võitlus jagatud ressursi pärast viib kiiresti kriisi
+	\end{description}	
 \end{frame}
 
 \begin{frame}[fragile]
@@ -343,7 +335,7 @@
 	\frametitle{Võtmeküsimus:}
 	\vfill
 	\begin{center}
-		Kuidas mõõta infosüsteemi keerukust?  
+		Kuidas hinnata infosüsteemi keerukust?  
 		\note{Just nimelt sotsiotehnilise, mitte ainult tehnilise süsteemi. Sellest sõltub, kuidas ja mil viisil saab hinnata ärimuutuse mõju teie poolt juhitavale süsteemile ning milline on teie reaalne võimekus reageerida}
 	\end{center}
 	\vfill
@@ -375,7 +367,7 @@
   \frametitle{Keerukuse juhtimine}
   	Keerukuse juhtimine on vastava taseme arhitekti töö. \\
 	\note{Meie puhul IT juhi oma \par}
-	Olen detilleerinud järgmised põhimõttelised strateegiad
+	Olen destilleerinud järgmised põhimõttelised strateegiad
 	\begin{description}
 	\item[Google mudel:] Joone tõusu vähendamine
 	\note{G suudab lisada teenuse teenuse ja serveripargi serveripargi järel ilma, et ta oma kompetentsist üle kasvaks\par}
@@ -411,35 +403,35 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Pank}
-	\vfill
-	\begin{center}
-		Näide ühe nimetuks jääva finantskorporatsiooni\\ ärimuutuse mõjust ITle
-		\note{Kuigi jutt tugineb avalikele allikatele, vääriti mõistmise välimiseks juhtumit lahti ei kirjuta}
+  \frametitle{Monte Carlo}
+  Viskame palju kordi münti\footnote{Simulatsioon: riskamp.com}
+  	\begin{center}
+			\includegraphics[width=.3\textwidth]{graaf.png}			\includegraphics[width=.5\textwidth]{jaotus.png}
 	\end{center}
-	\vfill
+	\begin{itemize}
+		\item Iga tegevuse kestvus on teatava jaotusega
+		\item Tegevustest moodustatakse sõltuvusgraaf
+		\item Tulemuseks projekti kestvuse hinnang
+	\end{itemize}
+
 \end{frame}
 
+
 \begin{frame}[fragile]
-  \frametitle{Kaduv disain}
-  Kuidas ja miks 90ndatel veebi toel tekkinud Digitaalse Muutuse Agendid on nüüdseks kadunud \citep{design}. 
+  \frametitle{Otsustuspuu}
+  Lihtne vahend stsenaariumide visualiseerimiseks ja läbi arvutamiseks
+  	\begin{center}
+			\includegraphics[width=.7\textwidth]{puu.pdf}
+	\end{center}
 	\begin{itemize}
-		\item Kogu veebidisaini äri sai võimalikuks vaid tänu veebile
-		\item Tekkis täiesti uus ärivaldkond
-		\item Disain muutus kriitiliseks edufaktoriks
-		\note{Disain kui kriitiline edufaktor: Google Ventures design for equity idee\par}
-		\item Suurkorporatsioonid tajusid strateegilist riski ja tõid disaini majja
-		\note{IBMil ~1000 disainerit palgal, Barclays suurim disainimaja Londonis jne.\par}
-		\item Tulemus: põhimõtteliselt on muutunud viis, kes ja kuidas tänapäeval kasutajakogemust disainib
-		\begin{itemize}
-			\item Muutunud on kogu \emph{toolchain}
-			\note{suurtel on jõudu mõjutada JSi ja brauserite arengut, kus on Dreamweaveri ja FrontPage analoogid?\par}
-			\item UXi disain on integraalne osa tarkvara arendamise protsessist
-			\note{UXi disain: Kuigi meie tarkvaratehnika osas sellest palju ei rääkinud? How come?\par}
-			\item On tekkinud reaalne \emph{design divide}
-		\end{itemize}		
+		\item Iga kasti realiseerumise tõenäosus on noolel, tulemus kasti sees
+		\item Iga haru lõpptulemus saadakse tõenäosusi korrutades
+		\item Kokkuvõttes liidetakse tulem korrutatuna tõenäosusega
+		\item $EX=.4\times-100+.3\times(.3\times-100+.7\times200)+.3\times50=8$
 	\end{itemize}
+
 \end{frame}
+
 
 %Arutelu koht
 \begin{frame}[fragile]
@@ -576,7 +568,7 @@
 \begin{frame}[fragile]
   \frametitle{Arutelu koht}
 		\begin{center}
-			\textbf{Kui tõsine probleem on riskijuhtimise paradigma muutus \\tegelikus elus?}
+			\textbf{Milline on ohutu süsteem?}
 		\end{center}
 \end{frame}
 
