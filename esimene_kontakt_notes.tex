@@ -1,5 +1,5 @@
 \documentclass[10pt, compress, xcolor={dvipsnames}]{beamer}
-\usetheme{m}
+\usetheme{metropolis}
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
@@ -7,6 +7,14 @@
 
 \usepackage{pgfpages}
 \usepackage[round]{natbib}
+\makeatletter 
+\def\beamer@framenotesbegin{% at beginning of slide
+     \usebeamercolor[fg]{normal text}
+      \gdef\beamer@noteitems{}% 
+      \gdef\beamer@notes{}% 
+}
+\makeatother
+
 
 \hypersetup{
     colorlinks=true,       % false: boxed links; true: colored links
@@ -17,14 +25,7 @@
 }
 
 \urlstyle{same}
-%\setbeameroption{show notes}
-%\setbeameroption{show notes on second screen=right}
-
-
-%\setbeameroption{hide notes} % Only slides
-%\setbeameroption{show only notes} % Only notes
-\setbeameroption{show notes on second screen=right} % Both
-
+\setbeameroption{show notes on second screen=right}
 \usemintedstyle{trac}
 
 \title{IT Strateegiline juhtimine}

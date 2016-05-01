@@ -23,7 +23,13 @@ Eelnevat arvestades on selge, et infoturbe strateegia on tihedalt seotud paljude
 Sellel pildil on küll kesksel kohal infoturbe meetmed (\emph{Controls}), kuid sama olulised on erinevad infoturbe mustrid. Muster siinkohal on tavalisest üldisem mõiste tähendades suhteliselt üldist korratavat lahendust. Idee disainimustritest toodi esmakordselt välja füüsilise arhitektuuri valdkonnas\sidenote{\cite{alexander1977pattern} Paralleele infosüsteemide ja füüsilise ruumi planeerimise vahel on leitud ikka ja jälle. Mõnel juhul on nii üles ehitatud terveid metoodikaid:\cite{longepe2003enterprise}} ning OSA lähenemises on kesksel kohal infoturbe mustrite kataloog. Teine oluline tähelepanek on, et äristrateegiast tuleneb kaks olulist taksonoomia elementi: äriprotsessid, mida realiseerivad infosüsteemid ning EA\index{EA}, mis sisaldab infoturbe mustreid. Järelikult eeldab võimekus kaitsta infosüsteeme kooskõla äriprotsesside ja süsteemi arhitektuuri vahel. Mõistliku koostöö puudumine viib tõenäoliselt vastuolulini kus äriprotsess ei ole infoturbe mõistes kaitstav ärilises mõttes mõistliku määrani.
 
 \section{Kuvandi olulisus infoturbes}
-Nii valemi \ref{eq:tasuvus} (vt. lk \pageref{eq:tasuvus}) kui teiste riskimudelite puhul on olulisel kohal hinnangulisus. Ründajal on võimalik hinnata kohtuniku käitumist, õiguskaitse tõhusust ning kaitse taga asuva väärtust. Kuid tal ei ole võimalik neid teada. Järelikult on olulisel kohal infoturbes valemi parameetritest ebasoodsa mulje jätmine. Bütsantsi riik kasutas sama taktikat juba aastatuhandete eest, see toimib ka täna. Piltlikult öeldes võib seif olla valmistatud papist, kuid kuni kui kõik usuvad ta olevat läbimatust terasest, keegi talle kääridega ei lähene. Loomulikult on mulje ajutine ning raskesti juhitav ning seetõttu tuleb valmis olla selle purunemiseks. Kui levib info papist seifist, on maailmas kääre küllaga. Samuti ei ole ilmselt mõistlik tekitada kõrge väärtusega sihtmärgi kuvandit lisades ründest oodatavale kasule "feimi" komponendi. 
+Nii valemi \ref{eq:tasuvus} (vt. lk \pageref{eq:tasuvus}) kui teiste riskimudelite puhul on olulisel kohal hinnangulisus. Ründajal on võimalik hinnata kohtuniku käitumist, õiguskaitse tõhusust ning kaitse taga asuva väärtust. Kuid tal ei ole võimalik neid teada. Järelikult on olulisel kohal infoturbes valemi parameetritest ebasoodsa mulje jätmine. Bütsantsi riik kasutas sama taktikat juba aastatuhandete eest, see toimib ka täna. Piltlikult öeldes võib seif olla valmistatud papist, kuid kuni kui kõik usuvad ta olevat läbimatust terasest, keegi talle kääridega ei lähene. Loomulikult on mulje ajutine ning raskesti juhitav ning seetõttu tuleb valmis olla selle purunemiseks. Kui levib info papist seifist, on maailmas kääre küllaga. Samuti ei ole ilmselt mõistlik tekitada kõrge väärtusega sihtmärgi kuvandit lisades ründest oodatavale kasule \enquote{feimi} komponendi.\sidenote{2013. aastal sundis Prantsuse DCRI, sealne spiooniorganisatsioon, prantsuskeelse Wikipedia toimetajat vahistamise ähvardusel muutma kogukonnateatmiku artiklit ühe Prantsuse õhujõudude raadiojaama kohta. Mispeale loomulikult too artikkel senisest võrratult rohkem tähelepanu sai. Tegu on niinimetatud Streisandi efektiga. 2003. aastal kabas Barbara Streisand kohtusse ühe fotograafi, kelle tehtud piltidelt (vt. joonis \ref{fig:barbara}) lauljatari häärber liiast kenasti kätte paistis. Enne kohtuasja oli pilte vaadatud mõned korrad, pärast kohtusse pöördumist on pilte ilmselt nähtud ilmselt sajad tuhanded huvilised.}
+
+\begin{marginfigure}
+	\includegraphics[width=\linewidth]{barbrara.jpg}%
+	\caption{Barbara Streisandi villa Malibus. Kenneth and Gabrielle Adelman via Wikimedia Commons. CC BY-SA 3.0} 
+	\label{fig:barbara}
+\end{marginfigure}
 
 Jättes kõrvale pideva automatiseeritud ründevoo, võetakse järgmised sihtmärgid kõige tõenäolisemalt ette:
 \begin{itemize}
@@ -142,10 +148,22 @@ Valem \ref{eq:loss} võimaldab hinnata oodatavat kahju ründest. Teades, kui tih
 
 Tegu ei ole infoturbespetsiifilise valemiga, täpselt samuti hinnatakse näiteks krediidiriske.
 
-
+\section{Pilveriskidest}
+Pilv kui kellegi teise arvuti ja mitte arvuti puudumine
+\TODO täida sisuga. 
 
 \section{Küsimusi aruteluks}
 \subsection{Kuidas tellida turvalist tarkvara?}
 \TODO: täida sisuga
 Kui turvalisus ei ole süsteemi funktsioon vaid emergentne omadus, siis mida see tähendab tellimise jaoks? Emergents ei ole ju lõpuni ennustatav.
+
+Saalist
+\begin{itemize}
+	\item Tee endale selgeks, mida kaitsta. Ja miks. Määra turvatase
+	\item Rakenda elementaarsed hügieeninõuded toetudes standardile (OWASP näiteks)
+\end{itemize}
+
+
+\section{Lahti kirjutada}
+Cakery Levier IT case. Retseptid füüsiliselt näha. Kultuuri kaotamise risk läbi IT rakendamise (laoarvestus vs. lastele küpsiste pakkumine)
 

@@ -13,6 +13,9 @@ Kuna süsteemide puhul on reeglina tegemist sotsiotehniliste süsteemidega (st. 
 
 Tulemi kvaliteet sõltub olulisel määral kasutatavast protsessist, nii ka tarkvaras. Vt. \ref{humble}.
 
+\TODO Vigade skoorimine ja arendussaba sugemine. Vigade mudel ja testimise olulisus. Keskpärasusega harjumine
+
+
 \section{Teenustaseme juhtimine}
 Tavaliselt on organisatsioonides diskussiooni objektiks teenuse mõiste. Kuna kirjandusest samuti sobilikku määratlust võtta ei ole, siis võivad vaidlused osutuda pikkadeks ja viljatuteks. Seetõttu on oluline välja tuua teenuse definitsiooni kaks peamist struktuurset omadust lisaks slaididel kirjeldatud funktsionaalsetele omadustele:
 \begin{itemize}
@@ -88,6 +91,12 @@ Lühidalt ütleb Box, et me kõigeapelt koostame teooria või mudeli reaalsuse k
 \section{Küsimusi aruteluks}
 \subsection{Kuidas vabaneda end sisse söönud ”puugist”?}
 \TODO täida sisuga. Viide Aeda legacy tööle eespool. 
+Saalist
+\begin{itemize}
+	\item Miks peaks? Ehk, mis on see konkreetne põhjus, miks vabaneda. Peeglisse vaatamise märkus. Ilma selle artikuleerimiseta on raske kulu õigustada. Ja peab olema selge, mis tulevikus teisiti läheb ning kuidas puuk tekkis
+	\item Nullist kirjutada on võimalik vaid siis, kui on selged piirid tükkide vahel
+	\item Peale nullist ümber kirjutamise ei ole ühtegi head ideed
+\end{itemize}
 
 \begin{itemize}
 	\item Kirjuta kogu asi korstnasse. See ei pruugi olla palju kallim (arvutused ja modelleerimine!)
@@ -95,8 +104,16 @@ Lühidalt ütleb Box, et me kõigeapelt koostame teooria või mudeli reaalsuse k
 	\item Investeeri teadlikult muskli kasvatamisse ja arvesta kvaliteedi langusega
 \end{itemize}
 
-\subsection{Mida saab teha saamatu kliendiga?}
+\subsection{Mida saab teha saamatu äripoolega?}
 Eespool juba arutelu "kas saab ITd mõistlikult juhtida, kui klient ei ole mõistlikult juhitud?". Erista teadmiste/oskuste puudus võimete puudmisest (organisatsiooni, mitte isiku tasemel) Lolli tuleb kas kiita või temast lahti saada. Do not try to teach a pig to sing. It wastes your time and annoys the pig. 
+
+\TODO
+Saalist
+\begin{itemize}
+	\item Koolita klienti. Koolitus (targutamine) kui agressioon. Tule, ma räägin sulle, kuidas asju tegema peab. Aga milles?
+	\item Hansa pangatehnoloogia näide: organisatsioonis peab olema äri põhjalikult tundev inimene. See ei pruugi olle iseenesest mõistetav
+	\item Korrelatsioon: kui inimene ärist aru saab, on ta piisavalt nutikas ka ITst aru saama. Ükskõik millest hästi aru saamine eeldab reeglina õppimisvõimet ja vajalikud IT-teadmised ei ole väga keerulised. On omandatavad paari ämbrisseastumise järel.
+\end{itemize}
 
 \subsection{Millal on tarkvara valmis?}
 Tarkvara on valmis siis, kui tehakse vastav otsus. Arendusprotsess vähegi mittetriviaalsel juhul ei koondu. Järelikult
@@ -106,8 +123,20 @@ Tarkvara on valmis siis, kui tehakse vastav otsus. Arendusprotsess vähegi mitte
 	\item Peab otsustajatel olema mandaat ja pädevus otsustada. Seega peab otsustusprotsess kaasama kõiki osapooli (klient, opsid, ka arendaja) ja olema läbipaistev
 \end{itemize}
 
+Saalist
+\begin{itemize}
+	\item Kui tellija nõuded on täidetud. Aga mis on nõuete kvaliteet? Nii täpselt saabki siis hinnata seda kvaliteeti
+	\item Kui tarkvara on maha kantud! Viide arenduse ja halduse kuludele eespool
+\end{itemize}
+
 \subsection{Milline tarkvara on kvaliteetne?}
 \TODO täida sisuga
+Saalist
+\begin{itemize}
+	\item Funktsionaalsus on olemas
+	\item Tellija ütleb nii
+	\item Tellija, arendaja, ops ja infosec (miks mitte ka täitja) ütleb nii. Kvaliteet kui kokkulepe!
+\end{itemize}
 
 \subsection{Mis on teenus?}
 ITIL\index{ITIL} defineerib teenuse mõiste omandi läbi: [teenus on] \enquote{väärtuse pakkumine klientidele võimaldades neil saavutada lõpptulemusi ilma kaasnevaid kulusid ja riske kandmata.}\cite{itil}. Ehk, teenust pakkudes võimaldadatakse kellelgi saada väärtust ilma, et ta peaks teatud kulusid ja riske ise kandma. Mõiste on olemuselt tautoloogiline sisaldades nii abstraktse kui kui konkreetse väärtuse pakkumist: teenuseid pakkudes pakutakse tegelikult kulude ja riskide kandmise teenust. Järelikult on teenuse pakkumise eelduseks võimekus mingil põhjusel pakkuda väiksemaid riske ja kulusid. Kuidas seda saavutatakse ning mis \enquote{teenus} tegelikult on, ei öelda. Siiski on definitsioonis olulisel kohal väärtuse ja seega ka kliendi mõiste, teenust ei saa osutada ilma kliendita.
@@ -118,4 +147,6 @@ Kindlasti on mitmesuguseid definitsioone veel, kuid ilmsesti on need kaks kõige
 
 Mida siis teha? IT juht tegeleb reeglina mitte üksikute teenuste vaid teenuste portfelliga. Portfelli kui terviku ja selle üksikute elementide jõudlust peaks olema võimalik hinnata ning teha otsuseid. On selge, et ühest elemendist koosnev teenusteportfell lükkab teenustega tegelemise lihtsalt kellegi teise õlule. Samuti on ilmselt igal inimesel ja organisatsioonil konkreetses tehnoloogilises kontekstis võimalik hoomata piiratud hulka teenuseid. Rohkemaid teenuseid küll võib defineerida aga sellest ei saa palju kasu olla: juhtimislikke otsuseid on võimalik teha ainult hoomatavuse piires. 
 
-Seega jõuame veidi praktilisema teenuse definitsioonini: \enquote{Teenus on miski, millest ja millesarnastest on võimalik koostada praktiliselt kasulik teenuste portfell}. Seejuures on täitsa ükskõik, kas lähtutakse ITILi, ISO või mõnest kolmandast teenuse definitsioonist. Samuti on oluline mõista, et eri organisatsioonide portfellijuhtimise võimekus on erinev. Hästiarenenud EA\index{Enterprise Architecture} taristu abil on võimalik tegeleda tuhandete teenustega samas kui käsitsi toimetades võib ka kümmekond teenust üle jõu käia. 
+Seega jõuame veidi praktilisema teenuse definitsioonini: \enquote{Teenus on miski, millest ja millesarnastest on võimalik koostada praktiliselt kasulik teenuste portfell}. Seejuures on täitsa ükskõik, kas lähtutakse ITILi, ISO või mõnest kolmandast teenuse definitsioonist. Samuti on oluline mõista, et eri organisatsioonide portfellijuhtimise võimekus on erinev. Hästiarenenud EA\index{Enterprise Architecture} taristu abil on võimalik tegeleda tuhandete teenustega samas kui käsitsi toimetades võib ka kümmekond teenust üle jõu käia.
+
+\TODO Saalist: Väärtuse edastamise protsess. Aga väärtus on subjektiivne. Ja seega on teenused subjektiivsed. Milline paljudest valida? Tuleb ise otsustada, väärtuse järgi. Ja otsust üle vaadata, kui vajadustele ei vasta.
