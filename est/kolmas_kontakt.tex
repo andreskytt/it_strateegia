@@ -1,0 +1,590 @@
+\begin{document}
+
+\maketitle
+
+\section{Sissejuhatus}
+\begin{frame}[fragile]
+  \frametitle{Eelmine kord}
+  Peamine fookus IT valitsemisel
+	\begin{itemize}
+		\item IT valitsemine kui raskesti määratletav pool-akadeemiline distsipliin
+		\item Tõdemus, et äriplaan mõjutab oluliselt arhitektuurseid ja tarkvaratehnilisi otsuseid ning vastupidi
+		\item Tehniline võlg võib juhtimatuna kergesti tagumikust hammustada
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Täna kavas}
+		\includegraphics[width=\textwidth]{aine_struktuur_kolmas.pdf}
+\end{frame}
+
+\section{Jätkusuutlik areng}
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkusest}
+  	\begin{center}
+			\includegraphics[width=.72\textwidth]{sustainable.png}
+	\end{center}
+	XKCD 1007
+\end{frame}
+\note{Jätkusuutlikkuse ümber on väga palju haipi ja vähe fakte. Katsuge näiteks arendada USA ajakirjanduses intelligentset vestlust kliimamuutuse ja selle põhjuste üle: saate sauna mõlemalt poolt. \par Tuleb eristada vaidlust selle üle, kas ja miks praegune tegevus on jätkusuutlik arutelust jätkusuutlikkuse mõiste üle. Katsun täna keskenduda viimasele}
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkuse definitsioon}
+	\begin{itemize}
+		\item EKSS: arengu kohta, mis tagab inimeste elukvaliteedi paranemise kooskõlas keskkonna taluvusvõimega
+		\note{EKSS: Eesti Keele Seletav Sõnaraamat. Aga miks ainult inimeste elukvaliteedi paranemine? Ja miks see peab paranema kogu aeg?\par}
+		\item Wikipedia: \emph{sustainability is the endurance of systems and processes}
+		\note{Wikipedia oma on juba palju parem. Kuigi ikkagi on küsimus, mis on edurance? Universum ei ole ju ka igavene?\par}
+		\item Selles kontekstis küsigem:
+		\begin{itemize}
+			\item Kas maasse augu kaevamine on jätkusuutlik tegevus?
+			\item Kas 80-tunnine süsadmini töönädal on jätkusuutlik?
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkuse definitsioon}
+  \begin{center}
+  	\begin{quote}
+		Jätkusuutlik on tegevus, mida võib mingites ajaraamides sarnaste tulemustega jätkata 
+	\end{quote}
+  \end{center}
+
+	\begin{itemize}
+		\item Teised definitsioonid on liiga kitsad ning ei rakendu otse ITle
+		\note{Definitsioonid: välja arvatud serveriruumide disain, seal saab toetuda sustainable energy mõistele\par}
+		\item Mõistes on peidus 
+		\begin{itemize}
+			\item ajahorisont: miski ei ole päris igavene
+			\note{Keskpikas perspektiivis oleme me kõik surnud\par}
+			\item ressursi mõiste: mittejätkamine tuleneb ressursi lõppemisest
+		\end{itemize}
+		
+		\item Meie definitsiooni juured on agiilses tarkvaras \citep{sustainable}, kus räägitakse jätkusuutlikust tempost
+		\note{Jätkusuutlik on tempo, mida suudetakse kogu ettenähtava aja jooksul hoida\par}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutmatu käitumine}
+	Peter Senge toob ära rea erinevaid ebasoovitava käitumise arhetüüpe. Neist kolm väljendavad jätkusuutmatut käitumist:
+	
+	\begin{description}
+		\item[Piiratud kasv] Eksponentsiaalne kasv ei jätku reeglina lõputult
+		\item[Eskalatsioon] Kahe või rohkema osapoole vastastikune üksteise ületamine ei saa lõputult kesta
+		\item[Jagatud ressursi tragöödia] Võitlus jagatud ressursi pärast viib kiiresti kriisi
+	\end{description}	
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkuse ajahorisont}		
+  		Jätkusuutlikkuse põhiline parameeter on ajahorisont, igal organisatsioonil on oma. Startup näeb järgmise raharingini, ülikool ideaalis sajandite taha.
+	  \begin{itemize}
+		\item Organisatsiooni ajahorisonti mõjutavad oluliselt
+			\begin{itemize}
+				\item Kapitali struktuur
+				\note{Kui palju on laenu- ja kui palju omanike raha. Kust omanikud raha saavad, kui pikk on laenuraha jne.\par}
+				\item Omanike arusaam "väärtusest"
+				\note{Iga ettevõtte ülesandeks on maksimeerida omanikele pakutavat väärtust. Börsiettevõtte ajahorisont on praktiliselt üks kvartal.\par}
+				\item Keskkond
+				\note{Kiiresti muutuvas keskkonnas ei ole võimalik ega mõistlik pikki sihte seada\par}
+				\item Organisatsiooni strateegia
+				\note{Strateegia on mõnevõrra juba tulem omanike sisendist, kuid alati ei tule omanikelt konkreetset suunda ja otsuse teeb juhtkond\par}
+			\end{itemize}		
+		\item Iga juhtimistasand koostab oma strateegia eelmiselt tasandilt saadud piirangute alusel lisades omapoolse perspektiivi
+		\note{Muude piirangute puudumisel jahutategi te oma serveriruumi hülgepoegadega, kui see juhtub kõige efektiivsem võimalus olema. Teie ajahorisont võib aga piirduda kavandatud organisatsioonis töötamise aaga,  kuigi organisatsioon vaatab kaugemale\par} 
+	\end{itemize}
+\end{frame}
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Miks on kõrge PUE oluline?}
+			\note{Power Usage Effectivenes}
+		\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkus ja ressursid}
+	Mis on see, mis võib otsa saada?
+
+	\begin{itemize}
+		\item Materiaalsed ressursid: nafta, gaas, puhas vesi. Aga ka inimesed
+		\item Immateriaalsed ressursid
+			\begin{itemize}
+				\item Inimesed
+				\note{Inimesed: Admini võimekus teha tööd, nende heasoovlikkus\par}
+				\item Partnerid
+				\note{Parnerite vastutulelikkus, läbirääkimissoov\par}
+				\item Regulaatorid
+				\note{Regulaatorid: Politseiniku soov hoiatusega piirduda\par}
+				\item Ülemised juhtimistasandid
+				\note{Ülemised tasandid: Väga oluline! Tippjuhtkond on suuteline oma soovide ignoreerimist taluma vaid piiratud hulga aega!\par}
+			\end{itemize}		
+		\item Oluline küsimus: \emph{360 kraadi põhimõttel ringi vaadates, milliseid ressursse sa kelleltki saad ning mida sa neile vastu annad?}
+		\note{Vt. märkused, seal on üks meetod ära toodud selle kohta\par}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkuse olulisusest}
+	Miks üldse on oluline rääkida ja mõelda jätkusuutlikkusest?
+
+	\begin{itemize}
+		\item Ressursi lõppemine iseenesest on tavaline planeerimisülesanne ning ei ole strateegiline probleem
+		\note{Me teame üsna täpselt, millal meie karjäär tühjaks saab ning saame aegsasti valmistuda uue avamiseks\par}
+		\item Probleem on ülereageerimine
+			\begin{itemize}
+				\item Me ei pruugi teada, millal ressurss otsa saab
+				\note{Kui me ei tea, millel miski otsa saab, ei saa ka planeerida. Kui kaua suudab admin 80-tunniseid nädalaid teha?\par}
+				\item Me võime jätkata kulutamist ka siis, kui see tegelikult on juba otsas
+				\note{Me ei pruugi lõppmiset kohe aru saada: Admin jätkab tööd ka pärast võimete piiri ületamist\par}
+				\item Igal süsteemil on inerts, ta ei jõua hetkega reageerida
+				\note{Inerts: Kui admin väsib, ei ole uut kohe kuskilt võtta\par}
+			\end{itemize}		
+		\item Järgneb kas mõõdukas või täielik kollaps
+		\note{Sõltub kasvu kiirusest ja ressursi ning kasvu reageerimisaegadest}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Jätkusuutlikkuse olulisus}
+  	\begin{center}
+			\includegraphics[width=.75\textwidth]{over.png}
+	\end{center}
+	\cite{sterman2000business}
+\end{frame}
+\note{Kokku kolm põhimõttelist võimalust, sõltub süsteemi struktuurist ja parameetritest. Teised kaks on S-kujuline tõus (kõige lihtsam juhtum) ning täielik kollaps}
+
+\begin{frame}[fragile]
+  \frametitle{Näide kollapsist}
+	Vaatame meie süsadmini näidet. 
+
+	\begin{enumerate}
+		\item Süsadmini koormus kasvab, kuni ta teeb 80-tunniseid töönädalaid 
+		\item Sellega harjutakse
+		\item Admini tervis ütleb üles, ta satub haiglasse ning ei naase tööle
+		\item Teil juhina on 
+		\begin{itemize}
+			\item Teadmuskadu admini valdusala kohta
+			\note{Keegi ei dokumenteeri midagi, kui nii palju tööd teeb. Muu hulgas akumuleerub ka (hooletu) tehniline võlg!}
+			\item Vajadus päevapealt leida \emph{kaks} uut admini
+		\end{itemize}
+		\item Kuni uued adminid leitakse ja käima joostakse, valitseb kaos, mis võib viia ettevõtte pankrotini
+	\end{enumerate}
+	Ehk, süsteemi tagasiside ei reageerinud õigeaegselt taluvuspiiri ületamisele, toimus ülereageerimine ning kollaps. 
+\end{frame}
+
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Kuidas tuvastada jätkusuutmatust?}
+		\end{center}
+\end{frame}
+
+\section{Ärimuudatused}
+\begin{frame}[fragile]
+  \frametitle{Miks äri muutub?}
+  	\begin{center}
+			\includegraphics[width=.85\textwidth]{sp500.png}
+			\note{Ca iga 20 aasta tagant tundub toimuvat suurem väljasuremine. Pange see kõrvuti eelneva graafiga süsteemi ülereageerimisest!}
+	\end{center}
+	\cite{foster2011creative}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Miks äri muutub?}
+  Äri muutub, sest maailm muutub. Ja muutub üha kiiremini
+	\begin{itemize}
+		\item 1983. aastal leidis Royal Dutch/Shell, et üks kolmandik ettevõtetest, kes olid osa F500-st seitsmekümnendatel, on kadunud \citep{senge19905th}
+		\item \cite{foster2011creative} ütleb, et kestma loodud ettevõtted ei saa põhimõtteliselt edukad olla
+		\note{Kestma loodud ettevõtted ei ole edukad sest keskkond on alati muutumises\par}
+		\item Kommunikatsioon ja globaliseerumine loovad üha mittelineaarsemat maailma
+		\item Vaikuse korral peaks tekkima küsimus "miks äri juba ei muutu"?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Õppiv organisatsioon}
+  \begin{center}
+  	\begin{quote}
+		The organizations that will truly excel in the future will be the organizations that discover how to tap people's commitment and capacity to learn at all levels in an organization
+		\note{Tere Senge on väga hea. Lugege!\par}
+	\end{quote}
+  \end{center}
+  \cite{senge19905th}
+  \note{Asja mõte on, et kogu organisatsioon peab olema suuteline muutustele adekvaatselt ja paindlikult reageerima. See on spetsiifiline oskus. Dünaamilised võimekused on võtmesõna}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Muutuste interferents}
+  	\begin{center}
+			\includegraphics[width=.7\textwidth]{stack_interference.pdf}
+			\note{Räägitud ka esimeses loengus. Pildi moraal: Muutused ühes kihis propageeruvad ja võivad käivitada muutusi teistes kihtides. \\ Kahe muutuse mõju kokkupuutel tekivad täiesti muudes organisatsiooni osades täiesti ettearvamatud muutused.}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Mida teha muutuse korral?}
+  	Leia (ausad) vastused järgmistele küsimustele: 
+		\begin{itemize}
+			\item Mis põhjustab ärimuutuse?
+			\note{Põhjus: Kas endogeenne või eksogeenne muutus?\par}
+			\item Milles muutus seisneb?
+			\note{Milles muutus seisneb: Ehk, mis täpselt muutub. Neid kahte tuleb omavahel valideerida kuid 100\% vastavust ära oota, vt. British Steeli näide edaspidi\par}
+			\item Kes kontrollib muutust?
+			\note{Kontoll: Kes vastutab. Väga oluline küsimus. Väga hea vastus on ka vastuse puudumine\par}
+			\item Millistes organisatsiooni kihtides on muutus struktuurne ja millistes mitte?
+			\note{Sturktuurne vs. mittestruktuurne: Mäletate, rääkisime arhitektuurist kui parameetrite vektorist. Arhitektuuri muutmine on kallis, parameetrite muutmine odav\par}
+			\item Milline on muutuste kadents?
+			\note{Kadents: See on väga oluline küsimus: kas te peaksite oma süsteeme ehitama paindlikumaks või mitte. Paindlikkus on kallis, seda ei ole mõistlik niisama tekitada.\par}
+		\end{itemize}
+
+\end{frame}
+
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Kas IT saab algatada organisatsiooni äri muutuse? \\Kui jah, siis kuidas?}
+		\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Mis on keerukus?}
+  	\begin{center}
+			\includegraphics[width=\textwidth]{concrete.jpg}
+			\note{Mootor 200 rpm, 12 ülekannet, iga ülekanne vähendab 50 korda. Viimane võll pöörleb kord kahe triljoni aasta jooksul. Kui toda võlli keerata kiirusega 1 m/s ja masin vastu peaks, pöörleks mootor 814 365 469 korda valguse kiirusest kiiremini\\}
+	\end{center}
+	Arthur Ganson, Machine with Concrete
+	\note{Ei ole teada, millal tehtud. Arvatavasti asub Exploratoriumis SFis\\Suurepärane näide dünaamilisest keerukusest ja eksponendi rollist selles}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Miks rääkida keerukusest?}
+  Iga muutus äris on olemuslikult muutus keerulises sotsiotehnilises süsteemis
+	\begin{itemize}
+		\item IT-juht vastutab selle süsteemi tehnilise osa eest
+		\note{Erinevalt "sotsio" poolest ei saa siin hakkama deklaratsioonidega, keerukust ignoreerida ei saa. Väga sageli eeldatakse, et muutus regulatsioonis tähendab automaatselt muutust reaalsuses\par}
+		\item Tema roll on juba niigi keerulises süsteemis viia läbi mittetriviaalne muutus
+		\item Kuna ei ole ruumi rääkida süsteemiteooriast, räägime keerukusest
+		\note{Sellest on hea lühike ülevaade edasipidi viidatavas System Safety raamatus\par}
+		\item Arusaam keerukuse olemusest annab head mõttemudelid keerulistest situatsioonidest mõtlemiseks
+	\end{itemize}
+	\note{Keerukusest on oluline aru saada ning ärimuudatused tundus olevat õige koht sellest rääkimiseks}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Keerukuse mõiste}
+  Ühest definitsiooni ei ole. On viisid selle mõõtmiseks \citep{mitchell2009complexity}:
+  \note{Meil juba olid sellised asjad: strateegia, arhitektuur... Võib olla on tegu lihtsalt keelelise abstraktsiooniga, mille taga ongi hulk eri nähtusi?\par}
+	\begin{itemize}
+		\item Keerukus kui suurus, osiste ja nendevahelise seoste hulk
+		\note{suurus: Kõige levinum inseneerias. Küllalt intuitiivne.\par}
+		\item Keerukus kui entroopia määr
+		\note{entroopia: Shannon entropy. Üllatuse määr kommunikatsioonis\par}
+		\item Keerukus kui pakitavuse määr
+		\note{pakitavus: Kui palju annab süsteemi kokku pakkida. Tehniliselt Algorithmic Information Content\par}
+		\item Keerukus kui loogiline või termodünaamiline sügavus
+		\note{loogiline: Kui keeruline on süsteemi konstrueerida. Loogiline on matemaatliselt kena Turingi masina kaudu defineeritav konstruktsioon, praktiliselt aga kasutu. Termodünaamiline on samuti keeruline\par}
+		\item Keerukus kui sisendi ja väljundi seos
+		\note{sisendi/väljundi seos: Stat. Minimaalne kogus infot praeguse ja eelnenud sisendi kohta, mis vajalik väljundi ennustamiseks. Dün. keerukus!\\}
+
+		\item Keerukus kui fraktaaldimensioon
+		\note{Matemaatika, fraktalid, liiga keeruline, et siin detaili minna. Lugege\par}
+		\item Keerukus kui alamsüsteemide hulk
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Veel keerukusest}
+	Keerukust saab jagada veel eri dimensioone pidi:
+	
+	\begin{itemize}
+		\item Dünaamiline ja staatiline keerukus
+			\begin{itemize}
+				\item Dünaamiliselt keerukas süsteem käitub kaootiliselt: kuitahes väike sisendi muutus võib põhjustada kuitahes suure muutuse väljundis
+				\note{Dünaamiline keerukus: Liblika tiivalöök ja Bono. Meie süsteemid käituvad tänapäeval samuti\par}
+				\item Staatiliselt keerukas süsteem on keerulise struktuuriga
+				\note{Staatilist keerukust mõõdab enamus eeltoodud meetrikaid.\par}
+			\end{itemize} 
+		\item Tehniline ja äriline keerukus
+			\begin{itemize}
+				\item Tehniliselt keerulise süsteemi mõistmiseks peab omama sügavaid teadmisi arvutiteadusest  
+				\note{Selline on näiteks Skype p2p võrk\par}
+				\item Äriliselt keerulise süsteemi mõistmiseks peab omama sügavaid teadmisi ärist
+				\note{Selline on näiteks Skype veebipood.\par}
+			\end{itemize} 
+		\item Keerulisus vs. keerukus
+			\begin{itemize}
+				\item Keerulisus (ingl. \emph{complicatedness}) on süsteemi omadus näida keeruline
+				\item Keerukus (ingl. \emph{complexity}) on süsteemi keerukuse määr
+				\note{Väga ohtlikud on madala keerulisusega keerukad süsteemid. How hard can it be?\par}
+			\end{itemize} 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Võtmeküsimus:}
+	\vfill
+	\begin{center}
+		Kuidas hinnata infosüsteemi keerukust?  
+		\note{Just nimelt sotsiotehnilise, mitte ainult tehnilise süsteemi. Sellest sõltub, kuidas ja mil viisil saab hinnata ärimuutuse mõju teie poolt juhitavale süsteemile ning milline on teie reaalne võimekus reageerida}
+	\end{center}
+	\vfill
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Keerukuse kasvust}
+  	\begin{center}
+			\includegraphics[width=.7\textwidth]{keerukus.pdf}
+	\end{center}
+	Keerukusel on komme kasvada mittelineaarselt. Suhteliselt väike samm horisontaalteljel võib organisatsiooni paigutada suhteliselt kaugele teisele poole oma võimete piire. 
+	\note{Tegu on abstraktsiooniga! Elementide hulk ajas tavaliselt kasvab. Ja piir ei ole teada. Ja keerukuse dimensioone on palju.}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Võtmeküsimus:}
+	\vfill
+	\begin{center}
+		Kui kaugele minu võimete piirist \\mind käesoleva muutusega surutakse?
+		\note{Ma võin toime tulla muutusega aga kas ma suudan muutuse järel tekkinud süsteemi ka üleval pidada ning järgmistele muutustele viia?}
+	\end{center}
+	\vfill
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Keerukuse juhtimine}
+  	Keerukuse juhtimine on vastava taseme arhitekti töö. \\
+	\note{Meie puhul IT juhi oma \par}
+	Olen destilleerinud järgmised põhimõttelised strateegiad
+	\begin{description}
+	\item[Google mudel:] Joone tõusu vähendamine
+	\note{G suudab lisada teenuse teenuse ja serveripargi serveripargi järel ilma, et ta oma kompetentsist üle kasvaks\par}
+	\item[Morgani mudel:] Peatumine horisontaalteljel
+	\note{Morgan keeldub kasvamast, sest muidu satuks ohtu nende operatsioonimudel. Samal põhjusel ei võta pangad teatud piirist kallimaid projekte ette\par}
+	\item[Skype mudel:] Võimete piiri tõstmine
+	\note{Skype tagas, et suudab palgata kõige paremad saadaolevad insenerid ja lasta neil rahus toimetada viies sellega üles oma võimekuse. Ühel hetkel sai piiravaks jätkusuutlikkus: piisavalt võimekaid juhte ei olnud võtta enam isegi, kui insenere suudeti leida\par}
+\end{description}
+\end{frame}
+
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Mida teha, kui ees olev muutus viib organisatsiooni teisele poole oma võimete piiri?}
+		\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{British Steel}
+	\begin{itemize}
+		\item 1975. aastal pidi British Steel Corporation otsustama, kas ja kui mitu uudse tehnoloogiaga tehast Korfi korporatsioonilt osta 
+		\item Granada Television filmis kogu protsessi
+		\item Filmis jookseb korduvalt läbi fraas "kas üks või kaks tehast", kuigi samuti näha olnud strateegiline analüüs ütles, et tehast ei pruugi üldse vaja olla
+		\item Lõppotsus: osta kaks uue tehnoloogiaga tehast
+		\note{Põhjused mitmetahulised. Muu hulgas öeldakse, et aeti segi kaks eri otsust: kas uus või vana tehnoloogia ning kas osta või mitte osta. Oma rolli mängis ka ettevõttesisene poliitika.\par Hästi dokumenteeritud case, huvi korral leiab materiali, kuigi filmi ennast ei õnnestunud kätte saada}
+		\item Neist üks pandi püsti kuid konserveeriti kohe. Teist ei pandud kunagi püsti ning müüdi alles mõned aastad tagasi
+	\end{itemize}
+	\begin{center}
+		\textbf{Moraal:} ära kunagi eelda, et otsustusprotsess on ratsionaalne
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Monte Carlo}
+  Viskame palju kordi münti\footnote{Simulatsioon: riskamp.com}
+  	\begin{center}
+			\includegraphics[width=.3\textwidth]{graaf.png}			\includegraphics[width=.5\textwidth]{jaotus.png}
+	\end{center}
+	\begin{itemize}
+		\item Iga tegevuse kestvus on teatava jaotusega
+		\item Tegevustest moodustatakse sõltuvusgraaf
+		\item Tulemuseks projekti kestvuse hinnang
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Otsustuspuu}
+  Lihtne vahend stsenaariumide visualiseerimiseks ja läbi arvutamiseks
+  	\begin{center}
+			\includegraphics[width=.7\textwidth]{puu.pdf}
+	\end{center}
+	\begin{itemize}
+		\item Iga kasti realiseerumise tõenäosus on noolel, tulemus kasti sees
+		\item Iga haru lõpptulemus saadakse tõenäosusi korrutades
+		\item Kokkuvõttes liidetakse tulem korrutatuna tõenäosusega
+		\item $EX=.4\times-100+.3\times(.3\times-100+.7\times200)+.3\times50=8$
+	\end{itemize}
+
+\end{frame}
+
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Kas strateegilised otsused peaksid olema ratsionaalsed?}
+		\end{center}
+\end{frame}
+
+\section{Riskijuhtimine}
+
+\begin{frame}[fragile]
+  \frametitle{Riskijuhtimine}
+	
+	\begin{itemize}
+		\item Enamasti ei saa rääkida IT riskide juhtimisest eraldi organisatsiooni riskide juhtimisest
+		\item Süsteemide keerukuse kasv muudab põhimõtteliselt riskide juhtimise olemust
+	\end{itemize}
+
+	\begin{center}
+		\emph{Ei ole sisulist vahet, kas elektrijaam plahvatab kellegi rumaluse, küberründe, disainivea või komponendi kulumise tõttu}
+		\note{Inimesed saavad surma ja suur kahju tekib igal juhul}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Muutused riskijuhtimises}
+	Järgnev kehtib üha enam kõigi riskitüüpide puhul
+	\begin{itemize}
+		\item BCP\footnote{\emph{Business Continuity Plan}} keerukus/hind kasvab eksponendina süsteemi keerukusest
+		\item BCP efektiivsus kahaneb eksponendina süsteemi keerukusest
+		\item Üksikute riskisündmuste asemel peame rääkima pidevast, kasvavast ja kuju muutvast survest
+		\item Riskifaktoreid ei saa enam suruda aktsepteeritavale tasemele
+	\end{itemize}
+	\note{Need on rohkm lahti kirjutatud märkmetes, meil ei ole aega.}
+\end{frame}
+
+\iffalse
+% Need slaidid tõstetud märkmetesse, aega ei ole
+\begin{frame}[fragile]
+  \frametitle{BCP keerukus}
+	BCP keerukus/hind kasvab eksponendina süsteemi keerukusest
+	\begin{itemize}
+		\item Facebookil ei ole kuskil teist andmekeskust igaks juhuks jõude seismas. See oleks liiga kallis
+		\item Väliste partnerite puhul ei ole alati võimalik alternatiivi leida
+		\item Äriprotsesside toimimisele ei ole vahel enam mitte-elektroonilist alternatiivi
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{BCP efektiivsus}
+	BCP efektiivsus kahaneb eksponendina süsteemi keerukusest
+	\begin{itemize}
+		\item Kuidas taastub pilveteenusepakkuja täielikust andmekaost?
+		\item Keerulist süsteemi ei pruugi õnnestuda ka mitte ajuti taastada, kui palju ka ei kulutaks
+		\note{Kui Skype p2p võrk päriselt maha kukub, seda sisuliselt ei olnud võimalik taastada}
+		\item Äriplaanid, kliendiandmed, ideed, dokumentatsioon on üha enam immateriaalne ja seega kergesti teisaldatav
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Voog sündmuste asemel}
+	Üksikute riskisündmuste asemel peame rääkima pidevast, kasvavast ja kuju muutvast survest
+	\begin{itemize}
+		\item Ka kuritegevuses on edukas see, kes suudab oma ärimudeli võimalikult efektiivselt võimalikult suureks skaleerida
+		\item Keerulises süsteemis on väga palju elemente ja nende interaktsioone, mõne katki mineku tõenäosus on suur
+		\note{Suures tehases läheb kogu aeg midagi katki}
+		\item Inimese kognitiivset võimet ületavate süsteemide puhul kasvab kiiresti operaatori vigade tõenäosus
+		\note{Mistõttu ma olen suhteliselt ettevaatlik Eesti Vabariigi infosüsteemi torkimisega}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Riskifaktorid}
+	Riskifaktoreid ei saa enam suruda aktsepteeritavale tasemele
+	\begin{itemize}
+		\item Riik suudab tagada, et tänaval ei jookse nagaaniga vehkiv jõuk, internetis ei ole see võimalik
+		\item Süsteemi kõik elemendid ei ole kontrolli all
+		\note{Vt. esimese kontakti slaidid Yosemite intsidendist}
+		\item Kuna info liigub, kerkib kiiresti esile uusi (Google: \emph{"ATM gas attacks"})
+		\item Turvalist ega vigadeta tarkvara ei ole reaalne toota
+		\note{Heartbleed istus aastaid laialt kasutatud open source tarkvarateegis kõigi silmade all}
+	\end{itemize}
+\end{frame}
+
+\fi
+% Siit edasi on jälle OK
+
+\begin{frame}[fragile]
+	\frametitle{Kuidas läheneda?}
+	\vfill
+	\begin{center}
+		Keeruliste probleemide puhul küsi alati: \\kellel on sama probleem akuutsemalt ja kauem?  
+		\note{ABS leiutati kõigepealt lennukite pidama saamiseks. Autoinsenerid said lahenduse sealt}
+	\end{center}
+	\vfill
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Süsteemiohutusest}
+	Keerukate süsteemide ohutuse eest hoolitsevatel inimestel on asjakohane teooria ja praktika olemas.
+	\begin{itemize}
+		\item Kuidas tagada USA tuumalaevastiku ohutus?
+		\note{5400 reaktori-aastat intsidentideta tööd}
+		\item Keemiatööstus, lennukid, laevad 
+		\item Juured ICMB ja Apollo programmides eelmise sajandi keskel
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Süsteemiohutuse definitsioon}
+	\begin{center}
+		\begin{quote}
+			This system safety standard practice is a key element of Systems Engineering (SE) that provides a standard, generic method for the identification, classification, and mitigation of hazards.
+		\end{quote}
+	\end{center}
+			MIL-STD-882
+	
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Süsteemiohutusest}
+	Levinuimad põhjuslikkuse mudelid eeldavad, et õnnetusi põhjustavad komponentide rikked ning et neid rikkeid vältides või neiks valmistudes võib õnnetusi vältida. Kuigi see eeldus on tõsi lihtsate elektromehaaniliste süsteemide puhul, pole see enam nii tänaste keeruliste sotsiotehniliste süsteemide korral. \cite{leveson2011engineering}.
+	\begin{itemize}
+		\item Rida varasemalt toiminud eeldusi enam ei kehti
+		\item Põhjused on nii süsteemide keerukuse tõusus kui ka maailma järjest keerulisemaks muutumises
+		\note{Tuletage meelde juttu süsteemi piiridest}
+		\item Võtmetähtsusega on sotsiotehniliste süsteemide vaatlemine terviklike, tagasisidestatud mittelineaarsete süsteemidena
+	\end{itemize}
+\end{frame}
+
+
+%Arutelu koht
+\begin{frame}[fragile]
+  \frametitle{Arutelu koht}
+		\begin{center}
+			\textbf{Milline on ohutu süsteem?}
+		\end{center}
+\end{frame}
+
+
+\section{Viited}
+
+\begin{frame}[t,allowframebreaks,]
+  	\bibliographystyle{plainnat}
+	\bibliography{it_strateegia} 
+
+\end{frame}
+
+%\plain{Küsimusi?}
+\begin{frame}[plain]
+	\begin{center}Küsimusi?\end{center}
+\end{frame}
+
+
+\end{document}

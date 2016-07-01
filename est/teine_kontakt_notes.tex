@@ -1,0 +1,38 @@
+\documentclass[10pt, compress, xcolor={dvipsnames}]{beamer}
+\usetheme{metropolis}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{minted}
+\usepackage{pgfpages}
+
+\usepackage[round]{natbib}
+\makeatletter 
+\def\beamer@framenotesbegin{% at beginning of slide
+     \usebeamercolor[fg]{normal text}
+      \gdef\beamer@noteitems{}% 
+      \gdef\beamer@notes{}% 
+}
+\makeatother
+
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=black           % color of external links
+}
+
+\urlstyle{same}
+\setbeameroption{show notes on second screen=right}
+
+\usemintedstyle{trac}
+
+\title{IT Strateegiline juhtimine}
+\subtitle{Neljas kohtumine}
+\date{\today}
+\author{Andres Kütt}
+\institute{Riigi Infosüsteemi Amet}
+
+
+\input{teine_kontakt.tex}

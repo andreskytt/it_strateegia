@@ -1,0 +1,31 @@
+\documentclass{beamer}
+\usepackage{pgfpages}
+\setbeameroption{show notes on second screen=right} 
+
+\usetheme{metropolis}           % Use metropolis theme
+\title{A minimal example}
+\date{\today}
+\author{Matthias Vogelgesang}
+\institute{Centre for Modern Beamer Themes}
+
+
+\AtBeginSection{
+    \frame{\insertsectionhead}
+}
+
+\makeatletter 
+\def\beamer@framenotesbegin{% at beginning of slide
+     \usebeamercolor[fg]{normal text}
+      \gdef\beamer@noteitems{}% 
+      \gdef\beamer@notes{}% 
+}
+\makeatother
+
+\begin{document}
+  \maketitle
+  \section{First Section}
+  \begin{frame}{First Frame}
+    Hello, world!
+  \end{frame}
+
+\end{document}
