@@ -137,3 +137,7 @@ sympy-plots-for-*.tex/
 *.mdl
 *.2mdl
 
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
