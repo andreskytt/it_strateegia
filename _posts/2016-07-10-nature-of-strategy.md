@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Nature of Strategy
-date:       2016-07-10 09:08:19
+date:       2016-09-01 09:00:00
 summary:    And so we start our journey into the wonderful world of IT Strategy. Key concepts are introduced, the context established for the lectures and further writings.
 categories: basics Freedman
 ---

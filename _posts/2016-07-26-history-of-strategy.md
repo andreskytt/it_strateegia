@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Development of the strategic thought
-date:       2016-07-26 09:08:19
+date:       2016-09-12 09:00:00
 summary:    Some remarks on the history of strategic thought. Who was Master Sun and what did people think of him? 
 categories: suntzu Freedman history business
 ---
