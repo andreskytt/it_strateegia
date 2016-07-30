@@ -2,7 +2,7 @@
 layout:     post
 title:      Development of the strategic thought
 date:       2016-09-12 09:00:00
-summary:    Some remarks on the history of strategic thought. Who was Master Sun and what did people think of him? 
+summary:    Some remarks on the history of strategic thought. Who was Master Sun and what did people think of him? How did the science of strategy develop? What does this all mean to a CIO?
 categories: suntzu Freedman history business
 ---
 ## The Art of War
