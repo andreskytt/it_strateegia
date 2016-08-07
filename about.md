@@ -12,4 +12,3 @@ A Jekyll theme crafted with <3 by [John Otander](http://johnotander.com)
 ([@4lpine](https://twitter.com/4lpine)) is used.
 
 All the content is licensed under  Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-
