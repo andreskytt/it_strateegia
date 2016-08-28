@@ -32,7 +32,7 @@ These do not necessarily sound like profound, fundamental issues in need of deep
 we ask ourselves every day. Indeed, Freedman makes an observation that this is natural: that tactics and strategy are only distinguished by 
 the organizational position of the person concerned. I.e. it really does not matter how strong an impact your decision has or what time horizon is concerned. Everybody is making strategic decisions all the time, whether they realize it or not. 
 
-__Key point:__ Strategy is more an art of making decisions first than the art of what decisions to make.  
+__Key point:__ Strategy is more an art of making decisions than the art of what decisions to make.  
 
 ## Dynamics of strategy
 Oftentimes the concept of a strategic plan surfaces: the organization is supposed to have a clear strategic goal and a well-defined list of steps of attaining that.
