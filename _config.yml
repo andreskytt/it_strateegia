@@ -4,7 +4,7 @@ email:       andres.kytt@gmail.com
 author:      Andres Kütt
 description: "A set of writings accompanying the IT Strategy course in Tallinn University"
 baseurl:     "/it_strateegia"
-url:         "http://andreskytt.github.io/it_strateegia"
+#url:         "http://andreskytt.github.io"
 date_format: "%b %-d, %Y"
 
 # Google services
