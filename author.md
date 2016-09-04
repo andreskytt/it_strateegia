@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About the author
-permalink: /author/
+permalink: author/
 tags: author
 ---
 <table width="60%" border="0">
