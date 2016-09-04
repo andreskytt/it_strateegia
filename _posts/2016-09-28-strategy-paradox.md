@@ -3,7 +3,7 @@ layout:     post
 title:      The strategy paradox
 date:       2016-09-28 09:00:00
 summary:    Often the most successful organizations with the best strategies flounder suddenly, seemingly without a reason. Let's explore one possible explanation as to why this might be
-published:  true
+published:  false
 categories: quick strategy paradox
 ---
 ## The paradox

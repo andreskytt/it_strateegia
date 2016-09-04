@@ -4,7 +4,7 @@ title:      Development of the strategic thought
 date:       2016-09-12 09:00:00
 summary:    Some remarks on the history of strategic thought. Who was Master Sun and what did people think of him? How did the science of strategy develop? What does this all mean to a CIO?
 categories: suntzu Freedman history business
-published:  true
+published:  false
 ---
 ## The Art of War
 The concept of strategy as we recognize it today surfaced in the military in the 18th century. The word _strategos_ means a 'general' in greek and for long time strategy was seen as a purely military concern.

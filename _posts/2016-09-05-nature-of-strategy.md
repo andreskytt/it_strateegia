@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Nature of Strategy
-date:       2016-09-01 09:00:00
+date:       2016-09-05 09:00:00
 summary:    And so we start our journey into the wonderful world of IT Strategy. Key concepts are introduced, the context established for the lectures and further writings.
 published:  true
 categories: basics Freedman
@@ -14,7 +14,7 @@ and so oftentimes what gets passed for strategy has little resemblance to the su
 
 Therefore, before we proceed further into the topic, it would probably make sense to provide some context, some explanation of the underlying approach taken here.
 
-One of the most influencial authors in this regard is sir Lawrence Freedman (check out his lecture [here](https://www.youtube.com/watch?v=-R7kjNT8hkI)). And he tells us that this diversity of thought makes sense.
+One of the most influential authors in this regard is sir Lawrence Freedman (check out his lecture [here](https://www.youtube.com/watch?v=-R7kjNT8hkI)). And he tells us that this diversity of thought makes sense.
 Strategy, in his perspective, is all about discussing choices. The choices themselves, could be based on a wide variety of
 disciplines and approaches but, from the perspective of strategy, what matters is why we picked one choice over the other,
 why we were not aware of other choices etc.[^2]. The question of the decision-making process can be difficult to distinguish from the decisions and 

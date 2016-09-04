@@ -4,7 +4,7 @@ title:      Context of strategy
 date:       2016-09-19 09:00:00
 summary:    We examine key forces at play shaping any strategy. The OODA loop is introduced and a passing reference to seven levels of consciousness by Barrett is made. We also discuss the dynamics of people using Skype as an example.
 categories: basics people value 
-published:  true
+published:  false
 ---
 ## What about context?
 It would be lovely, if we could just treat the strategy as our neat little subject of research with no messy external influence whatsoever. Unfortunately this is not so and any strategy necessarily applies in a context. We have already discussed the dynamic nature of strategy that, to an extent, stems from the dynamic nature of the world we live. In the following, we'll look at a few elements of that context more closely.

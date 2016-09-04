@@ -3,7 +3,7 @@ layout:     post
 title:      Nature of QA
 date:       2016-09-23 09:00:00
 summary:    The terms of testing and QA are often used interchangeably and in ways that forget or obscure their initial meanings. We'll try to rectify that by referring to a classic text on the topic 
-published:  true
+published:  false
 categories: testing QA quick
 ---
 
