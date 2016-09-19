@@ -4,7 +4,7 @@ title:      Context of strategy
 date:       2016-09-19 09:00:00
 summary:    We examine key forces at play shaping any strategy. The OODA loop is introduced and a passing reference to seven levels of consciousness by Barrett is made. We also discuss the dynamics of people using Skype as an example.
 categories: basics people value 
-published:  false
+published:  true
 ---
 ## What about context?
 It would be lovely, if we could just treat the strategy as our neat little subject of research with no messy external influence whatsoever. Unfortunately this is not so and any strategy necessarily applies in a context. We have already discussed the dynamic nature of strategy that, to an extent, stems from the dynamic nature of the world we live. In the following, we'll look at a few elements of that context more closely.
@@ -43,7 +43,7 @@ __Key point__: Being able to make better decisions faster, than the competition 
 ## The employees
 Although internal to the organization[^4], strategies are usually developed by a small inner circle of thinkers and then communicated to the rest of the team. One of the best ways of doing this is by utilizing the Eisenhower quote we've already seen: plans are useless but planning is everything. Involving employees in the all stages of strategy development would at least ensure they are informed of the outcome as well as the thought processes behind them. This does not, however, mean agreement. Fundamentally, for a mutually beneficial cooperation stems from aligned strategic interests (also, remember the part about defining value). Of course, understanding is necessary for that alignment to be there but not sufficient. 
 
-Organizations are made of people and people do change. This can create interesting strategic challenges for organizations. For example, Skype at some point hired a lot of young talented people from Tallinn who worked hard and played hard together. It was an extraordinarily close group of people. And what happens when like-minded young people spend a lot of time together? Love. Marriage. Children. Thus, at a certain point there was a sudden explosion of "Skype kids": children born to Skyper parents. But strategic goals of a single twentysomething are very different from these of a young father. And so, a few years into its stellar ride,  Skype saw a sudden significant change in group dynamic in its engineering team just as its own strategy was challenged by its own success. 
+Organizations are made of people and people do change. This can create interesting strategic challenges for organizations. For example, Skype at some point hired a lot of young talented people from Tallinn who worked hard and played hard together. It was an extraordinarily close group of people. And what happens when like-minded young people spend a lot of time together? Love. Marriage. Children. Thus, at a certain point there was a sudden explosion of "Skype kids": children born to Skyper parents. But strategic goals of a single twentysomething are very different from these of a young father or mother. And so, a few years into its stellar ride,  Skype saw a sudden significant change in group dynamic in its engineering team just as its own strategy was challenged by its own success. 
 
 On a very fundamental level, our individual goals in life are tightly related to our personal values. Richard Barret divides these into seven levels of consciousness[^5]:
 
@@ -57,7 +57,7 @@ On a very fundamental level, our individual goals in life are tightly related to
 
 The exact meaning of these is definitely worthy of individual exploration but the key point is thus: On the 4th level of development a person leaves back its ego, is capable of facing its errors and accept lack of control. Control, however, is a central concept in strategy: historically military strategy sought to gain control over situations until the problems at hand grew too complex and the idea of dynamic competences or a learning organization emerged [^6]. Therefore, certain strategies assume certain values. Learning is not viable when most employees focus on survival. 
 
-__Key point__: It is not sufficient to communicate a strategy: it must also be executable by  the members of the organization within the applicable timeframe
+__Key point__: It is not sufficient to communicate a strategy: it must also be executable by  the members of the organization within the applicable time-frame
 
 ---
 [^1]: Cornelis A De Kluyver and John A Pearce. Strategy: a view from the top. Prentice Hall, fourth edition, 2012
