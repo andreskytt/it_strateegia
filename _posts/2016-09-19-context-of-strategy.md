@@ -29,6 +29,7 @@ Since its military roots, strategy has always concerned itself with winning, wit
 One of the most comprehensive models of dealing with competition comes from one John Boyd. He was a marvelous figure. An engineer by training, Boyd was a fighter pilot in Korean war and became a distinguished military strategist as his theories of aerial combat gained wider acceptance. He was known as "Forty Second Boyd" because of his standing bet that he could outmaneuver any opposing pilot within 40 seconds. It is not often somebody is able to develop a tactical approach, develop it to a strategic one and be able to see it both taught and executed[^3].
 
 The key concept of Boyd's was the OODA loop consisting of following steps:
+
  1. Observation: the collection of data by means of the senses
  1. Orientation: the analysis and synthesis of data to form one's current mental perspective
  1. Decision: the determination of a course of action based on one's current mental perspective
