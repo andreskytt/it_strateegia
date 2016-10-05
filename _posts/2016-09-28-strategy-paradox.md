@@ -3,14 +3,14 @@ layout:     post
 title:      The strategy paradox
 date:       2016-09-28 09:00:00
 summary:    Often the most successful organizations with the best strategies flounder suddenly, seemingly without a reason. Let's explore one possible explanation as to why this might be
-published:  false
+published:  true
 categories: quick strategy paradox
 ---
 ## The paradox
 There are a multitude of views of what the strategy is and is not, but it would be difficult to argue against the following statements about it
 
 1. Strategy is dependent on both the organizational context and the organization itself. The organizations fundamentally create value out of relationships with external stakeholders using internal resources.
-1. Strategy seeks to inflict a change in either the organization itself or its context. With no intention to change, developing a strategy would not be a very sensible excercise, would it?
+1. Strategy seeks to inflict a change in either the organization itself or its context. With no intention to change, developing a strategy would not be a very sensible exercise, would it?
 
 Combining these two statements leads us to a familiar understanding of the dynamics of strategy. Our approach towards the world must change as the world changes. 
 
