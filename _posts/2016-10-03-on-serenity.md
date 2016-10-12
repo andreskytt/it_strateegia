@@ -2,7 +2,7 @@
 layout:     post
 title:      On serenity 
 date:       2016-09-28 09:00:00
-summary:    What frustrates the IT folk endlessly is having to run a world-class IT operation within an organization that appears to be run by drunk ewoks. There is always the serenity prayer of olds but for rational people it helps to dig deeper into the issue. Which is what we're about to do
+summary:    What frustrates the IT folk endlessly is having to run a world-class IT operation within an organization that appears to be run by drunk ewoks. There is always the serenity prayer of olds, but for rational people it helps to dig deeper into the issue. Which is what we're about to do
 published:  true
 categories: serenity business architecture 
 ---
